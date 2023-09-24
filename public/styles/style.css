@@ -1,0 +1,273 @@
+@import url("https://fonts.googleapis.com/css?family=Nunito:600");
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700");
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background: #cbded8;
+    margin: 0;
+    overflow: hidden;
+}
+
+i {
+    -webkit-transition: all .3s;
+    transition: all .3s;
+    cursor: pointer;
+}
+
+i:hover {
+    color: #44f5b7;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    background: #4cb892;
+}
+
+body .player_inner,
+body .player_inner__middle .cube {
+    position: absolute;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
+    left: 0;
+    right: 0;
+    margin: auto;
+}
+
+body .player_inner__middle .cube_inner>div {
+    width: 380px;
+    height: 380px;
+    background: pink;
+    position: absolute;
+    -webkit-transform-style: preserve-3D;
+    transform-style: preserve-3D;
+}
+
+body .player_inner {
+    background: #3a4e47;
+    width: 380px;
+    height: 640px;
+    border-radius: 6px;
+    -webkit-perspective: 800px;
+    perspective: 800px;
+}
+
+body .player_inner__top {
+    height: 70px;
+    padding: 24px;
+    background: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/217233/koan.png");
+    background-size: 103% !important;
+    margin-bottom: 0px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+body .player_inner__top h1 {
+    position: relative;
+    color: white;
+    font-weight: 600;
+}
+
+
+body .player_inner__top .t_mid {
+    float: left;
+    text-align: center;
+    width: 100%;
+}
+
+body .player_inner__top .t_mid h1 {
+    margin: 0;
+    font-size: 12px;
+}
+
+
+body .player_inner__middle {
+    position: relative;
+    height: 380px;
+    background: #40555f;
+    box-shadow: 0px 0px 110px #181f23 inset;
+}
+
+body .player_inner__middle .cube {
+    top: 190px;
+    height: 380px;
+    -webkit-transform-style: preserve-3D;
+    transform-style: preserve-3D;
+    -webkit-perspective-origin: 190px 190px;
+    perspective-origin: 190px 190px;
+    -webkit-transition: all 300ms 200ms cubic-bezier(0.1, 1.94, 0.32, 1.02), -webkit-transform-origin 0ms;
+    transition: all 300ms 200ms cubic-bezier(0.1, 1.94, 0.32, 1.02), -webkit-transform-origin 0ms;
+    transition: all 300ms 200ms cubic-bezier(0.1, 1.94, 0.32, 1.02), transform-origin 0ms;
+    transition: all 300ms 200ms cubic-bezier(0.1, 1.94, 0.32, 1.02), transform-origin 0ms, -webkit-transform-origin 0ms;
+}
+
+body .player_inner__middle .cube_inner {
+    height: 380px;
+    -webkit-transform-style: preserve-3D;
+    transform-style: preserve-3D;
+}
+
+body .player_inner__middle .cube_inner__front {
+    background: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/217233/koan.png") !important;
+    background-size: 103% !important;
+    background-position-y: -71px !important;
+}
+
+body .player_inner__middle .cube_inner__front .details {
+    position: absolute;
+    z-index: 10;
+    width: 100%;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
+    color: white;
+    text-align: center;
+}
+
+body .player_inner__middle .cube_inner__front .details_album {
+    width: 90px;
+    height: 90px;
+    background-size: cover !important;
+    background: white;
+    border-radius: 4px;
+    margin: 0 auto;
+    background: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/217233/koanalbum.png");
+    margin-bottom: 20px;
+}
+
+body .player_inner__middle .cube_inner__front .details h2 {
+    font-size: 12px;
+    font-weight: 600;
+    margin: 0;
+}
+
+body .player_inner__middle .cube_inner__front .details h3 {
+    font-size: 10px;
+    margin: 0;
+    opacity: 0.6;
+    font-weight: 400;
+}
+
+body .player_inner__bottom {
+    height: 190px;
+    padding: 30px;
+}
+
+body .player_inner__bottom .controls {
+    clear: left;
+    margin-top: 26px;
+}
+
+body .player_inner__bottom .controls_left {
+    float: left;
+    width: 30%;
+    text-align: right;
+    font-size: 20px;
+    color: white;
+    position: relative;
+    top: 20px;
+}
+
+body .player_inner__bottom .controls_middle {
+    float: left;
+    width: 40%;
+    font-size: 50px;
+    color: white;
+    text-align: center;
+}
+
+body .player_inner__bottom .controls_right {
+    float: right;
+    position: relative;
+    top: 20px;
+    width: 30%;
+    font-size: 20px;
+    color: white;
+    text-align: left;
+}
+
+body .player_inner__bottom .options {
+    text-align: center;
+    color: white;
+    font-size: 12px;
+    margin-bottom: 20px;
+}
+
+body .player_inner__bottom .options i {
+    padding: 5px;
+}
+
+body .player_inner__bottom .options i:nth-of-type(1) {
+    color: #44f5b7;
+}
+
+body .player_inner__bottom .options i:nth-of-type(2) {
+    opacity: 0.4;
+}
+
+body .player_inner__bottom .playbar {
+    position: relative;
+    border-radius: 10px;
+}
+
+body .player_inner__bottom .playbar_inner {
+    width: 100%;
+    height: 4px;
+    border-radius: 10px;
+}
+
+/* Estilo del control deslizante */
+body .player_inner__bottom input[type="range"] {
+    background: #2c3e38;
+    border: none;
+    border-radius: 5px;
+    outline: none;
+}
+
+/* Estilo del pulgar del control deslizante */
+body .player_inner__bottom input[type="range"]::-webkit-slider-thumb,
+body .player_inner__bottom input[type="range"]::-moz-range-thumb {
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    background: transparent;
+    /* Hacemos el pulgar invisible por defecto */
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+/* Estilo del pulgar del control deslizante cuando se pasa el mouse encima */
+body .player_inner__bottom input[type="range"]:hover::-webkit-slider-thumb,
+body .player_inner__bottom input[type="range"]:hover::-moz-range-thumb {
+    background: #44f5b7;
+    /* Hacemos el pulgar visible cuando se pasa el mouse encima */
+}
+
+/* Estilo de la barra de progreso visible */
+body .player_inner__bottom  input[type="range"]::-webkit-slider-runnable-track,
+body .player_inner__bottom  input[type="range"]::-moz-range-track {
+    background: linear-gradient(to right, #44f5b7 0%, #44f5b7 calc((var(--progress-value) / 100) * 100%), #2c3e38 calc((var(--progress-value) / 100) * 100%), #2c3e38 100%);
+    /* Utilizamos un gradiente lineal para mostrar el progreso en #44f5b7 */
+    /* Ajusta la altura para que coincida con la barra de progreso */
+}
+
+body .player_inner__bottom .playbar_left {
+    float: left;
+    position: relative;
+    top: 8px;
+}
+
+body .player_inner__bottom .playbar_right {
+    position: relative;
+    top: 8px;
+    float: right;
+}
+
+body .player_inner__bottom .playbar span {
+    color: white;
+    font-size: 10px;
+}
