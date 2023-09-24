@@ -150,12 +150,3 @@ function obtenerDuracion(reproductor) {
     });
   });
 }
-
-var saludo = "";
-async function miau(){
-  let promise = new Promise((res)=>res("hola"));
-
-  let mensaje = await promise;
-  console.log(mensaje);
-  saludo = mensaje;
-}
