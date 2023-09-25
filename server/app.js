@@ -17,6 +17,6 @@ app.get("/", (req, res) => {
   res.send("hello");
 });
 
-app.listen(3000, () => {
-  console.log("Servidor iniciado en el puerto 3000");
+app.listen(4000, () => {
+  console.log("Servidor iniciado en el puerto http://localhost:4000");
 });
