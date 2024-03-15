@@ -5,7 +5,7 @@
 import './style.css'
 import { Playlist, Reproductor } from './Componentes/playlist.js'
 import { datosPlaylist, playlist } from './Componentes/primera-playlist.js'
-import { EstablecerPlaylist } from './Componentes/completePlaylist.js'
+import { EstablecerPlaylist, EstablecerReproductor } from './Componentes/completePlaylist.js'
 
 document.querySelector('#app').innerHTML = `
   <div id='lctmBrave'>
@@ -43,26 +43,29 @@ const tiempoDelAudio = (idx) => {
     })
   })
 }
-playlist[0].duracion = await tiempoDelAudio(0)
-playlist[1].duracion = await tiempoDelAudio(1)
-playlist[2].duracion = await tiempoDelAudio(2)
-playlist[3].duracion = await tiempoDelAudio(3)
-playlist[4].duracion = await tiempoDelAudio(4)
-playlist[5].duracion = await tiempoDelAudio(5)
-playlist[6].duracion = await tiempoDelAudio(6)
-playlist[7].duracion = await tiempoDelAudio(7)
-playlist[8].duracion = await tiempoDelAudio(8)
-playlist[9].duracion = await tiempoDelAudio(9)
-playlist[10].duracion = await tiempoDelAudio(10)
-playlist[11].duracion = await tiempoDelAudio(11)
-playlist[12].duracion = await tiempoDelAudio(12)
 
-let duracionTotal = 0
-playlist.forEach(pl => {
-  duracionTotal = duracionTotal + pl.duracion
-})
+(async () => {
+  playlist[0].duracion = await tiempoDelAudio(0)
+  playlist[1].duracion = await tiempoDelAudio(1)
+  playlist[2].duracion = await tiempoDelAudio(2)
+  playlist[3].duracion = await tiempoDelAudio(3)
+  playlist[4].duracion = await tiempoDelAudio(4)
+  playlist[5].duracion = await tiempoDelAudio(5)
+  playlist[6].duracion = await tiempoDelAudio(6)
+  playlist[7].duracion = await tiempoDelAudio(7)
+  playlist[8].duracion = await tiempoDelAudio(8)
+  playlist[9].duracion = await tiempoDelAudio(9)
+  playlist[10].duracion = await tiempoDelAudio(10)
+  playlist[11].duracion = await tiempoDelAudio(11)
+  playlist[12].duracion = await tiempoDelAudio(12)
 
-datosPlaylist.duracion = duracionTotal
+  let duracionTotal = 0
+  playlist.forEach(pl => {
+    duracionTotal = duracionTotal + pl.duracion
+  })
+
+  datosPlaylist.duracion = duracionTotal
+})()
 
 const setIncremento = () => {
   indice = indice >= maxIndice - 1 ? 0 : ++indice % maxIndice
@@ -98,6 +101,7 @@ const setEleccion = ({ cancion }) => {
 // Rellenar Playlist.
 
 EstablecerPlaylist(document.querySelector('.tabla-container'), { playlist, datosPlaylist })
+EstablecerReproductor(document.querySelector('#datos-song'), { unaCancion: playlist[0] })
 
 // EVENTOS DE AUDIO CONTROL
 
@@ -126,6 +130,7 @@ document.querySelector('table').addEventListener('click', (event) => {
     })
     cancion._indice = playlist.indexOf(cancion)
     setEleccion({ cancion })
+    EstablecerReproductor(document.querySelector('#datos-song'), { unaCancion: cancion })
   }
 })
 

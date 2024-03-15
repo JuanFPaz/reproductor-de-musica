@@ -97,7 +97,7 @@ function Playlist (element) {
 
 function Reproductor (element) {
   const reproductor = `
-  <p> Cargando</p>
+    <div id='datos-song'>Cargando...</div>
     <div>
     <button id='prev'>Prev</button>
     <button id='play'>Play</button>

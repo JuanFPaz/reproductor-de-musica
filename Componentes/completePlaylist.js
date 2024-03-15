@@ -31,4 +31,16 @@ function EstablecerPlaylist (unElemento, { playlist, datosPlaylist }) {
   unElemento.innerHTML = playList
 }
 
-export { EstablecerPlaylist }
+function EstablecerReproductor (unElemento, { unaCancion }) {
+  const reproductor = `
+    <div>
+      <ul>
+        <li>${unaCancion.titulo} - ${unaCancion.artista}</li>
+      </ul>
+    </div>
+  `
+
+  unElemento.innerHTML = reproductor
+}
+
+export { EstablecerPlaylist, EstablecerReproductor }
