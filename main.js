@@ -1,135 +1,11 @@
+/* eslint-disable array-callback-return */
+/* eslint-disable promise/param-names */
 /* eslint-disable no-undef */
 /* eslint-disable import/no-absolute-path */
 import './style.css'
-import welcome from './resource/01-Welcome.mp3'
-import haveyouever from './resource/02-Have-You-Ever.mp3'
-import staring from './resource/03-Staring-at-The-Sun.mp3'
-import prettyFly from './resource/04-Prety-Fly.mp3'
-import kidsArentRight from './resource/05-The-Kids-Arent-Alright.mp3'
-import feelings from './resource/06-Feelings.mp3'
-import shesgotissues from './resource/07-Shes-Got-Issues.mp3'
-import wallawalla from './resource/08-Walla-Walla.mp3'
-import theEnd from './resource/09-The-End-of-The-Line.mp3'
-import noBrakes from './resource/10-No-Brakes.mp3'
-import whyDontYouGetAJob from './resource/11-Why-Dont-You-Get-a-Job.mp3'
-import americanaSong from './resource/12-Americana.mp3'
-import payTheMan from './resource/13-Pay-The-Man.mp3'
-import luxaPic from './luxita-pic.jpg'
-import { Encabezado, Playlist, Reproductor, establecerReproduccionAutomatica } from './Componentes/playlist.js'
-
-const usuario = {
-  nombre: 'Americana',
-  img: luxaPic
-}
-
-const playlist = [
-  {
-    id: crypto.randomUUID(),
-    titulo: 'Welcome',
-    artista: 'The Offspring',
-    album: 'Americana',
-    src: welcome,
-    duracion: 0
-  },
-  {
-    id: crypto.randomUUID(),
-    titulo: 'Have you ever',
-    artista: 'The Offspring',
-    album: 'Americana',
-    src: haveyouever,
-    duracion: 0
-  },
-  {
-    id: crypto.randomUUID(),
-    titulo: 'Staring at the Sun',
-    artista: 'The Offspring',
-    album: 'Americana',
-    src: staring,
-    duracion: 0
-  },
-  {
-    id: crypto.randomUUID(),
-    titulo: 'Pretty Fly (For a White Guy)',
-    artista: 'The Offspring',
-    album: 'Americana',
-    src: prettyFly,
-    duracion: 0
-  },
-  {
-    id: crypto.randomUUID(),
-    titulo: 'The Kids Aren`t Right',
-    artista: 'The Offspring',
-    album: 'Americana',
-    src: kidsArentRight,
-    duracion: 0
-  },
-  {
-    id: crypto.randomUUID(),
-    titulo: 'Feelings',
-    artista: 'The Offspring',
-    album: 'Americana',
-    src: feelings,
-    duracion: 0
-  },
-  {
-    id: crypto.randomUUID(),
-    titulo: 'Shes Got Issues',
-    artista: 'The Offspring',
-    album: 'Americana',
-    src: shesgotissues,
-    duracion: 0
-  },
-  {
-    id: crypto.randomUUID(),
-    titulo: 'Walla Walla',
-    artista: 'The Offspring',
-    album: 'Americana',
-    src: wallawalla,
-    duracion: 0
-  },
-  {
-    id: crypto.randomUUID(),
-    titulo: 'The End of The Line',
-    artista: 'The Offspring',
-    album: 'Americana',
-    src: theEnd,
-    duracion: 0
-  },
-  {
-    id: crypto.randomUUID(),
-    titulo: 'No Brakes',
-    artista: 'The Offspring',
-    album: 'Americana',
-    src: noBrakes,
-    duracion: 0
-  },
-  {
-    id: crypto.randomUUID(),
-    titulo: 'Why Dont You Get a Job',
-    artista: 'The Offspring',
-    album: 'Americana',
-    src: whyDontYouGetAJob,
-    duracion: 0
-  },
-  {
-    id: crypto.randomUUID(),
-    titulo: 'Americana',
-    artista: 'The Offspring',
-    album: 'Americana',
-    src: americanaSong,
-    duracion: 0
-  },
-  {
-    id: crypto.randomUUID(),
-    titulo: 'Pay The Man',
-    artista: 'The Offspring',
-    album: 'Americana',
-    src: payTheMan,
-    duracion: 0
-  }
-]
-
-const cancion = playlist[0]
+import { Playlist, Reproductor } from './Componentes/playlist.js'
+import { datosPlaylist, playlist } from './Componentes/primera-playlist.js'
+import { EstablecerPlaylist } from './Componentes/completePlaylist.js'
 
 document.querySelector('#app').innerHTML = `
   <div id='lctmBrave'>
@@ -145,10 +21,115 @@ document.querySelector('#app').innerHTML = `
   </div>
 `
 
-Encabezado(document.querySelector('#encabezado'), { ...usuario, playlistName: 'Luxita Playlist', playListLength: playlist.length })
+// PRIMERO CREAMOS EL DOM:
+Playlist(document.querySelector('#playlist'))
 
-Playlist(document.querySelector('#playlist'), { unArreglo: playlist })
+Reproductor(document.querySelector('#reproductor'))
 
-Reproductor(document.querySelector('#reproductor'), { cancion })
+// AUDIO Control
+let { indice, maxIndice } = {
+  indice: 0,
+  maxIndice: playlist.length
+}
+const audio = new Audio()
+audio.src = playlist[indice].src
 
-establecerReproduccionAutomatica({ playlist })
+const tiempoDelAudio = (idx) => {
+  return new Promise((resolve) => {
+    const nuevoAudio = new Audio()
+    nuevoAudio.src = playlist[idx].src
+    nuevoAudio.addEventListener('loadedmetadata', () => {
+      resolve(nuevoAudio.duration)
+    })
+  })
+}
+playlist[0].duracion = await tiempoDelAudio(0)
+playlist[1].duracion = await tiempoDelAudio(1)
+playlist[2].duracion = await tiempoDelAudio(2)
+playlist[3].duracion = await tiempoDelAudio(3)
+playlist[4].duracion = await tiempoDelAudio(4)
+playlist[5].duracion = await tiempoDelAudio(5)
+playlist[6].duracion = await tiempoDelAudio(6)
+playlist[7].duracion = await tiempoDelAudio(7)
+playlist[8].duracion = await tiempoDelAudio(8)
+playlist[9].duracion = await tiempoDelAudio(9)
+playlist[10].duracion = await tiempoDelAudio(10)
+playlist[11].duracion = await tiempoDelAudio(11)
+playlist[12].duracion = await tiempoDelAudio(12)
+
+let duracionTotal = 0
+playlist.forEach(pl => {
+  duracionTotal = duracionTotal + pl.duracion
+})
+
+datosPlaylist.duracion = duracionTotal
+
+const setIncremento = () => {
+  indice = indice >= maxIndice - 1 ? 0 : ++indice % maxIndice
+  console.log(indice)
+  audio.pause()
+  audio.src = playlist[indice].src
+  audio.play()
+}
+
+const setDecremento = () => {
+  indice = indice <= 0 ? maxIndice - 1 : --indice % maxIndice
+  console.log(indice)
+  audio.pause()
+  audio.src = playlist[indice].src
+  audio.play()
+}
+
+const setZero = () => {
+  if (audio.paused) {
+    audio.play()
+  } else {
+    audio.pause()
+  }
+}
+
+const setEleccion = ({ cancion }) => {
+  console.log(cancion._indice)
+  indice = cancion._indice
+  audio.pause()
+  audio.src = cancion.src
+  audio.play()
+}
+// Rellenar Playlist.
+
+EstablecerPlaylist(document.querySelector('.tabla-container'), { playlist, datosPlaylist })
+
+// EVENTOS DE AUDIO CONTROL
+
+document.querySelector('#play').addEventListener('click', () => {
+  setZero()
+})
+
+document.querySelector('#prev').addEventListener('click', () => {
+  setDecremento()
+  console.log(indice)
+})
+
+document.querySelector('#next').addEventListener('click', () => {
+  setIncremento()
+  console.log(indice)
+})
+
+document.querySelector('table').addEventListener('click', (event) => {
+  if (event.target.tagName === 'TD') {
+    const fila = event.target.parentNode
+    const idCancion = fila.id
+    const cancion = playlist.find((pl) => {
+      if (pl.id === idCancion) {
+        return pl
+      }
+    })
+    cancion._indice = playlist.indexOf(cancion)
+    setEleccion({ cancion })
+  }
+})
+
+audio.addEventListener('ended', () => {
+  setIncremento()
+  console.log(indice)
+})
