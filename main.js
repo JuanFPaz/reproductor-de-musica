@@ -15,7 +15,7 @@ import whyDontYouGetAJob from './resource/11-Why-Dont-You-Get-a-Job.mp3'
 import americanaSong from './resource/12-Americana.mp3'
 import payTheMan from './resource/13-Pay-The-Man.mp3'
 import luxaPic from './luxita-pic.jpg'
-import { Encabezado, Playlist, Reproductor } from './Componentes/playlist.js'
+import { Encabezado, Playlist, Reproductor, establecerReproduccionAutomatica } from './Componentes/playlist.js'
 
 const usuario = {
   nombre: 'Americana',
@@ -151,40 +151,4 @@ Playlist(document.querySelector('#playlist'), { unArreglo: playlist })
 
 Reproductor(document.querySelector('#reproductor'), { cancion })
 
-// Eventos
-
-const AUDIO = new Audio(playlist[0].src)
-
-document.querySelector('.tabla-container').addEventListener('click', function (event) {
-  if (event.target.parentNode.tagName === 'TR') { // Verificar si el clic ocurrió en una fila
-    const fila = event.target.parentNode
-    const idCancion = fila.id
-
-    // Filtrar el objeto de la canción basado en el id
-    const verificarCancion = playlist.find(pl => pl.id === idCancion)
-
-    // Verificar si se encontró la canción
-    if (verificarCancion) {
-      // Llamar a la función Reproductor con la canción encontrada
-      Reproductor(document.querySelector('#reproductor'), { cancion: verificarCancion })
-      if (AUDIO.paused) {
-        AUDIO.src = verificarCancion.src
-        AUDIO.play()
-      } else {
-        AUDIO.pause()
-        AUDIO.src = verificarCancion.src
-        AUDIO.play()
-      }
-    } else {
-      console.log('No se encontró la canción con el ID:', idCancion)
-    }
-  }
-})
-
-document.querySelector('#play').addEventListener('click', () => {
-  if (AUDIO.paused) {
-    AUDIO.play()
-  } else {
-    AUDIO.pause()
-  }
-})
+establecerReproduccionAutomatica({ playlist })

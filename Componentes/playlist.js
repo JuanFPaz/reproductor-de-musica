@@ -1,6 +1,8 @@
 /* eslint-disable no-undef */
 import './playlistyle.css'
 
+const AUDIO = new Audio()
+
 function Encabezado (element, { nombre, img, playlistName, playListLength }) {
   const encabezado = `
     <img id='user' src=${img}>
@@ -12,7 +14,6 @@ function Encabezado (element, { nombre, img, playlistName, playListLength }) {
 }
 
 function Playlist (element, { unArreglo }) {
-  console.log(unArreglo)
   const playList = `
   <div class='tabla-container'>
   <h2>Playlist</h2>
@@ -41,31 +42,55 @@ function Playlist (element, { unArreglo }) {
   </div>
   `
   element.innerHTML = playList
+
+  document.querySelector('.tabla-container').addEventListener('click', (event) => {
+    if (event.target.parentNode.tagName === 'TR') {
+      const fila = event.target.parentNode
+      const idCancion = fila.id
+      const cancion = unArreglo.find(pl => pl.id === idCancion)
+      if (cancion) {
+        AUDIO.pause()
+        Reproductor(document.querySelector('#reproductor'), { cancion })
+        AUDIO.play()
+      } else {
+        console.log('No se encontró la canción con el ID:', idCancion)
+      }
+    }
+  })
 }
 
 function Reproductor (element, { cancion }) {
-  if (!cancion) {
-    const reproductor = `
-    <p> No hay cancion en el reproductor</p>
-    `
-    element.innerHTML = reproductor
-  } else {
-    console.log('Cancion Seleccionada')
-    const reproductor = `
+  AUDIO.src = cancion.src
+  const reproductor = `
+  <p> ${cancion.titulo} - ${cancion.artista}</p>
     <div>
     <button id='prev'>Prev</button>
     <button id='play'>Play</button>
     <button id='next'>Next</button>
     </div>
-
-    <p> ${cancion.titulo} - ${cancion.artista}</p>
     `
-    element.innerHTML = reproductor
-  }
+  element.innerHTML = reproductor
+
+  document.querySelector('#play').addEventListener('click', () => {
+    console.log('Se presiono el boton')
+    if (AUDIO.paused) {
+      AUDIO.play()
+    } else {
+      AUDIO.pause()
+    }
+  })
+}
+
+function establecerReproduccionAutomatica ({ playlist }) {
+  console.log(AUDIO.src)
+  AUDIO.addEventListener('ended', () => {
+    console.log(AUDIO.src)
+  })
 }
 
 export {
   Encabezado,
   Playlist,
-  Reproductor
+  Reproductor,
+  establecerReproduccionAutomatica
 }
