@@ -43,4 +43,16 @@ function EstablecerReproductor (unElemento, { unaCancion }) {
   unElemento.innerHTML = reproductor
 }
 
-export { EstablecerPlaylist, EstablecerReproductor }
+function EstablecerDuracion (unElemento, { unaCancion }) {
+  const duracionReproductor = `${Math.floor(unaCancion.duracion / 60).toString()} : ${Math.floor(unaCancion.duracion % 60).toString().padStart(2, '0')}`
+
+  unElemento.innerHTML = duracionReproductor
+}
+
+function ActualizarDuracion (unElemento, { unaDuracion }) {
+  const actualizarDuracion = `${Math.floor(unaDuracion / 60).toString()} : ${Math.floor(unaDuracion % 60).toString().padStart(2, '0')}`
+
+  unElemento.innerHTML = actualizarDuracion
+}
+
+export { EstablecerPlaylist, EstablecerReproductor, EstablecerDuracion, ActualizarDuracion }
