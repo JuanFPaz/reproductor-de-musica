@@ -1,3 +1,10 @@
+import dirtyDeeds from '../resource/mix-fonky/ACDC-Dirty-Deeds-Done-Dirt-Cheap.mp3'
+import highway from '../resource/mix-fonky/ACDC-Highway-to-Hell .mp3'
+import ifyouwanna from '../resource/mix-fonky/ACDC-Its-a-Long-Way-to-the-Top.mp3'
+import drainu from '../resource/mix-fonky/Nirvana-Drain-You.mp3'
+import inBloom from '../resource/mix-fonky/Nirvana-In-Bloom.mp3'
+import loungeAc from '../resource/mix-fonky/Nirvana-Lounge-Act.mp3'
+import orion from '../resource/mix-fonky/Metallica-Orion.mp3'
 import charming from '../resource/mix-fonky/The-Smiths-This-Charming-Man.mp3'
 import lastNight from '../resource/mix-fonky/The-Smiths-Last-Night-I-Dreamt-That-Somebody-Loved-Me.mp3'
 import iStarted from '../resource/mix-fonky/The-Smiths-I-Started-Something-I-Couldnt-Finish.mp3'
@@ -6,7 +13,6 @@ import prettyFly from '../resource/Americana/04-Prety-Fly.mp3'
 import feelings from '../resource/Americana/06-Feelings.mp3'
 import payTheMan from '../resource/Americana/13-Pay-The-Man.mp3'
 import someMight from '../resource/mix-fonky/Oasis-Some-Might-Say.mp3'
-import standByMe from '../resource/mix-fonky/Oasis-Stand-By-Me.mp3'
 import crua from '../resource/mix-fonky/Sumo-Crua-Chan.mp3'
 import beautiful from '../resource/mix-fonky/Sumo-Beautiful-Losers.mp3'
 import heroina from '../resource/mix-fonky/Sumo-Heroina.mp3'
@@ -15,7 +21,6 @@ import regtest from '../resource/mix-fonky/Sumo-Regtest.mp3'
 import estosHombres from '../resource/mix-fonky/Almendra-A-Estos-Hombres-Tristes.mp3'
 import temaPototo from '../resource/mix-fonky/Almendra-Tema-De-Pototo.mp3'
 import promesas from '../resource/mix-fonky/Charly-Garcia-Promesas-Sobre-El-Bidet.mp3'
-import rarosPeinados from '../resource/mix-fonky/Charly-Garcia-Raros-Peinados-Nuevos.mp3'
 import moonage from '../resource/mix-fonky/David-Bowie-Moonage-Daydream.mp3'
 import letsDance from '../resource/mix-fonky/David-Bowie-Lets-Dance.mp3'
 import modernLove from '../resource/mix-fonky/David-Bowie-Modern-Love.mp3'
@@ -28,6 +33,30 @@ import secret from '../resource/mix-fonky/Arctic-Monkeys-Secret-Door.mp3'
 import luxa from '../resource/mix-fonky/luxita-pic.jpg'
 
 const playlist = [
+  {
+    id: crypto.randomUUID(),
+    titulo: 'Dirty Deeds Done Dirt Cheap',
+    artista: 'ACDC',
+    album: '',
+    src: dirtyDeeds,
+    duracion: 0
+  },
+  {
+    id: crypto.randomUUID(),
+    titulo: 'Highway to Hell',
+    artista: 'ACDC',
+    album: '',
+    src: highway,
+    duracion: 0
+  },
+  {
+    id: crypto.randomUUID(),
+    titulo: 'Its a Long Way to the Top (If you wanna Rock\'n\'Roll)',
+    artista: 'ACDC',
+    album: '',
+    src: ifyouwanna,
+    duracion: 0
+  },
   {
     id: crypto.randomUUID(),
     titulo: 'A estos Hombres Tristes',
@@ -95,14 +124,6 @@ const playlist = [
   },
   {
     id: crypto.randomUUID(),
-    titulo: 'Raros Peinados Nuevos',
-    artista: 'Charly Garcia',
-    album: 'Piano Bar',
-    src: rarosPeinados,
-    duracion: 0
-  },
-  {
-    id: crypto.randomUUID(),
     titulo: 'Moonage Daydream',
     artista: 'David Bowie',
     album: '',
@@ -134,14 +155,42 @@ const playlist = [
     src: chinaGirl,
     duracion: 0
   },
+  // Metallica
   {
     id: crypto.randomUUID(),
-    titulo: 'Stand By Me',
-    artista: 'Oasis',
-    album: 'Be Here Now',
-    src: standByMe,
+    titulo: 'Orion',
+    artista: 'Metallica',
+    album: 'Master of Puppets',
+    src: orion,
     duracion: 0
   },
+  // Metallica
+  // Nirvana
+  {
+    id: crypto.randomUUID(),
+    titulo: 'Drain You',
+    artista: 'Nirvana',
+    album: 'Nevermind',
+    src: drainu,
+    duracion: 0
+  },
+  {
+    id: crypto.randomUUID(),
+    titulo: 'In Bloom',
+    artista: 'Nirvana',
+    album: 'Nevermind',
+    src: inBloom,
+    duracion: 0
+  },
+  {
+    id: crypto.randomUUID(),
+    titulo: 'Lounge Act',
+    artista: 'Nirvana',
+    album: 'Nevermind',
+    src: loungeAc,
+    duracion: 0
+  },
+  // Nirvana
   {
     id: crypto.randomUUID(),
     titulo: 'Some Might Say',
