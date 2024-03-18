@@ -23,7 +23,7 @@ function Reproductor (element) {
       Cargando...
     </div>
     <div class='playbar'>
-      <input type="range" class='playbar_inner' id="progress" min="0" max="100" >
+      <input type="range" class='playbar_inner' id="progress" min="0" max="100" value="0">
       <div class='playbar_left'>
           <span id="time-progress">0:00</span>
       </div>
