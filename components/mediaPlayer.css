@@ -1,0 +1,64 @@
+.media-player-container{
+    /*Flexbox para los item del contenedor*/
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /*Position para el contenedor en la app*/
+    position: fixed;
+    padding: 5px;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 14%;
+    background-color: black;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.media-player-container #media-player-time{
+    display: flex;
+    width: 70%;
+    justify-content: space-between;
+    padding: 5px 0 5px 0;
+}
+
+.media-player-container #media-player-playbar{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.media-player-container #media-player-playbar  #playbar_progress{
+    width: 65%;
+    height: 4px;
+    border-radius: 10px;
+}
+
+/* Estilo del pulgar del control deslizante cuando se pasa el mouse encima */
+.media-player-container #media-player-playbar  #playbar_progress::-webkit-slider-thumb,
+.media-player-container #media-player-playbar  #playbar_progress::-moz-range-thumb {
+  appearance: none;
+  width: 20px;
+  height: 20px;
+  background: transparent;
+  /* Hacemos el pulgar invisible por defecto */
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+}
+.media-player-container #media-player-playbar  #playbar_progress:hover::-webkit-slider-thumb,
+.media-player-container #media-player-playbar  #playbar_progress:hover::-moz-range-thumb {
+  background: #44f5b7;
+}
+
+.media-player-container #media-player-playbar  #playbar_progress::-webkit-slider-runnable-track,
+.media-player-container #media-player-playbar  #playbar_progress::-moz-range-track {
+  background: linear-gradient(
+    to right,
+    #44f5b7 0%,
+    #44f5b7 calc((var(--progress-value) / 100) * 100%),
+    #2c3e38 calc((var(--progress-value) / 100) * 100%),
+    #2c3e38 100%
+  );
+}

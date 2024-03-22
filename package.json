@@ -17,5 +17,8 @@
   },
   "eslintConfig": {
     "extends": "./node_modules/standard/eslintrc.json"
+  },
+  "dependencies": {
+    "colorthief": "^2.4.0"
   }
 }

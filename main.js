@@ -3,146 +3,169 @@
 /* eslint-disable no-undef */
 /* eslint-disable import/no-absolute-path */
 import './style.css'
-import { Playlist, Reproductor } from './Componentes/playlist.js'
-import { datosPlaylist, playlist } from './Componentes/mixPlaylist.js'
-import { ActualizarDuracion, EstablecerPlaylist, EstablecerReproductor } from './Componentes/completePlaylist.js'
+import playlist from './components/playlist.js'
+import audioControl from './components/audioControl.js'
+import fakeRequest from './components/playlist/mixPlaylist.js'
+// import { ActualizarDuracion, EstablecerPlaylist, EstablecerReproductor } from './components/completePlaylist.js'
 
-document.querySelector('#app').innerHTML = `
-  <div id='lctmBrave'>
-    <div id='encabezado'>
-
+async function app () {
+  document.querySelector('#app').innerHTML = `
+    <h1>Cargando<h1>
+  `
+  try {
+    const dataPlaylist = await fakeRequest()
+    document.querySelector('#app').innerHTML = `
+    <div class='pseudo-router'>
     </div>
-    <div id='playlist'>
-
+    <div class='media-player-container'>
     </div>
-    <div id='reproductor'>
-
-    </div>
-  </div>
-`
-
-// PRIMERO CREAMOS EL DOM:
-Playlist(document.querySelector('#playlist'))
-
-Reproductor(document.querySelector('#reproductor')); // <-Forzar semicolon para separar de la IIFE
-
-//
-(async () => {
-  // AUDIO Control
-  let { indice, maxIndice } = {
-    indice: 0,
-    maxIndice: playlist.length
+  `
+    playlist(document.querySelector('.pseudo-router'), { ...dataPlaylist })
+    // audioControl
+    audioControl({ ...dataPlaylist })
+  } catch (error) {
+    console.log(error)
+    document.querySelector('.playlist-main-container').innerHTML = `
+      <h1>Error: ${error.message}</h1>
+    `
   }
-  const audio = new Audio()
-  audio.src = playlist[indice].src
+}
 
-  // const tiempoDelAudio = (idx) => {
-  //   return new Promise((resolve) => {
-  //     const nuevoAudio = new Audio()
-  //     nuevoAudio.src = playlist[idx].src
-  //     nuevoAudio.addEventListener('loadedmetadata', () => {
-  //       resolve(nuevoAudio.duration)
-  //     })
-  //   })
-  // }
-  // playlist.forEach(async (pl, idx) => {
-  //   pl.duracion = await tiempoDelAudio(idx)
-  //   console.log(`${pl.titulo} dura: ${pl.duracion}`)
-  // })
+app()
 
-  // console.log(playlist)
-  // console.log(playlist[0].duracion)
-  // let duracionTotal = 0
+// (async () => {
+//   // AUDIO Control
+//   let { indice, maxIndice } = {
+//     indice: 0,
+//     maxIndice: playlist.length
+//   }
+//   const audio = new Audio()
+//   audio.src = playlist[indice].src
+//   audio.controls = true
+//   console.log(audio)
 
-  // playlist.forEach(pl => {
-  //   duracionTotal = duracionTotal + pl.duracion
-  // })
+//   // const tiempoDelAudio = (idx) => {
+//   //   return new Promise((resolve) => {
+//   //     const nuevoAudio = new Audio()
+//   //     nuevoAudio.src = playlist[idx].src
+//   //     nuevoAudio.addEventListener('loadedmetadata', () => {
+//   //       resolve(nuevoAudio.duration)
+//   //     })
+//   //   })
+//   // }
+//   // playlist.forEach(async (pl, idx) => {
+//   //   pl.duracion = await tiempoDelAudio(idx)
+//   //   console.log(`${pl.titulo} dura: ${pl.duracion}`)
+//   // })
 
-  // datosPlaylist.duracion = duracionTotal
+//   // console.log(playlist)
+//   // console.log(playlist[0].duracion)
+//   // let duracionTotal = 0
 
-  const setIncremento = () => {
-    indice = indice >= maxIndice - 1 ? 0 : ++indice % maxIndice
-    audio.pause()
-    audio.src = playlist[indice].src
-    audio.play()
-    document.querySelector('#progress').value = 0
-    EstablecerReproductor(document.querySelector('#datos-song'), { unaCancion: playlist[indice] })
-  }
+//   // playlist.forEach(pl => {
+//   //   duracionTotal = duracionTotal + pl.duracion
+//   // })
 
-  const setDecremento = () => {
-    indice = indice <= 0 ? maxIndice - 1 : --indice % maxIndice
-    audio.pause()
-    audio.src = playlist[indice].src
-    audio.play()
-    document.querySelector('#progress').value = 0
-    EstablecerReproductor(document.querySelector('#datos-song'), { unaCancion: playlist[indice] })
-  }
+//   // datosPlaylist.duracion = duracionTotal
 
-  const setZero = () => {
-    if (audio.paused) {
-      audio.play()
-      document.querySelector('#play').innerHTML = 'Stop'
-    } else {
-      audio.pause()
-      document.querySelector('#play').innerHTML = 'Play'
-    }
-  }
+//   const setIncremento = () => {
+//     indice = indice >= maxIndice - 1 ? 0 : ++indice % maxIndice
+//     audio.pause()
+//     audio.src = playlist[indice].src
+//     audio.play()
+//     document.querySelector('#progress').value = 0
+//     EstablecerReproductor(document.querySelector('#datos-song'), {
+//       unaCancion: playlist[indice]
+//     })
+//   }
 
-  const setEleccion = ({ cancion }) => {
-    indice = cancion._indice
-    audio.pause()
-    audio.src = cancion.src
-    audio.play()
-    document.querySelector('#progress').value = 0
-    EstablecerReproductor(document.querySelector('#datos-song'), { unaCancion: cancion })
-  }
+//   const setDecremento = () => {
+//     indice = indice <= 0 ? maxIndice - 1 : --indice % maxIndice
+//     audio.pause()
+//     audio.src = playlist[indice].src
+//     audio.play()
+//     document.querySelector('#progress').value = 0
+//     EstablecerReproductor(document.querySelector('#datos-song'), {
+//       unaCancion: playlist[indice]
+//     })
+//   }
 
-  const setProgressTime = ({ unaDuracion }) => {
-    ActualizarDuracion(document.querySelector('#time-progress'), { unaDuracion })
-  }
-  // Rellenar Playlist.
+//   const setZero = () => {
+//     if (audio.paused) {
+//       audio.play()
+//       document.querySelector('#play').innerHTML = 'Stop'
+//     } else {
+//       audio.pause()
+//       document.querySelector('#play').innerHTML = 'Play'
+//     }
+//   }
 
-  EstablecerPlaylist(document.querySelector('.tabla-container'), { playlist, datosPlaylist })
-  EstablecerReproductor(document.querySelector('#datos-song'), { unaCancion: playlist[0] })
+//   const setEleccion = ({ cancion }) => {
+//     indice = cancion._indice
+//     audio.pause()
+//     audio.src = cancion.src
+//     audio.play()
+//     document.querySelector('#progress').value = 0
+//     EstablecerReproductor(document.querySelector('#datos-song'), {
+//       unaCancion: cancion
+//     })
+//   }
 
-  // EVENTOS DE AUDIO CONTROL
+//   const setProgressTime = ({ unaDuracion }) => {
+//     ActualizarDuracion(document.querySelector('#time-progress'), {
+//       unaDuracion
+//     })
+//   }
+//   // Rellenar Playlist.
 
-  document.querySelector('#play').addEventListener('click', () => {
-    setZero()
-  })
+//   EstablecerPlaylist(document.querySelector('.tabla-container'), {
+//     playlist,
+//     datosPlaylist
+//   })
+//   EstablecerReproductor(document.querySelector('#datos-song'), {
+//     unaCancion: playlist[0]
+//   })
 
-  document.querySelector('#prev').addEventListener('click', () => {
-    setDecremento()
-  })
+//   // EVENTOS DE AUDIO CONTROL
 
-  document.querySelector('#next').addEventListener('click', () => {
-    setIncremento()
-  })
+//   document.querySelector('#play').addEventListener('click', () => {
+//     setZero()
+//   })
 
-  document.querySelector('#progress').addEventListener('input', (e) => {
-    const progressTime = audio.duration * (e.target.value / 100)
-    audio.currentTime = progressTime
-    setProgressTime({ unaDuracion: audio.currentTime })
-  })
+//   document.querySelector('#prev').addEventListener('click', () => {
+//     setDecremento()
+//   })
 
-  document.querySelector('table').addEventListener('click', (event) => {
-    if (event.target.tagName === 'TD') {
-      const fila = event.target.parentNode
-      const idCancion = fila.id
-      const cancion = playlist.find((pl) => pl.id === idCancion)
-      cancion._indice = playlist.indexOf(cancion)
-      setEleccion({ cancion })
-    }
-  })
+//   document.querySelector('#next').addEventListener('click', () => {
+//     setIncremento()
+//   })
 
-  audio.addEventListener('timeupdate', () => {
-    const updateProgressBar = (audio.currentTime / audio.duration) * 100
-    document.querySelector('#progress').value = updateProgressBar
-    document.querySelector('#progress').style.setProperty('--progress-value', updateProgressBar)
-    setProgressTime({ unaDuracion: audio.currentTime })
-  })
+//   document.querySelector('#progress').addEventListener('input', (e) => {
+//     const progressTime = audio.duration * (e.target.value / 100)
+//     audio.currentTime = progressTime
+//     setProgressTime({ unaDuracion: audio.currentTime })
+//   })
 
-  audio.addEventListener('ended', () => {
-    setIncremento()
-  })
-})()
+//   document.querySelector('table').addEventListener('click', (event) => {
+//     if (event.target.tagName === 'TD') {
+//       const fila = event.target.parentNode
+//       const idCancion = fila.id
+//       const cancion = playlist.find((pl) => pl.id === idCancion)
+//       cancion._indice = playlist.indexOf(cancion)
+//       setEleccion({ cancion })
+//     }
+//   })
+
+// audio.addEventListener('timeupdate', () => {
+//   const updateProgressBar = (audio.currentTime / audio.duration) * 100
+//   document.querySelector('#progress').value = updateProgressBar
+//   document
+//     .querySelector('#progress')
+//     .style.setProperty('--progress-value', updateProgressBar)
+//   setProgressTime({ unaDuracion: audio.currentTime })
+// })
+
+//   audio.addEventListener('ended', () => {
+//     setIncremento()
+//   })
+// })()
