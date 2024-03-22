@@ -3,7 +3,7 @@
 import mediaPlayer, { actualizarMediaPlayerDataSong, actualizarMediaPlayerTimeProgress, actualizarMediaPlayerTimeSong } from './mediaPlayer.js'
 
 export default function audioControl ({ playlist }) {
-  let { indice, maxIndice, currentPlaylist } = {
+  let { indice, maxIndice, currentPlaylist, random } = {
     indice: 0,
     currentPlaylist: [...playlist],
     maxIndice: playlist.length,
@@ -25,6 +25,7 @@ export default function audioControl ({ playlist }) {
     actualizarMediaPlayerDataSong({ ...currentPlaylist[indice] })
   }
 
+  // Set para el evento Prev
   const setDecremento = () => {
     indice = indice <= 0 ? maxIndice - 1 : --indice % maxIndice
     audio.pause()
@@ -33,6 +34,7 @@ export default function audioControl ({ playlist }) {
     actualizarMediaPlayerDataSong({ ...currentPlaylist[indice] })
   }
 
+  // Set para el evento Play/Puase
   const setZero = () => {
     if (audio.paused) {
       audio.play()
@@ -43,6 +45,7 @@ export default function audioControl ({ playlist }) {
     }
   }
 
+  // Set para el seleccion en Playlist table
   const setEleccion = ({ cancion }) => {
     indice = cancion._indice
     audio.pause()
@@ -52,12 +55,39 @@ export default function audioControl ({ playlist }) {
     actualizarMediaPlayerDataSong({ ...currentPlaylist[indice] })
   }
 
+  // Set para el time Progress + barra de progreso
   const setProgressTime = ({ duracion }) => {
     actualizarMediaPlayerTimeProgress({ duracion })
   }
+
+  // Set para establcer duracion de la cancion
   const setSongTime = ({ duracion }) => {
     actualizarMediaPlayerTimeSong({ duracion })
-  } // Eventos de principales
+  }
+
+  // Setters para random
+  const setRandom = () => {
+    if (!random) {
+      random = true
+
+      const randomPlaylist = [...currentPlaylist].sort(() => Math.random() - 0.5)
+      const indexCurrentAudio = randomPlaylist.indexOf(currentPlaylist[indice])
+      randomPlaylist.splice(indexCurrentAudio, 1)
+      randomPlaylist.splice(0, 0, currentPlaylist[indice])
+      currentPlaylist = randomPlaylist
+      indice = 0
+      actualizarMediaPlayerDataSong({ ...currentPlaylist[indice] })
+      document.querySelector('#random').style.backgroundColor = 'green'
+    } else {
+      random = false
+      const currentAudio = currentPlaylist[indice]
+      currentPlaylist = [...playlist]
+      indice = currentPlaylist.indexOf(currentAudio)
+      document.querySelector('#random').style.backgroundColor = ''
+    }
+  }
+
+  // Eventos de principales
   document.querySelector('#play').addEventListener('click', () => {
     setZero()
   })
@@ -72,6 +102,10 @@ export default function audioControl ({ playlist }) {
 
   document.querySelector('#next').addEventListener('click', () => {
     setIncremento()
+  })
+
+  document.querySelector('#random').addEventListener('click', () => {
+    setRandom()
   })
 
   document.querySelector('#playbar_progress').addEventListener('input', (e) => {

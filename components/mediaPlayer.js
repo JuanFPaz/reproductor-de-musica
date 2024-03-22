@@ -6,7 +6,7 @@ export default function mediaPlayer (element, { titulo, artista }) {
       ${titulo} - ${artista}
     </div>
     <div id='media-player-button'>
-      <button id='random' disabled>Random</button>
+      <button id='random'>Random</button>
       <button id='prev'>Prev</button>
       <button id='play'>Play</button>
       <button id='next'>Next</button>
