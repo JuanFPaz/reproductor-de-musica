@@ -31,6 +31,44 @@ import florurescent from '../../resource/mix-fonky/Arctic-Monkeys-Fluorescent-Ad
 import balacava from '../../resource/mix-fonky/Arctic-Monkeys-Balaclava.mp3'
 import fivezerofive from '../../resource/mix-fonky/Arctic-Monkeys-505.mp3'
 import secret from '../../resource/mix-fonky/Arctic-Monkeys-Secret-Door.mp3'
+import revenga from '../../resource/mix-fonky/SOAD-Revenga.mp3'
+import violentXXX from '../../resource/mix-fonky/SOAD-Violent-Pornography.mp3'
+/* NUEVO 25/3 */
+import coffetv from '../../resource/mix-fonky/Blur-Coffe-&-TV.mp3'
+import girlsboys from '../../resource/mix-fonky/Blur-Girls-&-Boys.mp3'
+import parklife from '../../resource/mix-fonky/Blur-Parklife.mp3'
+
+import les from '../../resource/mix-fonky/Childish-Gambino-Les.mp3'
+import redbone from '../../resource/mix-fonky/Childish-Gambino-Redbone.mp3'
+
+import loseurself from '../../resource/mix-fonky/Daft-Punk-Lose-Yourself-To-Dance.mp3'
+import somethingaboutus from '../../resource/mix-fonky/Daft-Punk-Something-About-Us.mp3'
+
+import heyPixies from '../../resource/mix-fonky/Pixies-Hey.mp3'
+import monkeysgonetoheaven from '../../resource/mix-fonky/Pixies-Monkey-Gone-To-Heaven.mp3'
+import theThing from '../../resource/mix-fonky/Pixies-The-Thing.mp3'
+import waveOfMutilation from '../../resource/mix-fonky/Pixies-Wave-of-Mutilation-UK-Surf.mp3'
+
+import anotheronebite from '../../resource/mix-fonky/Queen-Another-One-Bites-the-Dust.mp3'
+import killerqueen from '../../resource/mix-fonky/Queen-Killer-Queen.mp3'
+
+import amerika from '../../resource/mix-fonky/Rammstein-Amerika.mp3'
+import moskau from '../../resource/mix-fonky/Rammstein-Moskau.mp3'
+
+import beatonthebrat from '../../resource/mix-fonky/Ramones-Beat-on-the-Brat.mp3'
+import blitzkrieg from '../../resource/mix-fonky/Ramones-Blitzkrieg-Bop.mp3'
+import bonzogoes from '../../resource/mix-fonky/Ramones-Bonzo-Goes-To-Bitburg.mp3'
+import heretoday from '../../resource/mix-fonky/Ramones-Here-Today-Gone-Tomorrow.mp3'
+import idontwannagrowup from '../../resource/mix-fonky/Ramones-I-Dont-Wanna-Grow-Up.mp3'
+import iwannabesedated from '../../resource/mix-fonky/Ramones-I-Wanna-Be-Sedated.mp3'
+import judyispunk from '../../resource/mix-fonky/Ramones-Judy-Is-a-Punk.mp3'
+import needlesandpins from '../../resource/mix-fonky/Ramones-Needles-and-pins.mp3'
+import petsematary from '../../resource/mix-fonky/Ramones-Pet-Sematary.mp3'
+import psychoTherapy from '../../resource/mix-fonky/Ramones-Psycho-Therapy.mp3'
+import substitute from '../../resource/mix-fonky/Ramones-Substitute.mp3'
+import kkktookmybaby from '../../resource/mix-fonky/Ramones-The-KKK-Took-My-Baby-Away.mp3'
+import tooToughToDie from '../../resource/mix-fonky/Ramones-Too-Tough-to-Die.mp3'
+
 import luxa from '../../resource/mix-fonky/luxita-pic.jpg'
 
 const dataPlaylist = {
@@ -43,6 +81,7 @@ const dataPlaylist = {
     duracion: 0
   },
   playlist: [
+    /* ACDC */
     {
       id: crypto.randomUUID(),
       titulo: 'Dirty Deeds Done Dirt Cheap',
@@ -67,6 +106,8 @@ const dataPlaylist = {
       src: ifyouwanna,
       duracion: 0
     },
+    /* ACDC */
+    /** almendra */
     {
       id: crypto.randomUUID(),
       titulo: 'A estos Hombres Tristes',
@@ -83,6 +124,7 @@ const dataPlaylist = {
       src: temaPototo,
       duracion: 0
     },
+    /* Artic */
     {
       id: crypto.randomUUID(),
       titulo: 'Brianstorm',
@@ -95,7 +137,7 @@ const dataPlaylist = {
       id: crypto.randomUUID(),
       titulo: 'Balaclava',
       artista: 'Arctic Monkey',
-      album: 'Piano Bar',
+      album: '',
       src: balacava,
       duracion: 0
     },
@@ -123,7 +165,8 @@ const dataPlaylist = {
       src: secret,
       duracion: 0
     },
-
+    /* Artic */
+    /* Charly */
     {
       id: crypto.randomUUID(),
       titulo: 'Promesas Sobre El Bidet',
@@ -132,6 +175,8 @@ const dataPlaylist = {
       src: promesas,
       duracion: 0
     },
+    /* Charly */
+    /* Bowie */
     {
       id: crypto.randomUUID(),
       titulo: 'Moonage Daydream',
@@ -165,6 +210,7 @@ const dataPlaylist = {
       src: chinaGirl,
       duracion: 0
     },
+    /* Bowie */
     // Metallica
     {
       id: crypto.randomUUID(),
@@ -201,6 +247,7 @@ const dataPlaylist = {
       duracion: 0
     },
     // Nirvana
+    /* Oasis */
     {
       id: crypto.randomUUID(),
       titulo: 'Some Might Say',
@@ -209,6 +256,26 @@ const dataPlaylist = {
       src: someMight,
       duracion: 0
     },
+    /* Oasis */
+    /* SOAD */
+    {
+      id: crypto.randomUUID(),
+      titulo: 'Revenga',
+      artista: 'System of a down',
+      album: 'Mezmerize',
+      src: revenga,
+      duracion: 0
+    },
+    {
+      id: crypto.randomUUID(),
+      titulo: 'Violent Pornography',
+      artista: 'System of a down',
+      album: 'Mezmerize',
+      src: violentXXX,
+      duracion: 0
+    },
+    /* SOAD */
+    /* Sumo */
     {
       id: crypto.randomUUID(),
       titulo: 'Beautiful Losers',
@@ -249,6 +316,8 @@ const dataPlaylist = {
       src: regtest,
       duracion: 0
     },
+    /* Sumo */
+    /* Offspting */
     {
       id: crypto.randomUUID(),
       titulo: 'Have you ever',
@@ -281,6 +350,7 @@ const dataPlaylist = {
       src: payTheMan,
       duracion: 0
     },
+    /* The Smiths */
     {
       id: crypto.randomUUID(),
       titulo: 'This Charming Man',
@@ -305,6 +375,7 @@ const dataPlaylist = {
       src: iStarted,
       duracion: 0
     }
+    /* The Smiths */
   ]
 }
 

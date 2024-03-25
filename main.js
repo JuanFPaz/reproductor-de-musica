@@ -4,8 +4,9 @@
 /* eslint-disable import/no-absolute-path */
 import './style.css'
 import playlist from './components/playlist.js'
-import audioControl from './components/audioControl.js'
 import fakeRequest from './components/playlist/mixPlaylist.js'
+import audioControl from './components/audioControl.js'
+// import fakeRequest from './components/playlist/mixPlaylist.js'
 // import { ActualizarDuracion, EstablecerPlaylist, EstablecerReproductor } from './components/completePlaylist.js'
 
 async function app () {
@@ -21,7 +22,6 @@ async function app () {
     </div>
   `
     playlist(document.querySelector('.pseudo-router'), { ...dataPlaylist })
-    // audioControl
     audioControl({ ...dataPlaylist })
   } catch (error) {
     console.log(error)

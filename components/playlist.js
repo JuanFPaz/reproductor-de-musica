@@ -20,7 +20,7 @@ function headerPlaylist ({ nombrePlaylist, playlistPic, userPic, userName, lanza
   document.querySelector('#playlist-header').innerHTML = `
         <div id='playlist-header-column-one'>
             <div class='img-container'>
-                <img src=${playlistPic} crossorigin='annonymus' />
+                <img src=${userPic} />
             </div>
         </div>
         <div id='playlist-header-column-two'>
