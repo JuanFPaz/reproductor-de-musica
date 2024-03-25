@@ -12,11 +12,11 @@ export default function playlist (element, { playlist, infoPlaylist }) {
             </div>
         </div>
     `
-  headerPlaylist({ ...infoPlaylist })
+  headerPlaylist({ ...infoPlaylist, playlist })
   bodyPlaylist({ playlist })
 }
 
-function headerPlaylist ({ nombrePlaylist, playlistPic, userPic, userName, lanzamiento, duracion }) {
+function headerPlaylist ({ nombrePlaylist, playlistPic, userPic, userName, lanzamiento, duracion, playlist }) {
   document.querySelector('#playlist-header').innerHTML = `
         <div id='playlist-header-column-one'>
             <div class='img-container'>
@@ -29,7 +29,7 @@ function headerPlaylist ({ nombrePlaylist, playlistPic, userPic, userName, lanza
                 <li>Creada por: ${userName} </li>
                 <li>Fecha de creacion: ${lanzamiento}</li>
                 <li>Duracion: ${duracion}</li>
-                <li>Canciones: Las que quieras compa :)</li>
+                <li>Canciones: ${playlist.length}</li>
             </ul>
         </div>
 

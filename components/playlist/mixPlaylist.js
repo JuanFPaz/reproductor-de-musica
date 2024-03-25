@@ -34,7 +34,7 @@ import secret from '../../resource/mix-fonky/Arctic-Monkeys-Secret-Door.mp3'
 import revenga from '../../resource/mix-fonky/SOAD-Revenga.mp3'
 import violentXXX from '../../resource/mix-fonky/SOAD-Violent-Pornography.mp3'
 /* NUEVO 25/3 */
-import coffetv from '../../resource/mix-fonky/Blur-Coffe-&-TV.mp3'
+import coffetv from '../../resource/mix-fonky/Blur-Coffee-&-TV.mp3'
 import girlsboys from '../../resource/mix-fonky/Blur-Girls-&-Boys.mp3'
 import parklife from '../../resource/mix-fonky/Blur-Parklife.mp3'
 
@@ -166,6 +166,32 @@ const dataPlaylist = {
       duracion: 0
     },
     /* Artic */
+    /* Blur */
+    {
+      id: crypto.randomUUID(),
+      titulo: 'Coffee & TV',
+      artista: 'Blur',
+      album: '',
+      src: coffetv,
+      duracion: 0
+    },
+    {
+      id: crypto.randomUUID(),
+      titulo: 'Girls & Boys',
+      artista: 'Blur',
+      album: '',
+      src: girlsboys,
+      duracion: 0
+    },
+    {
+      id: crypto.randomUUID(),
+      titulo: 'Parklife',
+      artista: 'Blur',
+      album: '',
+      src: parklife,
+      duracion: 0
+    },
+    /* Blur */
     /* Charly */
     {
       id: crypto.randomUUID(),
@@ -176,6 +202,42 @@ const dataPlaylist = {
       duracion: 0
     },
     /* Charly */
+    /* childish */
+    {
+      id: crypto.randomUUID(),
+      titulo: 'Les',
+      artista: 'Childish Gambino',
+      album: '',
+      src: les,
+      duracion: 0
+    },
+    {
+      id: crypto.randomUUID(),
+      titulo: 'Redbone',
+      artista: 'Childish Gambino',
+      album: '',
+      src: redbone,
+      duracion: 0
+    },
+    /* childish */
+    /* daft */
+    {
+      id: crypto.randomUUID(),
+      titulo: 'Lose Yourself To Dance',
+      artista: 'Daft Punk',
+      album: '',
+      src: loseurself,
+      duracion: 0
+    },
+    {
+      id: crypto.randomUUID(),
+      titulo: 'Something About Us',
+      artista: 'Daft Punk',
+      album: '',
+      src: somethingaboutus,
+      duracion: 0
+    },
+    /* daft */
     /* Bowie */
     {
       id: crypto.randomUUID(),
@@ -257,6 +319,182 @@ const dataPlaylist = {
       duracion: 0
     },
     /* Oasis */
+    /* Pixies */
+    {
+      id: crypto.randomUUID(),
+      titulo: 'Hey',
+      artista: 'Pixies',
+      album: '',
+      src: heyPixies,
+      duracion: 0
+    },
+    {
+      id: crypto.randomUUID(),
+      titulo: 'Monkey Gone To Heaven',
+      artista: 'Pixies',
+      album: '',
+      src: monkeysgonetoheaven,
+      duracion: 0
+    },
+    {
+      id: crypto.randomUUID(),
+      titulo: 'The Thing',
+      artista: 'Pixies',
+      album: '',
+      src: theThing,
+      duracion: 0
+    },
+    {
+      id: crypto.randomUUID(),
+      titulo: 'Wave of Mutilation (UK Surf)',
+      artista: 'Pixies',
+      album: '',
+      src: waveOfMutilation,
+      duracion: 0
+    },
+    /* Pixies */
+    /* Queen */
+    {
+      id: crypto.randomUUID(),
+      titulo: 'Another One Bites the Dust',
+      artista: 'Queen',
+      album: '',
+      src: anotheronebite,
+      duracion: 0
+    },
+    {
+      id: crypto.randomUUID(),
+      titulo: 'Killer Queen',
+      artista: 'Queen',
+      album: '',
+      src: killerqueen,
+      duracion: 0
+    },
+    /* Queen */
+    /* Rammstein */
+    {
+      id: crypto.randomUUID(),
+      titulo: 'Amerika',
+      artista: 'Rammstein',
+      album: '',
+      src: amerika,
+      duracion: 0
+    },
+    {
+      id: crypto.randomUUID(),
+      titulo: 'Moskau',
+      artista: 'Rammstein',
+      album: '',
+      src: moskau,
+      duracion: 0
+    },
+    /* Rammstein */
+    /* Ramones */
+    {
+      id: crypto.randomUUID(),
+      titulo: 'Beat on the Brat',
+      artista: 'Ramones',
+      album: '',
+      src: beatonthebrat,
+      duracion: 0
+    },
+    {
+      id: crypto.randomUUID(),
+      titulo: 'Blitzkrieg Bop',
+      artista: 'Ramones',
+      album: '',
+      src: blitzkrieg,
+      duracion: 0
+    },
+    {
+      id: crypto.randomUUID(),
+      titulo: 'Bonzo Goes To Bitburg',
+      artista: 'Ramones',
+      album: '',
+      src: bonzogoes,
+      duracion: 0
+    },
+    {
+      id: crypto.randomUUID(),
+      titulo: 'Here Today, Gone Tomorrow',
+      artista: 'Ramones',
+      album: '',
+      src: heretoday,
+      duracion: 0
+    },
+    {
+      id: crypto.randomUUID(),
+      titulo: 'I Don\'t Wanna Grow Up',
+      artista: 'Ramones',
+      album: '',
+      src: idontwannagrowup,
+      duracion: 0
+    },
+    {
+      id: crypto.randomUUID(),
+      titulo: 'I Wanna Be Sedated',
+      artista: 'Ramones',
+      album: '',
+      src: iwannabesedated,
+      duracion: 0
+    },
+    {
+      id: crypto.randomUUID(),
+      titulo: 'Judy Is a Punk',
+      artista: 'Ramones',
+      album: '',
+      src: judyispunk,
+      duracion: 0
+    },
+    {
+      id: crypto.randomUUID(),
+      titulo: 'Needles and Pins',
+      artista: 'Ramones',
+      album: '',
+      src: needlesandpins,
+      duracion: 0
+    },
+    {
+      id: crypto.randomUUID(),
+      titulo: 'Pet Sematary',
+      artista: 'Ramones',
+      album: '',
+      src: petsematary,
+      duracion: 0
+    },
+    {
+      id: crypto.randomUUID(),
+      titulo: 'Psycho Therapy',
+      artista: 'Ramones',
+      album: '',
+      src: psychoTherapy,
+      duracion: 0
+    },
+    {
+      id: crypto.randomUUID(),
+      titulo: 'Substitute',
+      artista: 'Ramones',
+      album: '',
+      src: substitute,
+      duracion: 0
+    },
+    {
+      id: crypto.randomUUID(),
+      titulo: 'The KKK Took My Baby Away',
+      artista: 'Ramones',
+      album: '',
+      src: kkktookmybaby,
+      duracion: 0
+    },
+    {
+      id: crypto.randomUUID(),
+      titulo: 'Too Tough to Die',
+      artista: 'Ramones',
+      album: '',
+      src: tooToughToDie,
+      duracion: 0
+    },
+    /* Ramones */
     /* SOAD */
     {
       id: crypto.randomUUID(),
