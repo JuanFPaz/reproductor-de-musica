@@ -16,7 +16,15 @@ export default function playlist (element, { playlist, infoPlaylist }) {
   bodyPlaylist({ playlist })
 }
 
-function headerPlaylist ({ nombrePlaylist, playlistPic, userPic, userName, lanzamiento, duracion, playlist }) {
+function headerPlaylist ({
+  nombrePlaylist,
+  playlistPic,
+  userPic,
+  userName,
+  lanzamiento,
+  duracion,
+  playlist
+}) {
   document.querySelector('#playlist-header').innerHTML = `
         <div id='playlist-header-column-one'>
             <div class='img-container'>
@@ -52,8 +60,9 @@ function bodyPlaylist ({ playlist }) {
                     <th>Duracion</th>
                 </thead>
                 <tbody>
-                    ${playlist.map((pl, idx) => {
-                      return `
+                    ${playlist
+                      .map((pl, idx) => {
+                        return `
                       <tr id=${pl.id}>
                           <td id=${pl.id}>${idx + 1}</td>
                           <td class='td-info-song' id=${pl.id}>
@@ -62,7 +71,8 @@ function bodyPlaylist ({ playlist }) {
                           <td>0:00</td>
                       </tr>
                       `
-                    }).join('')}
+                      })
+                      .join('')}
                 </tbody>
             </table>
         </div>
@@ -73,7 +83,6 @@ function tdInfo ({ titulo, artista, album }) {
   return `
         <div class='info-song-container'>
             <div class='info-song-albumPic'>
-                <img>
             </div>
             <div class='info-song-dataSong'>
                 <span>${titulo} - ${album}</span>

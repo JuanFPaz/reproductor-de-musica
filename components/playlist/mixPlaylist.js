@@ -37,24 +37,18 @@ import violentXXX from '../../resource/mix-fonky/SOAD-Violent-Pornography.mp3'
 import coffetv from '../../resource/mix-fonky/Blur-Coffee-&-TV.mp3'
 import girlsboys from '../../resource/mix-fonky/Blur-Girls-&-Boys.mp3'
 import parklife from '../../resource/mix-fonky/Blur-Parklife.mp3'
-
 import les from '../../resource/mix-fonky/Childish-Gambino-Les.mp3'
 import redbone from '../../resource/mix-fonky/Childish-Gambino-Redbone.mp3'
-
 import loseurself from '../../resource/mix-fonky/Daft-Punk-Lose-Yourself-To-Dance.mp3'
 import somethingaboutus from '../../resource/mix-fonky/Daft-Punk-Something-About-Us.mp3'
-
 import heyPixies from '../../resource/mix-fonky/Pixies-Hey.mp3'
 import monkeysgonetoheaven from '../../resource/mix-fonky/Pixies-Monkey-Gone-To-Heaven.mp3'
 import theThing from '../../resource/mix-fonky/Pixies-The-Thing.mp3'
 import waveOfMutilation from '../../resource/mix-fonky/Pixies-Wave-of-Mutilation-UK-Surf.mp3'
-
 import anotheronebite from '../../resource/mix-fonky/Queen-Another-One-Bites-the-Dust.mp3'
 import killerqueen from '../../resource/mix-fonky/Queen-Killer-Queen.mp3'
-
 import amerika from '../../resource/mix-fonky/Rammstein-Amerika.mp3'
 import moskau from '../../resource/mix-fonky/Rammstein-Moskau.mp3'
-
 import beatonthebrat from '../../resource/mix-fonky/Ramones-Beat-on-the-Brat.mp3'
 import blitzkrieg from '../../resource/mix-fonky/Ramones-Blitzkrieg-Bop.mp3'
 import bonzogoes from '../../resource/mix-fonky/Ramones-Bonzo-Goes-To-Bitburg.mp3'
@@ -68,7 +62,8 @@ import psychoTherapy from '../../resource/mix-fonky/Ramones-Psycho-Therapy.mp3'
 import substitute from '../../resource/mix-fonky/Ramones-Substitute.mp3'
 import kkktookmybaby from '../../resource/mix-fonky/Ramones-The-KKK-Took-My-Baby-Away.mp3'
 import tooToughToDie from '../../resource/mix-fonky/Ramones-Too-Tough-to-Die.mp3'
-
+/* 26/3 */
+import joeyDontworry from '../../resource/mix-fonky/Joey-Ramone-Dont-Worry-About-Me.mp3'
 import luxa from '../../resource/mix-fonky/luxita-pic.jpg'
 
 const dataPlaylist = {
@@ -273,6 +268,16 @@ const dataPlaylist = {
       duracion: 0
     },
     /* Bowie */
+    /* Joey papacito <3 */
+    {
+      id: crypto.randomUUID(),
+      titulo: 'Dont worry about me',
+      artista: 'Joey Ramone',
+      album: '',
+      src: joeyDontworry,
+      duracion: 0
+    },
+    /* Joey papacito <3 */
     // Metallica
     {
       id: crypto.randomUUID(),
