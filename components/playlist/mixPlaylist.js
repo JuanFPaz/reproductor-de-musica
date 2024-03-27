@@ -66,6 +66,9 @@ import tooToughToDie from '../../resource/mix-fonky/Ramones-Too-Tough-to-Die.mp3
 /* 26/3 */
 import joeyDontworry from '../../resource/mix-fonky/Joey-Ramone-Dont-Worry-About-Me.mp3'
 import luxa from '../../resource/mix-fonky/luxita-pic.jpg'
+/* 27/3 */
+import dustToDust from '../../resource/mix-fonky/Misfits-Dust-to-Dust.mp3'
+
 import getAllDuration from '../helper/getAllDuration'
 
 const dataPlaylist = {
@@ -290,6 +293,16 @@ const dataPlaylist = {
       duracion: 0
     },
     // Metallica
+    /* Misfits */
+    {
+      id: crypto.randomUUID(),
+      titulo: 'Dust to Dust',
+      artista: 'Misfits',
+      album: '',
+      src: dustToDust,
+      duracion: 0
+    },
+    /* Misfits */
     // Nirvana
     {
       id: crypto.randomUUID(),
