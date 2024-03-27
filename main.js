@@ -6,8 +6,6 @@ import './style.css'
 import playlist from './components/playlist.js'
 import fakeRequest from './components/playlist/mixPlaylist.js'
 import audioControl from './components/audioControl.js'
-// import fakeRequest from './components/playlist/mixPlaylist.js'
-// import { ActualizarDuracion, EstablecerPlaylist, EstablecerReproductor } from './components/completePlaylist.js'
 
 async function app () {
   document.querySelector('#app').innerHTML = `
@@ -21,7 +19,8 @@ async function app () {
     <div class='media-player-container'>
     </div>
   `
-    playlist(document.querySelector('.pseudo-router'), { ...dataPlaylist })
+    /* Crear un helper, que recorre la playlist, rellene la duracion de cada cancion. */
+    playlist({ routerProvider: '.pseudo-router', ...dataPlaylist })
     audioControl({ ...dataPlaylist })
   } catch (error) {
     console.log(error)

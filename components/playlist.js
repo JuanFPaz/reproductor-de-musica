@@ -3,8 +3,8 @@ import ColorThief from '../node_modules/colorthief/dist/color-thief.mjs'
 
 const colorThief = new ColorThief()
 
-export default function playlist (element, { playlist, infoPlaylist }) {
-  element.innerHTML = `
+export default function playlist ({ routerProvider, playlist, infoPlaylist }) {
+  document.querySelector(routerProvider).innerHTML = `
         <div id='playlist-main-container'>
             <div id='playlist-header'>
             </div>
@@ -36,7 +36,7 @@ function headerPlaylist ({
             <ul>
                 <li>Creada por: ${userName} </li>
                 <li>Fecha de creacion: ${lanzamiento}</li>
-                <li>Duracion: ${duracion}</li>
+                <li>Duracion: ${Math.floor(duracion / 60).toString()} : ${Math.floor(duracion % 60).toString().padStart(2, '0')}</li>
                 <li>Canciones: ${playlist.length}</li>
             </ul>
         </div>
@@ -68,7 +68,7 @@ function bodyPlaylist ({ playlist }) {
                           <td class='td-info-song' id=${pl.id}>
                               ${tdInfo(pl)}
                           </td>
-                          <td>0:00</td>
+                          <td> ${Math.floor(pl.duracion / 60).toString()} : ${Math.floor(pl.duracion % 60).toString().padStart(2, '0')}</td>
                       </tr>
                       `
                       })

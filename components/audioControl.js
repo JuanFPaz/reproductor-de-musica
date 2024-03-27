@@ -50,9 +50,10 @@ export default function audioControl ({ playlist }) {
     indice = cancion._indice
     audio.pause()
     audio.src = cancion.src
-    audio.play()
     document.querySelector('#playbar_progress').value = 0
     actualizarMediaPlayerDataSong({ ...currentPlaylist[indice] })
+    setZero()
+    console.log(currentPlaylist)
   }
 
   // Set para el time Progress + barra de progreso
@@ -87,6 +88,17 @@ export default function audioControl ({ playlist }) {
     }
   }
 
+  const setRandomEleccion = ({ cancion }) => {
+    const randomPlaylist = [...currentPlaylist].sort(() => Math.random() - 0.5)
+    const indexCurrentAudio = randomPlaylist.indexOf(currentPlaylist[cancion._indice])
+    randomPlaylist.splice(indexCurrentAudio, 1)
+    randomPlaylist.splice(0, 0, currentPlaylist[cancion._indice])
+    currentPlaylist = randomPlaylist
+    indice = 0
+    actualizarMediaPlayerDataSong({ ...currentPlaylist[indice] })
+    console.log(currentPlaylist)
+  }
+
   // Eventos de principales
   document.querySelector('#play').addEventListener('click', () => {
     setZero()
@@ -114,13 +126,16 @@ export default function audioControl ({ playlist }) {
     setProgressTime({ duracion: audio.currentTime })
   })
 
-  /* Este evento podria estar en un handle en un futuro */
   document.querySelector('table').addEventListener('click', (event) => {
     const fila = event.target.closest('tr')
     const idCancion = fila.id
     const cancion = currentPlaylist.find((pl) => pl.id === idCancion)
     cancion._indice = currentPlaylist.indexOf(cancion)
-    setEleccion({ cancion })
+    if (!random) {
+      setEleccion({ cancion })
+    } else {
+      setRandomEleccion({ cancion })
+    }
   })
 
   audio.addEventListener('timeupdate', () => {
@@ -131,7 +146,7 @@ export default function audioControl ({ playlist }) {
   })
 
   audio.addEventListener('loadedmetadata', () => {
-    setSongTime({ duracion: audio.duration })
+    setSongTime({ duracion: currentPlaylist[indice].duracion })
   })
 
   audio.addEventListener('ended', () => {

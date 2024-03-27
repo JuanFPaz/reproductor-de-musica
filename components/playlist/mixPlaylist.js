@@ -1,3 +1,4 @@
+/* eslint-disable no-undef */
 /* eslint-disable promise/param-names */
 import dirtyDeeds from '../../resource/mix-fonky/ACDC-Dirty-Deeds-Done-Dirt-Cheap.mp3'
 import highway from '../../resource/mix-fonky/ACDC-Highway-to-Hell .mp3'
@@ -65,6 +66,7 @@ import tooToughToDie from '../../resource/mix-fonky/Ramones-Too-Tough-to-Die.mp3
 /* 26/3 */
 import joeyDontworry from '../../resource/mix-fonky/Joey-Ramone-Dont-Worry-About-Me.mp3'
 import luxa from '../../resource/mix-fonky/luxita-pic.jpg'
+import getAllDuration from '../helper/getAllDuration'
 
 const dataPlaylist = {
   infoPlaylist: {
@@ -621,11 +623,18 @@ const dataPlaylist = {
     /* The Smiths */
   ]
 }
+//* *Es un quilombo, pero anda. Se cuestionaran los metodos, pero no los resultado */
+export default async function fakeRequest () {
+  try {
+    const datosLocales = localStorage.getItem('playlistCurrent')
+    if (!datosLocales) {
+      throw new Error('No se encontraron datos en el localStorage, intentando denuevo.')
+    }
 
-export default function fakeRequest () {
-  return new Promise((res, rej) => {
-    setTimeout(() => {
-      res(dataPlaylist)
-    }, 5)
-  })
+    return JSON.parse(datosLocales)
+  } catch {
+    const miau = await getAllDuration({ ...dataPlaylist })
+    localStorage.setItem('playlistCurrent', JSON.stringify(miau))
+    return fakeRequest()
+  }
 }
