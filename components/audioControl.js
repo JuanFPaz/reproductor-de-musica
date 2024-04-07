@@ -50,7 +50,6 @@ export default function audioControl ({ playlist }) {
     indice = cancion._indice
     audio.pause()
     audio.src = cancion.src
-    document.querySelector('#playbar_progress').value = 0
     actualizarMediaPlayerDataSong({ ...currentPlaylist[indice] })
     setZero()
     console.log(currentPlaylist)
@@ -88,6 +87,7 @@ export default function audioControl ({ playlist }) {
     }
   }
 
+  // Solucion del setRandomEleccion: No le indique nunca al audio.src cual debe ser su nuevo source.-
   const setRandomEleccion = ({ cancion }) => {
     const randomPlaylist = [...currentPlaylist].sort(() => Math.random() - 0.5)
     const indexCurrentAudio = randomPlaylist.indexOf(currentPlaylist[cancion._indice])
@@ -95,7 +95,10 @@ export default function audioControl ({ playlist }) {
     randomPlaylist.splice(0, 0, currentPlaylist[cancion._indice])
     currentPlaylist = randomPlaylist
     indice = 0
+    audio.pause()
+    audio.src = cancion.src
     actualizarMediaPlayerDataSong({ ...currentPlaylist[indice] })
+    setZero()
     console.log(currentPlaylist)
   }
 
