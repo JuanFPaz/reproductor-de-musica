@@ -688,7 +688,8 @@ const dataPlaylist = {
 //* *Es un quilombo, pero anda. Se cuestionaran los metodos, pero no los resultado */
 export default async function fakeRequest () {
   try {
-    const datosLocales = localStorage.getItem('playlistCurrent')
+    /* TODO: si agregas nuevas canciones, no salen por el jodido localStorage xd */
+    const datosLocales = localStorage.getItem('nuevaPlaylistCurrent')
     if (!datosLocales) {
       throw new Error('No se encontraron datos en el localStorage, intentando denuevo.')
     }
@@ -696,7 +697,7 @@ export default async function fakeRequest () {
     return JSON.parse(datosLocales)
   } catch {
     const miau = await getAllDuration({ ...dataPlaylist })
-    localStorage.setItem('playlistCurrent', JSON.stringify(miau))
+    localStorage.setItem('nuevaPlaylistCurrent', JSON.stringify(miau))
     return fakeRequest()
   }
 }
