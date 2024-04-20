@@ -68,6 +68,12 @@ import joeyDontworry from '../../resource/mix-fonky/Joey-Ramone-Dont-Worry-About
 import luxa from '../../resource/mix-fonky/luxita-pic.jpg'
 /* 27/3 */
 import dustToDust from '../../resource/mix-fonky/Misfits-Dust-to-Dust.mp3'
+/* 20/4 */
+import delectrico from '../../resource/mix-fonky/Babasonicos-Delectrico.mp3'
+import fizz from '../../resource/mix-fonky/Babasonicos-Fizz.mp3'
+import losHornys from '../../resource/mix-fonky/Babasonicos-Los-Calientes.mp3'
+import indios from '../../resource/mix-fonky/Legião-Urbana-Indios.mp3'
+import tempoPerdido from '../../resource/mix-fonky/Legião-Urbana-Tempo-Perdido.mp3'
 
 import getAllDuration from '../helper/getAllDuration'
 
@@ -166,6 +172,32 @@ const dataPlaylist = {
       duracion: 0
     },
     /* Artic */
+    /* Babasonicos */
+    {
+      id: crypto.randomUUID(),
+      titulo: 'Los Calientes',
+      artista: 'Babasonicos',
+      album: 'Jessico',
+      src: losHornys,
+      duracion: 0
+    },
+    {
+      id: crypto.randomUUID(),
+      titulo: 'Fizz',
+      artista: 'Babasonicos',
+      album: 'Jessico',
+      src: fizz,
+      duracion: 0
+    },
+    {
+      id: crypto.randomUUID(),
+      titulo: 'Delectrico',
+      artista: 'Babasonicos',
+      album: 'Jessico',
+      src: delectrico,
+      duracion: 0
+    },
+    /* Babasonicos */
     /* Blur */
     {
       id: crypto.randomUUID(),
@@ -255,7 +287,6 @@ const dataPlaylist = {
       src: modernLove,
       duracion: 0
     },
-
     {
       id: crypto.randomUUID(),
       titulo: 'Lets Dance',
@@ -283,6 +314,24 @@ const dataPlaylist = {
       duracion: 0
     },
     /* Joey papacito <3 */
+    /* Legiao urbana */
+    {
+      id: crypto.randomUUID(),
+      titulo: 'Indios',
+      artista: 'Legião Urbana',
+      album: '',
+      src: indios,
+      duracion: 0
+    },
+    {
+      id: crypto.randomUUID(),
+      titulo: 'Tempo Perdido',
+      artista: 'Legião Urbana',
+      album: '',
+      src: tempoPerdido,
+      duracion: 0
+    },
+    /* Legiao urbana */
     // Metallica
     {
       id: crypto.randomUUID(),
