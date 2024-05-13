@@ -77,7 +77,7 @@ export default function audioControl ({ playlist }) {
       currentPlaylist = randomPlaylist
       indice = 0
       actualizarMediaPlayerDataSong({ ...currentPlaylist[indice] })
-      document.querySelector('#random').style.backgroundColor = 'green'
+      document.querySelector('#random').style.backgroundColor = 'blue'
     } else {
       random = false
       const currentAudio = currentPlaylist[indice]

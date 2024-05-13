@@ -16,15 +16,7 @@ export default function playlist ({ routerProvider, playlist, infoPlaylist }) {
   bodyPlaylist({ playlist })
 }
 
-function headerPlaylist ({
-  nombrePlaylist,
-  playlistPic,
-  userPic,
-  userName,
-  lanzamiento,
-  duracion,
-  playlist
-}) {
+function headerPlaylist ({ nombrePlaylist, playlistPic, userPic, userName, lanzamiento, duracion, playlist }) {
   document.querySelector('#playlist-header').innerHTML = `
         <div id='playlist-header-column-one'>
             <div class='img-container'>
