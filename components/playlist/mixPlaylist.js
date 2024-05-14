@@ -1,79 +1,157 @@
+/* eslint-disable import/no-absolute-path */
 /* eslint-disable no-undef */
 /* eslint-disable promise/param-names */
-import dirtyDeeds from '../../resource/mix-fonky/ACDC-Dirty-Deeds-Done-Dirt-Cheap.mp3'
-import highway from '../../resource/mix-fonky/ACDC-Highway-to-Hell .mp3'
-import ifyouwanna from '../../resource/mix-fonky/ACDC-Its-a-Long-Way-to-the-Top.mp3'
-import drainu from '../../resource/mix-fonky/Nirvana-Drain-You.mp3'
-import inBloom from '../../resource/mix-fonky/Nirvana-In-Bloom.mp3'
-import loungeAc from '../../resource/mix-fonky/Nirvana-Lounge-Act.mp3'
-import orion from '../../resource/mix-fonky/Metallica-Orion.mp3'
-import charming from '../../resource/mix-fonky/The-Smiths-This-Charming-Man.mp3'
-import lastNight from '../../resource/mix-fonky/The-Smiths-Last-Night-I-Dreamt-That-Somebody-Loved-Me.mp3'
-import iStarted from '../../resource/mix-fonky/The-Smiths-I-Started-Something-I-Couldnt-Finish.mp3'
-import haveyouever from '../../resource/Americana/02-Have-You-Ever.mp3'
-import prettyFly from '../../resource/Americana/04-Prety-Fly.mp3'
-import feelings from '../../resource/Americana/06-Feelings.mp3'
-import payTheMan from '../../resource/Americana/13-Pay-The-Man.mp3'
-import someMight from '../../resource/mix-fonky/Oasis-Some-Might-Say.mp3'
-import crua from '../../resource/mix-fonky/Sumo-Crua-Chan.mp3'
-import beautiful from '../../resource/mix-fonky/Sumo-Beautiful-Losers.mp3'
-import heroina from '../../resource/mix-fonky/Sumo-Heroina.mp3'
-import holaFrank from '../../resource/mix-fonky/Sumo-Hola-Frank.mp3'
-import regtest from '../../resource/mix-fonky/Sumo-Regtest.mp3'
-import estosHombres from '../../resource/mix-fonky/Almendra-A-Estos-Hombres-Tristes.mp3'
-import temaPototo from '../../resource/mix-fonky/Almendra-Tema-De-Pototo.mp3'
-import promesas from '../../resource/mix-fonky/Charly-Garcia-Promesas-Sobre-El-Bidet.mp3'
-import moonage from '../../resource/mix-fonky/David-Bowie-Moonage-Daydream.mp3'
-import letsDance from '../../resource/mix-fonky/David-Bowie-Lets-Dance.mp3'
-import modernLove from '../../resource/mix-fonky/David-Bowie-Modern-Love.mp3'
-import chinaGirl from '../../resource/mix-fonky/David-Bowie-China-Girl.mp3'
-import brianStorm from '../../resource/mix-fonky/Arctic-Monkeys-Brianstorm.mp3'
-import florurescent from '../../resource/mix-fonky/Arctic-Monkeys-Fluorescent-Adolescent.mp3'
-import balacava from '../../resource/mix-fonky/Arctic-Monkeys-Balaclava.mp3'
-import fivezerofive from '../../resource/mix-fonky/Arctic-Monkeys-505.mp3'
-import secret from '../../resource/mix-fonky/Arctic-Monkeys-Secret-Door.mp3'
-import revenga from '../../resource/mix-fonky/SOAD-Revenga.mp3'
-import violentXXX from '../../resource/mix-fonky/SOAD-Violent-Pornography.mp3'
-/* NUEVO 25/3 */
-import coffetv from '../../resource/mix-fonky/Blur-Coffee-&-TV.mp3'
-import girlsboys from '../../resource/mix-fonky/Blur-Girls-&-Boys.mp3'
-import parklife from '../../resource/mix-fonky/Blur-Parklife.mp3'
-import les from '../../resource/mix-fonky/Childish-Gambino-Les.mp3'
-import redbone from '../../resource/mix-fonky/Childish-Gambino-Redbone.mp3'
-import loseurself from '../../resource/mix-fonky/Daft-Punk-Lose-Yourself-To-Dance.mp3'
-import somethingaboutus from '../../resource/mix-fonky/Daft-Punk-Something-About-Us.mp3'
-import heyPixies from '../../resource/mix-fonky/Pixies-Hey.mp3'
-import monkeysgonetoheaven from '../../resource/mix-fonky/Pixies-Monkey-Gone-To-Heaven.mp3'
-import theThing from '../../resource/mix-fonky/Pixies-The-Thing.mp3'
-import waveOfMutilation from '../../resource/mix-fonky/Pixies-Wave-of-Mutilation-UK-Surf.mp3'
-import anotheronebite from '../../resource/mix-fonky/Queen-Another-One-Bites-the-Dust.mp3'
-import killerqueen from '../../resource/mix-fonky/Queen-Killer-Queen.mp3'
-import amerika from '../../resource/mix-fonky/Rammstein-Amerika.mp3'
-import moskau from '../../resource/mix-fonky/Rammstein-Moskau.mp3'
-import beatonthebrat from '../../resource/mix-fonky/Ramones-Beat-on-the-Brat.mp3'
-import blitzkrieg from '../../resource/mix-fonky/Ramones-Blitzkrieg-Bop.mp3'
-import bonzogoes from '../../resource/mix-fonky/Ramones-Bonzo-Goes-To-Bitburg.mp3'
-import heretoday from '../../resource/mix-fonky/Ramones-Here-Today-Gone-Tomorrow.mp3'
-import idontwannagrowup from '../../resource/mix-fonky/Ramones-I-Dont-Wanna-Grow-Up.mp3'
-import iwannabesedated from '../../resource/mix-fonky/Ramones-I-Wanna-Be-Sedated.mp3'
-import judyispunk from '../../resource/mix-fonky/Ramones-Judy-Is-a-Punk.mp3'
-import needlesandpins from '../../resource/mix-fonky/Ramones-Needles-and-pins.mp3'
-import petsematary from '../../resource/mix-fonky/Ramones-Pet-Sematary.mp3'
-import psychoTherapy from '../../resource/mix-fonky/Ramones-Psycho-Therapy.mp3'
-import substitute from '../../resource/mix-fonky/Ramones-Substitute.mp3'
-import kkktookmybaby from '../../resource/mix-fonky/Ramones-The-KKK-Took-My-Baby-Away.mp3'
-import tooToughToDie from '../../resource/mix-fonky/Ramones-Too-Tough-to-Die.mp3'
-/* 26/3 */
-import joeyDontworry from '../../resource/mix-fonky/Joey-Ramone-Dont-Worry-About-Me.mp3'
-import luxa from '../../resource/mix-fonky/luxita-pic.jpg'
+/* ACDC */
+import DirtyDeeds from '/data/acdc/ACDC-Dirty-Deeds-Done-Dirt-Cheap.mp3'
+import HighwayToHell from '/data/acdc/ACDC-Highway-to-Hell .mp3'
+import IfYouWannaBlood from '/data/acdc/ACDC-Its-a-Long-Way-to-the-Top.mp3'
+/* ACDC */
+/* ALMENDRA */
+import EstosHombres from '/data/almendra/Almendra-A-Estos-Hombres-Tristes.mp3'
+import TemaPototo from '/data/almendra/Almendra-Tema-De-Pototo.mp3'
+import Plegaria from '/data/almendra/Almendra-Plegaria-para-un-niño-dormido.mp3'
+/* ALMENDRA */
+/* ARCTIC MONKEYS :) */
+import Flourescente from '/data/arctic-monkeys/Arctic-Monkeys-Fluorescent-Adolescent.mp3'
+import Balaclava from '/data/arctic-monkeys//Arctic-Monkeys-Balaclava.mp3'
+import FiveOrFive from '/data/arctic-monkeys/Arctic-Monkeys-505.mp3'
+import SecretDoor from '/data/arctic-monkeys//Arctic-Monkeys-Secret-Door.mp3'
+/* ARCTIC MONKEYS :) */
+/** BABASONICOS */
+import Delectrico from '/data/babasonicos/Babasonicos-Delectrico.mp3'
+import Fizz from '/data/babasonicos/Babasonicos-Fizz.mp3'
+import LosCalientes from '/data/babasonicos/Babasonicos-Los-Calientes.mp3'
+/** BABASONICOS */
+/** BLUR */
+import CoffeAndTv from '/data/blur/Blur-Coffee-&-TV.mp3'
+import GirlsAndBoys from '/data/blur/Blur-Girls-&-Boys.mp3'
+import Parklife from '/data/blur/Blur-Parklife.mp3'
+/** BLUR */
+/* CHARLY */
+import PromisesAboutBidet from '/data/charly-garcia/Charly-Garcia-Promesas-Sobre-El-Bidet.mp3'
+import RarosPeinados from '/data/charly-garcia/Charly-Garcia-Raros-peinados-nuevos.mp3'
+import PianoBar from '/data/charly-garcia/Charly-Garcia-Piano-Bar.mp3'
+import TotalInterferencia from '/data/charly-garcia/Charly-Garcia-Total-Interferencia.mp3'
+import PlateadoSobrePlateado from '/data/charly-garcia/Charly-Garcia-Plateado-sobre-plateado.mp3'
+import NoSoyUnExtraño from '/data/charly-garcia/Charly-Garcia-No-soy-un-extraño.mp3'
+/* CHARLY */
+/* CHICO BUARQUE */
+import ABanda from '/data/chico-buarque/Chico-Buarque-A-Banda.mp3'
+import Apesar from '/data/chico-buarque/Chico-Buarque-Apesar-De-Você.mp3'
+import Construsao from '/data/chico-buarque/Chico-Buarque-Construção.mp3'
+import Cotidiano from '/data/chico-buarque/Chico-Buarque-Cotidiano.mp3'
+import GenieOZepelim from '/data/chico-buarque/Chico-Buarque-Geni-e-o-zepelim.mp3'
+import Valsinha from '/data/chico-buarque/Chico-Buarque-Valsinha.mp3'
+/** CHICO BUARQUE */
+/** Childish */
+import les from '/data/childish-gambino/Childish-Gambino-Les.mp3'
+import redbone from '/data/childish-gambino/Childish-Gambino-Redbone.mp3'
+/** Childish */
+/** Daft Punk */
+import loseurself from '/data/daft-punk/Daft-Punk-Lose-Yourself-To-Dance.mp3'
+import somethingaboutus from '/data/daft-punk/Daft-Punk-Something-About-Us.mp3'
+/** Daft Punk */
+import moonage from '/data/david-bowie/David-Bowie-Moonage-Daydream.mp3'
+import letsDance from '/data/david-bowie/David-Bowie-Lets-Dance.mp3'
+import modernLove from '/data/david-bowie/David-Bowie-Modern-Love.mp3'
+import chinaGirl from '/data/david-bowie/David-Bowie-China-Girl.mp3'
+/** David Bowie <3  */
+/** Intoxicados */
+import NoTengoGanas from '/data/intoxicados/Intoxicados-No-tengo-ganas.mp3'
+/** Intoxicados */
+/** Joey */
+import joeyDontworry from '/data/joey-ramone/Joey-Ramone-Dont-Worry-About-Me.mp3'
+/** Joey */
+/** Legiao Urbana */
+/** Metallica */
+import orion from '/data/metallica/Metallica-Orion.mp3'
+/** Metallica */
+/** Misfits */
+import dustToDust from '/data/misfits/Misfits-Dust-to-Dust.mp3'
+/** Misfits */
+/** Molotov */
+import Frijolero from '/data/molotov/Molotov-Frijolero.mp3'
+import HereWeKum from '/data/molotov/Molotov-Here-We-Kum.mp3'
+/** Molotov */
+import indios from '/data/legiao-urbana/Legião-Urbana-Indios.mp3'
+import tempoPerdido from '/data/legiao-urbana/Legião-Urbana-Tempo-Perdido.mp3'
+import Faroeste from '/data/legiao-urbana/Legião-Urbana-Faroeste-Caboclo.mp3'
+/** Nirvana <3 */
+import drainu from '/data/nirvana/Nirvana-Drain-You.mp3'
+import inBloom from '/data/nirvana/Nirvana-In-Bloom.mp3'
+import loungeAc from '/data/nirvana/Nirvana-Lounge-Act.mp3'
+/** Nirvana <3 */
+/** Oasis */
+import someMight from '/data/oasis/Oasis-Some-Might-Say.mp3'
+/** Oasis */
+/** Pescado Rabioso :o */
+import Bajan from '/data/pescado-rabioso/Pescado-Rabioso-Bajan.mp3'
+import CementerioClub from '/data/pescado-rabioso/Pescado-Rabioso-Cementerio-Club.mp3'
+/** Pescado Rabioso :o */
+/**  Pixies */
+import heyPixies from '/data/pixies/Pixies-Hey.mp3'
+import monkeysgonetoheaven from '/data/pixies/Pixies-Monkey-Gone-To-Heaven.mp3'
+import theThing from '/data/pixies/Pixies-The-Thing.mp3'
+import waveOfMutilation from '/data/pixies/Pixies-Wave-of-Mutilation-UK-Surf.mp3'
+/**  Pixies */
+/** Queen */
+import anotheronebite from '/data/queen/Queen-Another-One-Bites-the-Dust.mp3'
+import killerqueen from '/data/queen/Queen-Killer-Queen.mp3'
+/** Queen */
+/** Rammstein */
+import amerika from '/data/rammstein/Rammstein-Amerika.mp3'
+import moskau from '/data/rammstein/Rammstein-Moskau.mp3'
+/** Rammstein */
+/** Ramones */
+import beatonthebrat from '/data/ramones/Ramones-Beat-on-the-Brat.mp3'
+import blitzkrieg from '/data/ramones/Ramones-Blitzkrieg-Bop.mp3'
+import bonzogoes from '/data/ramones/Ramones-Bonzo-Goes-To-Bitburg.mp3'
+import heretoday from '/data/ramones/Ramones-Here-Today-Gone-Tomorrow.mp3'
+import idontwannagrowup from '/data/ramones/Ramones-I-Dont-Wanna-Grow-Up.mp3'
+import iwannabesedated from '/data/ramones/Ramones-I-Wanna-Be-Sedated.mp3'
+import judyispunk from '/data/ramones/Ramones-Judy-Is-a-Punk.mp3'
+import needlesandpins from '/data/ramones/Ramones-Needles-and-pins.mp3'
+import petsematary from '/data/ramones/Ramones-Pet-Sematary.mp3'
+import psychoTherapy from '/data/ramones/Ramones-Psycho-Therapy.mp3'
+import substitute from '/data/ramones/Ramones-Substitute.mp3'
+import kkktookmybaby from '/data/ramones/Ramones-The-KKK-Took-My-Baby-Away.mp3'
+import tooToughToDie from '/data/ramones/Ramones-Too-Tough-to-Die.mp3'
+/** Ramones */
+/** Seru Giran */
+import ALosJovenes from '/data/seru-giran/Serú-Girán-A-Los-Jóvenes-De-Ayer.mp3'
+import CancionDeAlicia from '/data/seru-giran/Serú-Girán-Canción-De-Alicia-En-El-País.mp3'
+import DesarmaYSangra from '/data/seru-giran/Serú-Girán-Desarma-Y-Sangra.mp3'
+import CinemaVerite from '/data/seru-giran/Serú-Girán-Cinema-Verité.mp3'
+import Peperina from '/data/seru-giran/Serú-Girán-Peperina.mp3'
+import LlorandoEnElEspejo from '/data/seru-giran/Serú-Girán-Llorando-En-El-Espejo.mp3'
+import PerroAndaluz from '/data/seru-giran/Serú-Girán-Perro-Andaluz.mp3'
+/** Seru Giran */
+/** Sumo */
+import crua from '/data/sumo/Sumo-Crua-Chan.mp3'
+import beautiful from '/data/sumo/Sumo-Beautiful-Losers.mp3'
+import heroina from '/data/sumo/Sumo-Heroina.mp3'
+import holaFrank from '/data/sumo/Sumo-Hola-Frank.mp3'
+import regtest from '/data/sumo/Sumo-Regtest.mp3'
+/** Sumo */
+/** System */
+import revenga from '/data/system-of-a-down/SOAD-Revenga.mp3'
+import violentXXX from '/data/system-of-a-down/SOAD-Violent-Pornography.mp3'
+/** System */
+/** The offspring */
+import haveyouever from '/data/the-offspring/02-Have-You-Ever.mp3'
+import prettyFly from '/data/the-offspring/04-Prety-Fly.mp3'
+import feelings from '/data/the-offspring/06-Feelings.mp3'
+import payTheMan from '/data/the-offspring/13-Pay-The-Man.mp3'
+/** The offspring */
+/** The smitsh <3 */
+import charming from '/data/the-smiths/The-Smiths-This-Charming-Man.mp3'
+import lastNight from '/data/the-smiths/The-Smiths-Last-Night-I-Dreamt-That-Somebody-Loved-Me.mp3'
+import iStarted from '/data/the-smiths/The-Smiths-I-Started-Something-I-Couldnt-Finish.mp3'
+/** The smitsh <3 */
+
+import luxa from '/luxita-pic.jpg'
 /* 27/3 */
-import dustToDust from '../../resource/mix-fonky/Misfits-Dust-to-Dust.mp3'
 /* 20/4 */
-import delectrico from '../../resource/mix-fonky/Babasonicos-Delectrico.mp3'
-import fizz from '../../resource/mix-fonky/Babasonicos-Fizz.mp3'
-import losHornys from '../../resource/mix-fonky/Babasonicos-Los-Calientes.mp3'
-import indios from '../../resource/mix-fonky/Legião-Urbana-Indios.mp3'
-import tempoPerdido from '../../resource/mix-fonky/Legião-Urbana-Tempo-Perdido.mp3'
 
 import getAllDuration from '../helper/getAllDuration'
 
@@ -93,7 +171,7 @@ const dataPlaylist = {
       titulo: 'Dirty Deeds Done Dirt Cheap',
       artista: 'ACDC',
       album: '',
-      src: dirtyDeeds,
+      src: DirtyDeeds,
       duracion: 0
     },
     {
@@ -101,7 +179,7 @@ const dataPlaylist = {
       titulo: 'Highway to Hell',
       artista: 'ACDC',
       album: '',
-      src: highway,
+      src: HighwayToHell,
       duracion: 0
     },
     {
@@ -109,7 +187,7 @@ const dataPlaylist = {
       titulo: 'Its a Long Way to the Top (If you wanna Rock\'n\'Roll)',
       artista: 'ACDC',
       album: '',
-      src: ifyouwanna,
+      src: IfYouWannaBlood,
       duracion: 0
     },
     /* ACDC */
@@ -119,7 +197,7 @@ const dataPlaylist = {
       titulo: 'A estos Hombres Tristes',
       artista: 'Almendra',
       album: 'Almendra',
-      src: estosHombres,
+      src: EstosHombres,
       duracion: 0
     },
     {
@@ -127,24 +205,24 @@ const dataPlaylist = {
       titulo: 'Tema de Pototo',
       artista: 'Almendra',
       album: '',
-      src: temaPototo,
+      src: TemaPototo,
+      duracion: 0
+    },
+    {
+      id: crypto.randomUUID(),
+      titulo: 'Plegaria para un niño dormido',
+      artista: 'Almendra',
+      album: '',
+      src: Plegaria,
       duracion: 0
     },
     /* Artic */
     {
       id: crypto.randomUUID(),
-      titulo: 'Brianstorm',
-      artista: 'Arctic Monkey',
-      album: '',
-      src: brianStorm,
-      duracion: 0
-    },
-    {
-      id: crypto.randomUUID(),
       titulo: 'Balaclava',
       artista: 'Arctic Monkey',
       album: '',
-      src: balacava,
+      src: Balaclava,
       duracion: 0
     },
     {
@@ -152,7 +230,7 @@ const dataPlaylist = {
       titulo: 'Flourescent Adolescent',
       artista: 'Arctic Monkey',
       album: '',
-      src: florurescent,
+      src: Flourescente,
       duracion: 0
     },
     {
@@ -160,7 +238,7 @@ const dataPlaylist = {
       titulo: '505',
       artista: 'Arctic Monkey',
       album: '',
-      src: fivezerofive,
+      src: FiveOrFive,
       duracion: 0
     },
     {
@@ -168,7 +246,7 @@ const dataPlaylist = {
       titulo: 'Secret Door',
       artista: 'Arctic Monkey',
       album: '',
-      src: secret,
+      src: SecretDoor,
       duracion: 0
     },
     /* Artic */
@@ -178,7 +256,7 @@ const dataPlaylist = {
       titulo: 'Los Calientes',
       artista: 'Babasonicos',
       album: 'Jessico',
-      src: losHornys,
+      src: LosCalientes,
       duracion: 0
     },
     {
@@ -186,7 +264,7 @@ const dataPlaylist = {
       titulo: 'Fizz',
       artista: 'Babasonicos',
       album: 'Jessico',
-      src: fizz,
+      src: Fizz,
       duracion: 0
     },
     {
@@ -194,7 +272,7 @@ const dataPlaylist = {
       titulo: 'Delectrico',
       artista: 'Babasonicos',
       album: 'Jessico',
-      src: delectrico,
+      src: Delectrico,
       duracion: 0
     },
     /* Babasonicos */
@@ -204,7 +282,7 @@ const dataPlaylist = {
       titulo: 'Coffee & TV',
       artista: 'Blur',
       album: '',
-      src: coffetv,
+      src: CoffeAndTv,
       duracion: 0
     },
     {
@@ -212,7 +290,7 @@ const dataPlaylist = {
       titulo: 'Girls & Boys',
       artista: 'Blur',
       album: '',
-      src: girlsboys,
+      src: GirlsAndBoys,
       duracion: 0
     },
     {
@@ -220,20 +298,110 @@ const dataPlaylist = {
       titulo: 'Parklife',
       artista: 'Blur',
       album: '',
-      src: parklife,
+      src: Parklife,
       duracion: 0
     },
     /* Blur */
     /* Charly */
     {
       id: crypto.randomUUID(),
-      titulo: 'Promesas Sobre El Bidet',
+      titulo: 'Plateado Sobre Plateado (Huellas en el mar)',
+      artista: 'Charly Garcia',
+      album: 'Clics modernos',
+      src: PlateadoSobrePlateado,
+      duracion: 0
+    },
+    {
+      id: crypto.randomUUID(),
+      titulo: 'No soy un extraño',
+      artista: 'Charly Garcia',
+      album: 'Clics modernos',
+      src: NoSoyUnExtraño,
+      duracion: 0
+    },
+    {
+      id: crypto.randomUUID(),
+      titulo: 'Promesas sobre el bidet',
       artista: 'Charly Garcia',
       album: 'Piano Bar',
-      src: promesas,
+      src: PromisesAboutBidet,
+      duracion: 0
+    },
+    {
+      id: crypto.randomUUID(),
+      titulo: 'Raros Peinados Nuevos',
+      artista: 'Charly Garcia',
+      album: 'Piano Bar',
+      src: RarosPeinados,
+      duracion: 0
+    },
+    {
+      id: crypto.randomUUID(),
+      titulo: 'Piano Bar',
+      artista: 'Charly Garcia',
+      album: 'Piano Bar',
+      src: PianoBar,
+      duracion: 0
+    },
+    {
+      id: crypto.randomUUID(),
+      titulo: 'Total Inteferencia',
+      artista: 'Charly Garcia',
+      album: 'Piano Bar',
+      src: TotalInterferencia,
       duracion: 0
     },
     /* Charly */
+    /** Chico Buarque */
+    {
+      id: crypto.randomUUID(),
+      titulo: 'Construção',
+      artista: 'Chico Buarque',
+      album: '',
+      src: Construsao,
+      duracion: 0
+    },
+    {
+      id: crypto.randomUUID(),
+      titulo: 'Cotidiano',
+      artista: 'Chico Buarque',
+      album: '',
+      src: Cotidiano,
+      duracion: 0
+    },
+    {
+      id: crypto.randomUUID(),
+      titulo: 'Valsinha',
+      artista: 'Chico Buarque',
+      album: '',
+      src: Valsinha,
+      duracion: 0
+    },
+    {
+      id: crypto.randomUUID(),
+      titulo: 'A Banda',
+      artista: 'Chico Buarque',
+      album: '',
+      src: ABanda,
+      duracion: 0
+    },
+    {
+      id: crypto.randomUUID(),
+      titulo: 'Apesar De Você',
+      artista: 'Chico Buarque',
+      album: '',
+      src: Apesar,
+      duracion: 0
+    },
+    {
+      id: crypto.randomUUID(),
+      titulo: 'Geni E O Zepelim',
+      artista: 'Chico Buarque',
+      album: '',
+      src: GenieOZepelim,
+      duracion: 0
+    },
+    /** Chico Buarque */
     /* childish */
     {
       id: crypto.randomUUID(),
@@ -270,7 +438,7 @@ const dataPlaylist = {
       duracion: 0
     },
     /* daft */
-    /* Bowie */
+    /* david Bowie */
     {
       id: crypto.randomUUID(),
       titulo: 'Moonage Daydream',
@@ -303,7 +471,17 @@ const dataPlaylist = {
       src: chinaGirl,
       duracion: 0
     },
-    /* Bowie */
+    /* david Bowie */
+    /** Intoxicados */
+    {
+      id: crypto.randomUUID(),
+      titulo: 'No Tengo Ganas',
+      artista: 'Intoxicados',
+      album: '',
+      src: NoTengoGanas,
+      duracion: 0
+    },
+    /** Intoxicados */
     /* Joey papacito <3 */
     {
       id: crypto.randomUUID(),
@@ -331,6 +509,14 @@ const dataPlaylist = {
       src: tempoPerdido,
       duracion: 0
     },
+    {
+      id: crypto.randomUUID(),
+      titulo: 'Faroeste Caboclo',
+      artista: 'Legião Urbana',
+      album: '',
+      src: Faroeste,
+      duracion: 0
+    },
     /* Legiao urbana */
     // Metallica
     {
@@ -352,6 +538,24 @@ const dataPlaylist = {
       duracion: 0
     },
     /* Misfits */
+    /** Molotov */
+    {
+      id: crypto.randomUUID(),
+      titulo: 'Here We Kum',
+      artista: 'Molotov',
+      album: 'Dance dense and denso',
+      src: HereWeKum,
+      duracion: 0
+    },
+    {
+      id: crypto.randomUUID(),
+      titulo: 'Frijolero',
+      artista: 'Molotov',
+      album: 'Dance dense and denso',
+      src: Frijolero,
+      duracion: 0
+    },
+    /** Molotov */
     // Nirvana
     {
       id: crypto.randomUUID(),
@@ -388,6 +592,24 @@ const dataPlaylist = {
       duracion: 0
     },
     /* Oasis */
+    /** Pesacdo Rabioso */
+    {
+      id: crypto.randomUUID(),
+      titulo: 'Bajan',
+      artista: 'Pescado Rabioso',
+      album: 'Artaud',
+      src: Bajan,
+      duracion: 0
+    },
+    {
+      id: crypto.randomUUID(),
+      titulo: 'Cementerio Club',
+      artista: 'Pescado Rabioso',
+      album: 'Artaud',
+      src: CementerioClub,
+      duracion: 0
+    },
+    /** Pescado Rabioso */
     /* Pixies */
     {
       id: crypto.randomUUID(),
@@ -564,24 +786,64 @@ const dataPlaylist = {
       duracion: 0
     },
     /* Ramones */
-    /* SOAD */
+    /* Seru */
     {
       id: crypto.randomUUID(),
-      titulo: 'Revenga',
-      artista: 'System of a down',
-      album: 'Mezmerize',
-      src: revenga,
+      titulo: 'A Los Jóvenes De Ayer',
+      artista: 'Serú Girán',
+      album: 'Bicicleta',
+      src: ALosJovenes,
       duracion: 0
     },
     {
       id: crypto.randomUUID(),
-      titulo: 'Violent Pornography',
-      artista: 'System of a down',
-      album: 'Mezmerize',
-      src: violentXXX,
+      titulo: 'Canción De Alicia En El País',
+      artista: 'Serú Girán',
+      album: 'Bicicleta',
+      src: CancionDeAlicia,
       duracion: 0
     },
-    /* SOAD */
+    {
+      id: crypto.randomUUID(),
+      titulo: 'Cinema Verité',
+      artista: 'Serú Girán',
+      album: 'Bicicleta',
+      src: CinemaVerite,
+      duracion: 0
+    },
+    {
+      id: crypto.randomUUID(),
+      titulo: 'Desarma y Sangra',
+      artista: 'Serú Girán',
+      album: 'Bicicleta',
+      src: DesarmaYSangra,
+      duracion: 0
+    },
+    {
+      id: crypto.randomUUID(),
+      titulo: 'Peperina',
+      artista: 'Serú Girán',
+      album: 'Peperina',
+      src: Peperina,
+      duracion: 0
+    },
+    {
+      id: crypto.randomUUID(),
+      titulo: 'Llorando en el Espejo',
+      artista: 'Serú Girán',
+      album: 'Peperina',
+      src: LlorandoEnElEspejo,
+      duracion: 0
+    },
+    {
+      id: crypto.randomUUID(),
+      titulo: 'Perro Andaluz',
+      artista: 'Serú Girán',
+      album: 'La grasa de las capitales',
+      src: PerroAndaluz,
+      duracion: 0
+    },
+    /** Seru */
     /* Sumo */
     {
       id: crypto.randomUUID(),
@@ -624,6 +886,24 @@ const dataPlaylist = {
       duracion: 0
     },
     /* Sumo */
+    /* SOAD */
+    {
+      id: crypto.randomUUID(),
+      titulo: 'Revenga',
+      artista: 'System of a down',
+      album: 'Mezmerize',
+      src: revenga,
+      duracion: 0
+    },
+    {
+      id: crypto.randomUUID(),
+      titulo: 'Violent Pornography',
+      artista: 'System of a down',
+      album: 'Mezmerize',
+      src: violentXXX,
+      duracion: 0
+    },
+    /* SOAD */
     /* Offspting */
     {
       id: crypto.randomUUID(),
@@ -687,17 +967,5 @@ const dataPlaylist = {
 }
 //* *Es un quilombo, pero anda. Se cuestionaran los metodos, pero no los resultado */
 export default async function fakeRequest () {
-  try {
-    /* TODO: si agregas nuevas canciones, no salen por el jodido localStorage xd */
-    const datosLocales = localStorage.getItem('nuevaPlaylistCurrent')
-    if (!datosLocales) {
-      throw new Error('No se encontraron datos en el localStorage, intentando denuevo.')
-    }
-
-    return JSON.parse(datosLocales)
-  } catch {
-    const miau = await getAllDuration({ ...dataPlaylist })
-    localStorage.setItem('nuevaPlaylistCurrent', JSON.stringify(miau))
-    return fakeRequest()
-  }
+  return dataPlaylist
 }
