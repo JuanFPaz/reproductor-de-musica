@@ -75,7 +75,6 @@ import HereWeKum from '/data/molotov/Molotov-Here-We-Kum.mp3'
 /** Molotov */
 import indios from '/data/legiao-urbana/Legião-Urbana-Indios.mp3'
 import tempoPerdido from '/data/legiao-urbana/Legião-Urbana-Tempo-Perdido.mp3'
-import Faroeste from '/data/legiao-urbana/Legião-Urbana-Faroeste-Caboclo.mp3'
 /** Nirvana <3 */
 import drainu from '/data/nirvana/Nirvana-Drain-You.mp3'
 import inBloom from '/data/nirvana/Nirvana-In-Bloom.mp3'
@@ -148,12 +147,15 @@ import charming from '/data/the-smiths/The-Smiths-This-Charming-Man.mp3'
 import lastNight from '/data/the-smiths/The-Smiths-Last-Night-I-Dreamt-That-Somebody-Loved-Me.mp3'
 import iStarted from '/data/the-smiths/The-Smiths-I-Started-Something-I-Couldnt-Finish.mp3'
 /** The smitsh <3 */
+/* Viejas Locas */
+import Homero from '/data/viejas-locas/Viejas-Locas-Homero.mp3'
+/** Viejas Locas */
 
 import luxa from '/luxita-pic.jpg'
 /* 27/3 */
 /* 20/4 */
 
-import getAllDuration from '../helper/getAllDuration'
+// import getAllDuration from '../helper/getAllDuration'
 
 const dataPlaylist = {
   infoPlaylist: {
@@ -507,14 +509,6 @@ const dataPlaylist = {
       artista: 'Legião Urbana',
       album: '',
       src: tempoPerdido,
-      duracion: 0
-    },
-    {
-      id: crypto.randomUUID(),
-      titulo: 'Faroeste Caboclo',
-      artista: 'Legião Urbana',
-      album: '',
-      src: Faroeste,
       duracion: 0
     },
     /* Legiao urbana */
@@ -961,8 +955,16 @@ const dataPlaylist = {
       album: 'Strangeways, Here We Come',
       src: iStarted,
       duracion: 0
-    }
+    },
     /* The Smiths */
+    {
+      id: crypto.randomUUID(),
+      titulo: 'Homero',
+      artista: 'Viejas Locas',
+      album: '',
+      src: Homero,
+      duracion: 0
+    }
   ]
 }
 //* *Es un quilombo, pero anda. Se cuestionaran los metodos, pero no los resultado */

@@ -3,9 +3,9 @@
 /* eslint-disable no-undef */
 /* eslint-disable import/no-absolute-path */
 import './style.css'
-import playlist from './components/playlist.js'
-import fakeRequest from './components/playlist/mixPlaylist.js'
-import audioControl from './components/audioControl.js'
+import playlist from './app/components/playlist.js'
+import fakeRequest from './app/playlist/mixPlaylist.js'
+import audioControl from './app/util/audioControl.js'
 
 async function app () {
   document.querySelector('#app').innerHTML = `

@@ -1,6 +1,6 @@
 /* eslint-disable no-unused-vars */
 /* eslint-disable no-undef */
-import mediaPlayer, { actualizarMediaPlayerDataSong, actualizarMediaPlayerTimeProgress, actualizarMediaPlayerTimeSong } from './mediaPlayer.js'
+import mediaPlayer, { actualizarMediaPlayerDataSong, actualizarMediaPlayerTimeProgress, actualizarMediaPlayerTimeSong } from '../components/mediaPlayer.js'
 
 export default function audioControl ({ playlist }) {
   let { indice, maxIndice, currentPlaylist, random } = {
