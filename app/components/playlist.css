@@ -20,17 +20,15 @@
 }
 
 #playlist-header .img-container {
-  width: 146px; /* Define el ancho deseado */
-  height: 146px; /* Define la altura deseada */
-  display: flex;
+  margin: 0 auto;
 }
 
 #playlist-header .img-container img{
-    display: block;
-    border-radius: 5px;
-    width: 150px; /* Define el ancho deseado */
-    /*height: 150px */ /*Por algun motivo, si establecemos el height, la imagen sobresale del contenedor ._.*/
-    object-fit: cover;
+  border-radius: 5px;
+  width: 150px; /* Define el ancho deseado */
+  height: 150px;  /*Por algun motivo, si establecemos el height, la imagen sobresale del contenedor ._.*/
+  object-fit: cover;
+  object-position: top;
   } 
 
 
@@ -62,11 +60,11 @@
   }
   
   #playlist-body .info-song-albumPic img{
-      display: block;
       border-radius: 5px;
-      width: 40px; /* Define el ancho deseado */
-      /*height: 150px */ /*Por algun motivo, si establecemos el height, la imagen sobresale del contenedor ._.*/
+      width: 150px; /* Define el ancho deseado */
+      height: 150px;  /*Por algun motivo, si establecemos el height, la imagen sobresale del contenedor ._.*/
       object-fit: cover;
+      object-position: bottom;
     } 
 
 #playlist-body .info-song-dataSong {
