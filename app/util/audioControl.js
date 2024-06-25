@@ -1,6 +1,6 @@
 /* eslint-disable no-unused-vars */
 /* eslint-disable no-undef */
-import mediaPlayer, { actualizarMediaPlayerDataSong, actualizarMediaPlayerTimeProgress, actualizarMediaPlayerTimeSong } from '../components/mediaPlayer.js'
+import mediaPlayer, { actualizarMediaPlayerDataSong, actualizarMediaPlayerTimeProgress, actualizarMediaPlayerTimeSong, actualizarMediaPlayButton, actualizarMediaRandomButton } from '../components/mediaPlayer.js'
 
 export default function audioControl ({ playlist }) {
   let { indice, maxIndice, currentPlaylist, random } = {
@@ -38,10 +38,10 @@ export default function audioControl ({ playlist }) {
   const setZero = () => {
     if (audio.paused) {
       audio.play()
-      document.querySelector('#play').innerHTML = 'Stop'
+      actualizarMediaPlayButton({ _play: audio.paused })
     } else {
       audio.pause()
-      document.querySelector('#play').innerHTML = 'Play'
+      actualizarMediaPlayButton({ _play: audio.paused })
     }
   }
 
@@ -77,13 +77,13 @@ export default function audioControl ({ playlist }) {
       currentPlaylist = randomPlaylist
       indice = 0
       actualizarMediaPlayerDataSong({ ...currentPlaylist[indice] })
-      document.querySelector('#random').style.backgroundColor = 'blue'
+      actualizarMediaRandomButton({ random })
     } else {
       random = false
       const currentAudio = currentPlaylist[indice]
       currentPlaylist = [...playlist]
       indice = currentPlaylist.indexOf(currentAudio)
-      document.querySelector('#random').style.backgroundColor = ''
+      actualizarMediaRandomButton({ random })
     }
   }
 

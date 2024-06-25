@@ -9,12 +9,7 @@ body{
   background-color: rgb(24, 23, 23);
   color: rgb(241, 241, 241);
 }
-/*Altura fija en #app para que siempre quepa en la pantalla*/
-#app{
-  width: 100%;
-  height: 100vh;
-}
+
 .pseudo-router {
-  height: 86%; /* Calcular la altura para dejar espacio para el componente mediaPlayer (50px es un valor de ejemplo, puedes ajustarlo según sea necesario) */
-  overflow-y: auto; /* Permitir el desplazamiento vertical cuando el contenido exceda la altura del contenedor */
+  margin-bottom: 142px;
 }

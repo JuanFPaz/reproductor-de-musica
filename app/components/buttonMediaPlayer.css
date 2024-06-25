@@ -1,0 +1,39 @@
+#media-player-button button{
+    width: 30px;
+    height: 30px;
+    background-color: #84a0fc;
+    border-radius: 50%;
+    border: 1px solid #84a0fc;
+    transition:box-shadow ease-in-out 0.5s;
+}
+
+#media-player-button button:disabled{
+    background-color: #37446e;
+    border: 1px solid #37446e;
+}
+
+#media-player-button button:hover:disabled{
+    box-shadow: 0 0 0;
+}
+
+
+#media-player-button button img{
+    width: 50%;
+}
+
+#media-player-button button:hover{
+    box-shadow: 0 0 10px #9cb3ff;
+}
+
+#media-player-button button#play{
+    width: 50px;
+    height: 50px;
+}
+
+#media-player-button button#prev{
+    transform: rotate(180deg);
+}
+
+#media-player-button button.active{
+    box-shadow: 0 0 14px #9cb3ff;
+}
