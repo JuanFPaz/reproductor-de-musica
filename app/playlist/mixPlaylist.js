@@ -1,11 +1,6 @@
 /* eslint-disable import/no-absolute-path */
 /* eslint-disable no-undef */
 /* eslint-disable promise/param-names */
-/* ACDC */
-import DirtyDeeds from '/data/acdc/ACDC-Dirty-Deeds-Done-Dirt-Cheap.mp3'
-import HighwayToHell from '/data/acdc/ACDC-Highway-to-Hell .mp3'
-import IfYouWannaBlood from '/data/acdc/ACDC-Its-a-Long-Way-to-the-Top.mp3'
-/* ACDC */
 /* ALMENDRA */
 import EstosHombres from '/data/almendra/Almendra-A-Estos-Hombres-Tristes.mp3'
 import TemaPototo from '/data/almendra/Almendra-Tema-De-Pototo.mp3'
@@ -153,9 +148,62 @@ import Homero from '/data/viejas-locas/Viejas-Locas-Homero.mp3'
 
 import luxa from '/luxita-pic.jpg'
 /* 27/3 */
-/* 20/4 */
-
-// import getAllDuration from '../helper/getAllDuration'
+/* 25/6
+  deja de importar los temas asi  xd
+*/
+/* beatles */
+import loverHer from '/data/the-beatles/The-Beatles-And-I-Love-Her.mp3'
+import wait from '/data/the-beatles/The-Beatles-Wait.mp3'
+import girl from '/data/the-beatles/The-Beatles-Girl.mp3'
+import onlySleeping from '/data/the-beatles/The-Beatles-Im-Only-Sleeping.mp3'
+import sgtpepper from '/data/the-beatles/The-Beatles-Sgt-Peppers-Lonely-Hearts-Club-Band.mp3'
+import littleHelpFromFriends from '/data/the-beatles/The-Beatles-With-A-Little-Help-From-My-Friends.mp3'
+import lucyInTheSky from '/data/the-beatles/The-Beatles-Lucy-In-The-Sky-With-Diamonds.mp3'
+import urMotherShouldKnow from '/data/the-beatles/The-Beatles-Your-Mother-Should-Know.mp3'
+import happinessWarmGun from '/data/the-beatles/The-Beatles-Happiness-Is-A-Warm-Gun.mp3'
+import whileMyGuitar from '/data/the-beatles/The-Beatles-While-My-Guitar-Gently-Weeps.mp3'
+import rockyRaccoon from '/data/the-beatles/The-Beatles-Rocky-Raccoon.mp3'
+import comeTogether from '/data/the-beatles/The-Beatles-Come-Together.mp3'
+import ohDarling from '/data/the-beatles/The-Beatles-Oh-Darling.mp3'
+import because from '/data/the-beatles/The-Beatles-Because.mp3'
+import uNeverGiveMe from '/data/the-beatles/The-Beatles-You-Never-Give-Me-Your-Money.mp3'
+import sunKing from '/data/the-beatles/The-Beatles-Sun-King.mp3'
+/* beatles */
+/* smino */
+import amphetamine from '/data/smino/Smino-Amphetamine-(slow).mp3'
+/* smino */
+/* harmless */
+import swinn from '/data/harmless/Harmless-Swing-Lynn.mp3'
+/* harmless */
+/* mcmiller */
+import selfCare from '/data/mac-miller/Mac-Miller-Self-Care.mp3'
+/* mcmiller */
+/* strokes */
+import lastNite from '/data/the-strokes/The-Strokes-Last-Nite.mp3'
+import yolo from '/data/the-strokes/The-Strokes-You-Only-Live-Once.mp3'
+import visionDiv from '/data/the-strokes/The-Strokes-Vision-Of-Division.mp3'
+import callKarma from '/data/the-strokes/The-Strokes-Call-It-Fate-Call-It-Karma.mp3'
+import theAdultsRTalkin from '/data/the-strokes/The-Strokes-The-Adults-Are-Talking.mp3'
+import yrSundaysSoDepressing from '/data/the-strokes/The-Strokes-Why-Are-Sundays-So-Depressing.mp3'
+import odeMets from '/data/the-strokes/The-Strokes-Ode-to-the-Mets.mp3'
+/* strokes */
+/* thin lizzy */
+import whiskeyInTheJar from '/data/thin-lizzy/Thin-Lizzy-Whiskey-In-The-Jar.mp3'
+/* thin lizzy */
+/* CCR */
+import greenRiBer from '/data/creedence-clearwater-revival/CCR-Green-River.mp3'
+/* CCR */
+/* the doors */
+import ridersOnTheStorm from '/data/the-doors/The-Doors-Riders-On-The-Storm.mp3'
+/* the doors */
+/* tame impala */
+import lessIKnow from '/data/tame-impala/Tame-Impala-The-Less-I-Know-The-Better.mp3'
+/* tame impala */
+/* Bowie lo nuevo (? */
+import starmman from '/data/david-bowie/David-Bowie-Starman.mp3'
+import stationtostation from '/data/david-bowie/David-Bowie-Station-to-Station.mp3'
+import whoSoldTheWorld from '/data/david-bowie/David-Bowie-The-Man-Who-Sold-the-World.mp3'
+/* Bowie lo nuevo (? */
 
 const dataPlaylist = {
   infoPlaylist: {
@@ -167,32 +215,6 @@ const dataPlaylist = {
     duracion: 0
   },
   playlist: [
-    /* ACDC */
-    {
-      id: crypto.randomUUID(),
-      titulo: 'Dirty Deeds Done Dirt Cheap',
-      artista: 'ACDC',
-      album: '',
-      src: DirtyDeeds,
-      duracion: 0
-    },
-    {
-      id: crypto.randomUUID(),
-      titulo: 'Highway to Hell',
-      artista: 'ACDC',
-      album: '',
-      src: HighwayToHell,
-      duracion: 0
-    },
-    {
-      id: crypto.randomUUID(),
-      titulo: 'Its a Long Way to the Top (If you wanna Rock\'n\'Roll)',
-      artista: 'ACDC',
-      album: '',
-      src: IfYouWannaBlood,
-      duracion: 0
-    },
-    /* ACDC */
     /** almendra */
     {
       id: crypto.randomUUID(),
@@ -422,6 +444,16 @@ const dataPlaylist = {
       duracion: 0
     },
     /* childish */
+    /** CCR */
+    {
+      id: crypto.randomUUID(),
+      titulo: 'Green River',
+      artista: 'Creedence Clearwater Revival',
+      album: '',
+      src: greenRiBer,
+      duracion: 0
+    },
+    /** CCR */
     /* daft */
     {
       id: crypto.randomUUID(),
@@ -441,6 +473,22 @@ const dataPlaylist = {
     },
     /* daft */
     /* david Bowie */
+    {
+      id: crypto.randomUUID(),
+      titulo: 'The Man Who Sold The World',
+      artista: 'David Bowie',
+      album: '',
+      src: whoSoldTheWorld,
+      duracion: 0
+    },
+    {
+      id: crypto.randomUUID(),
+      titulo: 'Starman',
+      artista: 'David Bowie',
+      album: '',
+      src: starmman,
+      duracion: 0
+    },
     {
       id: crypto.randomUUID(),
       titulo: 'Moonage Daydream',
@@ -473,7 +521,25 @@ const dataPlaylist = {
       src: chinaGirl,
       duracion: 0
     },
+    {
+      id: crypto.randomUUID(),
+      titulo: 'Station to Station',
+      artista: 'David Bowie',
+      album: '',
+      src: stationtostation,
+      duracion: 0
+    },
     /* david Bowie */
+    /* HARMLESS */
+    {
+      id: crypto.randomUUID(),
+      titulo: 'Swinn Lynn',
+      artista: 'Harmless',
+      album: '',
+      src: swinn,
+      duracion: 0
+    },
+    /* HARMLESS */
     /** Intoxicados */
     {
       id: crypto.randomUUID(),
@@ -512,6 +578,16 @@ const dataPlaylist = {
       duracion: 0
     },
     /* Legiao urbana */
+    /* mcmiller */
+    {
+      id: crypto.randomUUID(),
+      titulo: 'Self Care',
+      artista: 'Mac Miller',
+      album: '',
+      src: selfCare,
+      duracion: 0
+    },
+    /* mcmiller */
     // Metallica
     {
       id: crypto.randomUUID(),
@@ -838,6 +914,16 @@ const dataPlaylist = {
       duracion: 0
     },
     /** Seru */
+    /* smino */
+    {
+      id: crypto.randomUUID(),
+      titulo: 'Amphetamine (Slow & Reverb)',
+      artista: 'Smino',
+      album: '',
+      src: amphetamine,
+      duracion: 0
+    },
+    /* smino */
     /* Sumo */
     {
       id: crypto.randomUUID(),
@@ -898,6 +984,156 @@ const dataPlaylist = {
       duracion: 0
     },
     /* SOAD */
+    /* TAME IMPALA */
+    {
+      id: crypto.randomUUID(),
+      titulo: 'The Less I Know The Better',
+      artista: 'Tame Impala',
+      album: '',
+      src: lessIKnow,
+      duracion: 0
+    },
+    /* TAME IMPALA */
+    /* beatles */
+    {
+      id: crypto.randomUUID(),
+      titulo: 'And I Love Her',
+      artista: 'The Beatles',
+      album: '',
+      src: loverHer,
+      duracion: 0
+    },
+    {
+      id: crypto.randomUUID(),
+      titulo: 'Wait',
+      artista: 'The Beatles',
+      album: '',
+      src: wait,
+      duracion: 0
+    },
+    {
+      id: crypto.randomUUID(),
+      titulo: 'Girl',
+      artista: 'The Beatles',
+      album: '',
+      src: girl,
+      duracion: 0
+    },
+    {
+      id: crypto.randomUUID(),
+      titulo: 'Im Only Sleeping',
+      artista: 'The Beatles',
+      album: '',
+      src: onlySleeping,
+      duracion: 0
+    },
+    {
+      id: crypto.randomUUID(),
+      titulo: "Sgt Pepper's Lonely Heart Club Band",
+      artista: 'The Beatles',
+      album: '',
+      src: sgtpepper,
+      duracion: 0
+    },
+    {
+      id: crypto.randomUUID(),
+      titulo: 'With A Little Help From My Friends',
+      artista: 'The Beatles',
+      album: '',
+      src: littleHelpFromFriends,
+      duracion: 0
+    },
+    {
+      id: crypto.randomUUID(),
+      titulo: 'Lucy in The Sky With Diamonds',
+      artista: 'The Beatles',
+      album: '',
+      src: lucyInTheSky,
+      duracion: 0
+    },
+    {
+      id: crypto.randomUUID(),
+      titulo: 'Your Mother Should Know',
+      artista: 'The Beatles',
+      album: '',
+      src: urMotherShouldKnow,
+      duracion: 0
+    },
+    {
+      id: crypto.randomUUID(),
+      titulo: 'Happiness is a Warm Gun',
+      artista: 'The Beatles',
+      album: '',
+      src: happinessWarmGun,
+      duracion: 0
+    },
+    {
+      id: crypto.randomUUID(),
+      titulo: 'While My Guitar Gently Weeps',
+      artista: 'The Beatles',
+      album: '',
+      src: whileMyGuitar,
+      duracion: 0
+    },
+    {
+      id: crypto.randomUUID(),
+      titulo: 'Rocky Raccoon',
+      artista: 'The Beatles',
+      album: '',
+      src: rockyRaccoon,
+      duracion: 0
+    },
+    {
+      id: crypto.randomUUID(),
+      titulo: 'Come Together',
+      artista: 'The Beatles',
+      album: '',
+      src: comeTogether,
+      duracion: 0
+    },
+    {
+      id: crypto.randomUUID(),
+      titulo: 'Oh! Darling',
+      artista: 'The Beatles',
+      album: '',
+      src: ohDarling,
+      duracion: 0
+    },
+    {
+      id: crypto.randomUUID(),
+      titulo: 'Because',
+      artista: 'The Beatles',
+      album: '',
+      src: because,
+      duracion: 0
+    },
+    {
+      id: crypto.randomUUID(),
+      titulo: 'You Never Give Me Your Money',
+      artista: 'The Beatles',
+      album: '',
+      src: uNeverGiveMe,
+      duracion: 0
+    },
+    {
+      id: crypto.randomUUID(),
+      titulo: 'Sun King',
+      artista: 'The Beatles',
+      album: '',
+      src: sunKing,
+      duracion: 0
+    },
+    /* beatles */
+    /* doors */
+    {
+      id: crypto.randomUUID(),
+      titulo: 'Riders on the Storm',
+      artista: 'The Doors',
+      album: '',
+      src: ridersOnTheStorm,
+      duracion: 0
+    },
+    /* doors */
     /* Offspting */
     {
       id: crypto.randomUUID(),
@@ -957,6 +1193,75 @@ const dataPlaylist = {
       duracion: 0
     },
     /* The Smiths */
+    /** strokes */
+    {
+      id: crypto.randomUUID(),
+      titulo: 'Last Nite',
+      artista: 'The Strokes',
+      album: '',
+      src: lastNite,
+      duracion: 0
+    },
+    {
+      id: crypto.randomUUID(),
+      titulo: 'You Only Live Once',
+      artista: 'The Strokes',
+      album: '',
+      src: yolo,
+      duracion: 0
+    },
+    {
+      id: crypto.randomUUID(),
+      titulo: 'Vision of Division',
+      artista: 'The Strokes',
+      album: '',
+      src: visionDiv,
+      duracion: 0
+    },
+    {
+      id: crypto.randomUUID(),
+      titulo: 'Call It Fate, Call it Karma',
+      artista: 'The Strokes',
+      album: '',
+      src: callKarma,
+      duracion: 0
+    },
+    {
+      id: crypto.randomUUID(),
+      titulo: 'The Adults Are Talking',
+      artista: 'The Strokes',
+      album: '',
+      src: theAdultsRTalkin,
+      duracion: 0
+    },
+    {
+      id: crypto.randomUUID(),
+      titulo: 'Why Are Sundays So Depressing?',
+      artista: 'The Strokes',
+      album: '',
+      src: yrSundaysSoDepressing,
+      duracion: 0
+    },
+    {
+      id: crypto.randomUUID(),
+      titulo: 'Ode to the Mets',
+      artista: 'The Strokes',
+      album: '',
+      src: odeMets,
+      duracion: 0
+    },
+    /** strokes */
+    /* Thin Lizzy */
+    {
+      id: crypto.randomUUID(),
+      titulo: 'Whiskey in The Jar',
+      artista: 'Thin Lizzy',
+      album: '',
+      src: whiskeyInTheJar,
+      duracion: 0
+    },
+    /* Thin Lizzy */
+    /* Viejas lo */
     {
       id: crypto.randomUUID(),
       titulo: 'Homero',
