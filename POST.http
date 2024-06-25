@@ -2,3 +2,8 @@ POST https://accounts.spotify.com/api/token
 Content-Type: application/x-www-form-urlencoded
 
 grant_type=client_credentials&client_id=0469548845aa46f3b525b6b405909aba&client_secret=c81edcbaf8e2487eb0a369c5e5cd636b
+
+###
+
+GET https://api.spotify.com/v1/artists?ids=2CIMQHirSU0MQqyYHq0eOx,57dN52uHvrHOxijzpIgu3E,1vCWHaC5f2uS3yhpwWbIA6
+Authorization: Bearer BQANHUzektH_ILIEPNaaJ6TCIuKDWu5VSYI5ZLBfxCUcft0i58f6HaP44Ej7zoR3TSK-dqKdxmUQeL7Am-d6O_0ZKU2nMOKmG6vUgqhXeMJ0MQJYaEU
