@@ -23,11 +23,11 @@ export default function mediaPlayer (element, { titulo, artista }) {
       <input type="range" class='playbar_progress' id="playbar_progress" min="0" max="100" value="0" focus>
     </div>
     <div id='media-player-button'>
-      <button id='random'><img src=${random}/></button>
-      <button id='prev'><img src=${nextprev}/></button>
-      <button id='play'><img src=${play}/></button>
-      <button id='next'><img src=${nextprev}/></button>
-      <button id='repeat' disabled><img src=${repeat}/></button>
+      <button id='random'><img src=${random}></button>
+      <button id='prev'><img src=${nextprev}></button>
+      <button id='play'><img src=${play}></button>
+      <button id='next'><img src=${nextprev}></button>
+      <button id='repeat' disabled><img src=${repeat}></button>
     </div>
     `
   element.innerHTML = mPlayer
