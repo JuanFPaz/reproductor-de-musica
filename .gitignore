@@ -13,6 +13,7 @@ dist-ssr
 *.local
 # audios
 public/data
+private
 # Editor directories and files
 .vscode/*
 !.vscode/extensions.json
