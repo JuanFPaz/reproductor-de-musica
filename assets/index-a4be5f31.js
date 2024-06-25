@@ -67,11 +67,11 @@
       <input type="range" class='playbar_progress' id="playbar_progress" min="0" max="100" value="0" focus>
     </div>
     <div id='media-player-button'>
-      <button id='random'><img src=${xt}/></button>
-      <button id='prev'><img src=${k}/></button>
-      <button id='play'><img src=${q}/></button>
-      <button id='next'><img src=${k}/></button>
-      <button id='repeat' disabled><img src=${kt}/></button>
+      <button id='random'><img src=${xt}></button>
+      <button id='prev'><img src=${k}></button>
+      <button id='play'><img src=${q}></button>
+      <button id='next'><img src=${k}></button>
+      <button id='repeat' disabled><img src=${kt}></button>
     </div>
     `;o.innerHTML=e}function L({titulo:o,artista:t}){document.querySelector("#media-player-dataSong").innerHTML=`
     ${o} - ${t}
