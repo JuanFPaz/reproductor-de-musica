@@ -13,6 +13,7 @@ dist-ssr
 *.local
 # audios
 public/data
+public/pages
 private
 # Editor directories and files
 .vscode/*
