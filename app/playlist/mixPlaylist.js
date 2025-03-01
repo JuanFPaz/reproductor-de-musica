@@ -58,6 +58,7 @@ import Apesar from '/data/chico-buarque/Chico-Buarque-Apesar-De-Você.mp3'
 import Construsao from '/data/chico-buarque/Chico-Buarque-Construção.mp3'
 import Cotidiano from '/data/chico-buarque/Chico-Buarque-Cotidiano.mp3'
 import Valsinha from '/data/chico-buarque/Chico-Buarque-Valsinha.mp3'
+import rodaVida from '/data/chico-buarque/Roda-Vida.mp3'
 /** CHICO BUARQUE */
 /** Childish */
 import les from '/data/childish-gambino/Childish-Gambino-Les.mp3'
@@ -211,7 +212,7 @@ import sunKing from '/data/the-beatles/The-Beatles-Sun-King.mp3'
 import amphetamine from '/data/smino/Smino-Amphetamine-(slow).mp3'
 /* smino */
 /* harmless */
-// import swinn from '/data/harmless/Harmless-Swing-Lynn.mp3'
+import swinn from '/data/harmless/Harmless-Swing-Lynn.mp3'
 /* harmless */
 /* mcmiller */
 import selfCare from '/data/mac-miller/Mac-Miller-Self-Care.mp3'
@@ -246,6 +247,13 @@ import whoSoldTheWorld from '/data/david-bowie/David-Bowie-The-Man-Who-Sold-the-
 import camaronBombay from '/data/divididos/Divididos-Camaron-Bombay.mp3'
 import cheQueEsperas from '/data/divididos/Divididos-Che-Que-Esperas.mp3'
 import cosasRaras from '/data/divididos/Divididos-Haciendo-Cosas-Raras.mp3'
+import salirAsutar from '/data/divididos/Salir-a-Asustar.mp3'
+import OrtegayGases from '/data/divididos/Ortega-y-Gases.mp3'
+import elArriero from '/data/divididos/El-arriero.mp3'
+import queVes from '/data/divididos/Que-Ves.mp3'
+import paisanoDeHurlingham from '/data/divididos/Paisano-De-Hurlingham.mp3'
+import huelgaDeAmores from '/data/divididos/Huelga-de-Amores.mp3'
+import ayQueDiosBoludon from '/data/divididos/Ay-Que-Dios-Boludo.mp3'
 /* divididos */
 /** dire straits */
 import money4nothing from '/data/dire-straits/Dire-Straits-Money-For-Nothing.mp3'
@@ -294,7 +302,6 @@ import todoUnPalo from '/data/patricio-rey/Patricio-Rey-y-sus-Redonditos-de-Rico
 /** PR - UN BAION */
 /** PR - bang bang */
 import heroeDelWhisky from '/data/patricio-rey/Patricio-Rey-y-sus-Redonditos-de-Ricota-Heroe-del-whisky.mp3'
-import parabellum from '/data/patricio-rey/Patricio-Rey-y-sus-Redonditos-de-Ricota-parabellum.mp3'
 import pacmanSavoy from '/data/patricio-rey/Patricio-Rey-y-sus-Redonditos-de-Ricota-Un-Pac-Man-en-el-Savoy.mp3'
 import nadieEsPerfecto from '/data/patricio-rey/Patricio-Rey-y-sus-Redonditos-de-Ricota-Nadie-es-perfecto.mp3'
 import maldicionDiaHermoso from '/data/patricio-rey/Patricio-Rey-y-sus-Redonditos-de-Ricota-Maldicion.mp3'
@@ -307,7 +314,6 @@ import bluesDeArtilleria from '/data/patricio-rey/Patricio-Rey-y-sus-Redonditos-
 import tareaFina from '/data/patricio-rey/Patricio-Rey-y-sus-Redonditos-de-Ricota-Tarea-Fina.mp3'
 import elPibeDeLosAstilleros from '/data/patricio-rey/Patricio-Rey-y-sus-Redonditos-de-Ricota-El-Pibe-de-los-Astilleros.mp3'
 import nuevaRoma from '/data/patricio-rey/Patricio-Rey-y-sus-Redonditos-de-Ricota-Nueva-Roma.mp3'
-import quesoRuso from '/data/patricio-rey/Patricio-Rey-y-sus-Redonditos-de-Ricota-Queso-Ruso.mp3'
 /** PR - mosca en la sopa */
 /** Patricio rey */
 /* Heroes del SIlencio */
@@ -348,6 +354,44 @@ import silencioHospital from '/data/fabulosos/Silencio-Hospital.mp3'
 import estoyHarto from '/data/fabulosos/Estoy-Harto-De-Verte-Con-Otros.mp3'
 import satanicoDr from '/data/fabulosos/El-Satanico-Dr-Cadillac.mp3'
 /** CADILLACS */
+/** Autenticos decadentes */
+import comoMeVoyAOlvidar from '/data/AD/Como-me-voy-a-Olvidar.mp3'
+import Diosa from '/data/AD/Diosa.mp3'
+import LocoTuFormaDeSer from '/data/AD/Loco-Tu-forma-de-ser.mp3'
+import vivirePorSiempre from '/data/AD/Vivire-por-siempre.mp3'
+/** Autenticos decadentes */
+/** SODA */
+import vitaminas from '/data/soda-stereo/Te-hacen-falta-vitaminas.mp3'
+import unMisil from '/data/soda-stereo/Un-Misil-en-mi-placard.mp3'
+import nadaPersonal from '/data/soda-stereo/Nada-Personal.mp3'
+/** Soda */
+/** Cuarteto de nos */
+import yendoAlAcasa from '/data/el-cuarteto-de-nos/Yendo-a-la-casa-de-Damian.mp3'
+/** CDN */
+/** Las Pelotas */
+import sera from '/data/las-pelotas/Sera.mp3'
+/** Las Pelotas */
+/** Los caballeros de la quema */
+import avantiMorocha from '/data/los-caballeros-de-la-quema/Avanti-Morocha.mp3'
+/** Los caballeros de la quema */
+/** Los rodriguez */
+import miEnfermadad from '/data/los-rodriguez/Mi-Enfermedad.mp3'
+import aLosOjos from '/data/los-rodriguez/A-los-ojos.mp3'
+/** Los rodriguez */
+/** Los tipitos */
+import brujeria from '/data/los-tipitos/Brujeria.mp3'
+import algo from '/data/los-tipitos/Algo.mp3'
+import campanasEnLaNoche from '/data/los-tipitos/Campanas-en-la-noche.mp3'
+/** Los tipitos */
+/** Turf */
+import cuatroPersonalidades from '/data/turf/Cuatro-Personalidades.mp3'
+import noSeLlamaAmor from '/data/turf/No-se-llama-amor.mp3'
+/** Turf */
+/** Virus */
+import noFumo from '/data/virus/Soy-moderno-no-fumo.mp3'
+import superficiesDePlacer from '/data/virus/Superficies-de-placer.mp3'
+import danzaDeBengalas from '/data/virus/Danza-de-Bengalas.mp3'
+/** Virus */
 
 const dataPlaylist = {
   infoPlaylist: {
@@ -374,6 +418,967 @@ const dataPlaylist = {
       artista: 'Almendra',
       album: '',
       src: TemaPototo,
+      duracion: 0
+    },
+    /** Almendra */
+    /** AUTENTICOS DECADENTES */
+    {
+      id: crypto.randomUUID(),
+      titulo: 'Como me voy a Olvidar',
+      artista: 'Autenticos Decadentes',
+      album: '',
+      src: comoMeVoyAOlvidar,
+      duracion: 0
+    },
+    {
+      id: crypto.randomUUID(),
+      titulo: 'Diosa',
+      artista: 'Autenticos Decadentes',
+      album: '',
+      src: Diosa,
+      duracion: 0
+    },
+    {
+      id: crypto.randomUUID(),
+      titulo: 'Loco (Tu forma de ser)',
+      artista: 'Autenticos Decadentes',
+      album: '',
+      src: LocoTuFormaDeSer,
+      duracion: 0
+    },
+    {
+      id: crypto.randomUUID(),
+      titulo: 'Vivire Por Siempre',
+      artista: 'Autenticos Decadentes',
+      album: '',
+      src: vivirePorSiempre,
+      duracion: 0
+    },
+    /** AUTENTICOS DECADENTES */
+    /* Babasonicos */
+    {
+      id: crypto.randomUUID(),
+      titulo: 'Los Calientes',
+      artista: 'Babasonicos',
+      album: 'Jessico',
+      src: LosCalientes,
+      duracion: 0
+    },
+    {
+      id: crypto.randomUUID(),
+      titulo: 'Fizz',
+      artista: 'Babasonicos',
+      album: 'Jessico',
+      src: Fizz,
+      duracion: 0
+    },
+    {
+      id: crypto.randomUUID(),
+      titulo: 'Irresponsables',
+      artista: 'Babasonicos',
+      album: 'Infame',
+      src: irresponsables,
+      duracion: 0
+    },
+    {
+      id: crypto.randomUUID(),
+      titulo: 'Putita',
+      artista: 'Babasonicos',
+      album: 'Infame',
+      src: putitaxd,
+      duracion: 0
+    },
+    /* Babasonicos */
+    /* Catupecu */
+    {
+      id: crypto.randomUUID(),
+      titulo: 'Dale!',
+      artista: 'Catupecu Machu',
+      album: 'Dale!',
+      src: dale,
+      duracion: 0
+    },
+    {
+      id: crypto.randomUUID(),
+      titulo: 'Y Lo Que Quiero es Que Pises sin el suelo',
+      artista: 'Catupecu Machu',
+      album: '',
+      src: yLoQueQuiero,
+      duracion: 0
+    },
+    /* Catupecu */
+    /* Charly */
+    {
+      id: crypto.randomUUID(),
+      titulo: 'No toquen',
+      artista: 'Charly Garcia',
+      album: 'Como conseguir chicas',
+      src: noToquen,
+      duracion: 0
+    },
+    {
+      id: crypto.randomUUID(),
+      titulo: 'Yendo de la cama al living',
+      artista: 'Charly Garcia',
+      album: 'Yendo de la cama al living',
+      src: yendoDeLaCamaAlLiving,
+      duracion: 0
+    },
+    {
+      id: crypto.randomUUID(),
+      titulo: 'Nos Siguen Pegando Abajo',
+      artista: 'Charly Garcia',
+      album: 'Clics modernos',
+      src: nosSiguenPegando,
+      duracion: 0
+    },
+    {
+      id: crypto.randomUUID(),
+      titulo: 'No soy un extraño',
+      artista: 'Charly Garcia',
+      album: 'Clics modernos',
+      src: NoSoyUnExtraño,
+      duracion: 0
+    },
+    {
+      id: crypto.randomUUID(),
+      titulo: 'Plateado Sobre Plateado (Huellas en el mar)',
+      artista: 'Charly Garcia',
+      album: 'Clics modernos',
+      src: PlateadoSobrePlateado,
+      duracion: 0
+    },
+    {
+      id: crypto.randomUUID(),
+      titulo: 'Demoliendo Hoteles',
+      artista: 'Charly Garcia',
+      album: 'Piano Bar',
+      src: demoliendoHoteles,
+      duracion: 0
+    },
+    {
+      id: crypto.randomUUID(),
+      titulo: 'Promesas sobre el bidet',
+      artista: 'Charly Garcia',
+      album: 'Piano Bar',
+      src: PromisesAboutBidet,
+      duracion: 0
+    },
+    {
+      id: crypto.randomUUID(),
+      titulo: 'Raros Peinados Nuevos',
+      artista: 'Charly Garcia',
+      album: 'Piano Bar',
+      src: RarosPeinados,
+      duracion: 0
+    },
+    {
+      id: crypto.randomUUID(),
+      titulo: 'No se va a llamar Mi Amor',
+      artista: 'Charly Garcia',
+      album: 'Piano Bar',
+      src: NoSeVaALlamar,
+      duracion: 0
+    },
+    {
+      id: crypto.randomUUID(),
+      titulo: 'Piano Bar',
+      artista: 'Charly Garcia',
+      album: 'Piano Bar',
+      src: PianoBar,
+      duracion: 0
+    },
+    {
+      id: crypto.randomUUID(),
+      titulo: 'Total Inteferencia',
+      artista: 'Charly Garcia',
+      album: 'Piano Bar',
+      src: TotalInterferencia,
+      duracion: 0
+    },
+    /* Charly */
+    /** Chico Buarque */
+    {
+      id: crypto.randomUUID(),
+      titulo: 'Roda Vida',
+      artista: 'Chico Buarque',
+      album: '',
+      src: rodaVida,
+      duracion: 0
+    },
+    {
+      id: crypto.randomUUID(),
+      titulo: 'Construção',
+      artista: 'Chico Buarque',
+      album: '',
+      src: Construsao,
+      duracion: 0
+    },
+    {
+      id: crypto.randomUUID(),
+      titulo: 'Cotidiano',
+      artista: 'Chico Buarque',
+      album: '',
+      src: Cotidiano,
+      duracion: 0
+    },
+    {
+      id: crypto.randomUUID(),
+      titulo: 'Valsinha',
+      artista: 'Chico Buarque',
+      album: '',
+      src: Valsinha,
+      duracion: 0
+    },
+    {
+      id: crypto.randomUUID(),
+      titulo: 'A Banda',
+      artista: 'Chico Buarque',
+      album: '',
+      src: ABanda,
+      duracion: 0
+    },
+    {
+      id: crypto.randomUUID(),
+      titulo: 'Apesar De Você',
+      artista: 'Chico Buarque',
+      album: '',
+      src: Apesar,
+      duracion: 0
+    },
+    /** Chico Buarque */
+    /** Divididos */
+    {
+      id: crypto.randomUUID(),
+      titulo: 'Camaron Bombay',
+      artista: 'Divididos',
+      album: '',
+      src: camaronBombay,
+      duracion: 0
+    },
+    {
+      id: crypto.randomUUID(),
+      titulo: 'Che, Que Esperas?',
+      artista: 'Divididos',
+      album: '',
+      src: cheQueEsperas,
+      duracion: 0
+    },
+    {
+      id: crypto.randomUUID(),
+      titulo: 'Haciendo cosas raras',
+      artista: 'Divididos',
+      album: '',
+      src: cosasRaras,
+      duracion: 0
+    },
+    {
+      id: crypto.randomUUID(),
+      titulo: 'Salir a Asustar',
+      artista: 'Divididos',
+      album: '',
+      src: salirAsutar,
+      duracion: 0
+    },
+    {
+      id: crypto.randomUUID(),
+      titulo: 'Ortega y Gases',
+      artista: 'Divididos',
+      album: '',
+      src: OrtegayGases,
+      duracion: 0
+    },
+    {
+      id: crypto.randomUUID(),
+      titulo: 'El Arriero',
+      artista: 'Divididos',
+      album: '',
+      src: elArriero,
+      duracion: 0
+    },
+    {
+      id: crypto.randomUUID(),
+      titulo: '¿Que Ves?',
+      artista: 'Divididos',
+      album: '',
+      src: queVes,
+      duracion: 0
+    },
+    {
+      id: crypto.randomUUID(),
+      titulo: 'Paisano de Hurlingham',
+      artista: 'Divididos',
+      album: '',
+      src: paisanoDeHurlingham,
+      duracion: 0
+    },
+    {
+      id: crypto.randomUUID(),
+      titulo: 'Huelga de Amores',
+      artista: 'Divididos',
+      album: '',
+      src: huelgaDeAmores,
+      duracion: 0
+    },
+    {
+      id: crypto.randomUUID(),
+      titulo: 'Ay, que dios Boludo',
+      artista: 'Divididos',
+      album: '',
+      src: ayQueDiosBoludon,
+      duracion: 0
+    },
+    /** Divididos */
+    /** CDN */
+    {
+      id: crypto.randomUUID(),
+      titulo: 'Yendo a la Casa de Damian',
+      artista: 'Cuarteto de Nos',
+      album: '',
+      src: yendoAlAcasa,
+      duracion: 0
+    },
+    /** CDN */
+    /* CADILLACS */
+    {
+      id: crypto.randomUUID(),
+      titulo: 'Cadillacs',
+      artista: 'Fabulosos Cadillacs',
+      album: '',
+      src: cadillac,
+      duracion: 0
+    },
+    {
+      id: crypto.randomUUID(),
+      titulo: 'Numero Dos en Tu Lista',
+      artista: 'Fabulosos Cadillacs',
+      album: '',
+      src: numeroDos,
+      duracion: 0
+    },
+    {
+      id: crypto.randomUUID(),
+      titulo: 'Estoy Harto',
+      artista: 'Fabulosos Cadillacs',
+      album: '',
+      src: estoyHarto,
+      duracion: 0
+    },
+
+    {
+      id: crypto.randomUUID(),
+      titulo: 'El Genio del Dub',
+      artista: 'Fabulosos Cadillacs',
+      album: '',
+      src: genidoDelDub,
+      duracion: 0
+    },
+    {
+      id: crypto.randomUUID(),
+      titulo: 'El Satanico Dr Cadillac',
+      artista: 'Fabulosos Cadillacs',
+      album: '',
+      src: satanicoDr,
+      duracion: 0
+    },
+    {
+      id: crypto.randomUUID(),
+      titulo: 'Silencio Hospital',
+      artista: 'Fabulosos Cadillacs',
+      album: '',
+      src: silencioHospital,
+      duracion: 0
+    },
+    /* CADILLACS */
+    /* Heroes del SIlencio */
+    {
+      id: crypto.randomUUID(),
+      titulo: 'Entre Dos Tierras',
+      artista: 'Heroes del Silencio',
+      album: '',
+      src: entreDosTierras,
+      duracion: 0
+    },
+    {
+      id: crypto.randomUUID(),
+      titulo: 'Maldito Duende',
+      artista: 'Heroes del Silencio',
+      album: '',
+      src: malditoDuende,
+      duracion: 0
+    },
+    {
+      id: crypto.randomUUID(),
+      titulo: 'Hechizo',
+      artista: 'Heroes del Silencio',
+      album: '',
+      src: hechizo,
+      duracion: 0
+    },
+    /* Heroes del SIlencio */
+    /** Las pelotas */
+    {
+      id: crypto.randomUUID(),
+      titulo: 'Sera',
+      artista: 'Las Pelotas',
+      album: '',
+      src: sera,
+      duracion: 0
+    },
+    /** Las pelotas */
+    /* Legiao urbana */
+    {
+      id: crypto.randomUUID(),
+      titulo: 'Indios',
+      artista: 'Legião Urbana',
+      album: '',
+      src: indios,
+      duracion: 0
+    },
+    {
+      id: crypto.randomUUID(),
+      titulo: 'Tempo Perdido',
+      artista: 'Legião Urbana',
+      album: '',
+      src: tempoPerdido,
+      duracion: 0
+    },
+    /* Legiao urbana */
+    /* Los Abuelos */
+    {
+      id: crypto.randomUUID(),
+      titulo: 'Mil Horas',
+      artista: 'Los Abuelos de la Nada',
+      album: '',
+      src: milHoras,
+      duracion: 0
+    },
+    {
+      id: crypto.randomUUID(),
+      titulo: 'Costumbres Argentinas',
+      artista: 'Los Abuelos de la Nada',
+      album: '',
+      src: costumbres,
+      duracion: 0
+    },
+    /* Los Abuelos */
+    /** Los Caballeros de la Quema */
+    {
+      id: crypto.randomUUID(),
+      titulo: 'Avanti Morocha',
+      artista: 'Los Caballeros de la Quema',
+      album: '',
+      src: avantiMorocha,
+      duracion: 0
+    },
+    /** Los Caballeros de la Quema */
+    /** Los Rodriguez */
+    {
+      id: crypto.randomUUID(),
+      titulo: 'Mi enfermedad',
+      artista: 'Los Rodriguez',
+      album: '',
+      src: miEnfermadad,
+      duracion: 0
+    },
+    {
+      id: crypto.randomUUID(),
+      titulo: 'A los Ojos',
+      artista: 'Los Rodriguez',
+      album: '',
+      src: aLosOjos,
+      duracion: 0
+    },
+    /** Los Rodriguez */
+    /** Los Tipitos */
+    {
+      id: crypto.randomUUID(),
+      titulo: 'Brujeria',
+      artista: 'Los Tipitos',
+      album: '',
+      src: brujeria,
+      duracion: 0
+    },
+    {
+      id: crypto.randomUUID(),
+      titulo: 'Algo',
+      artista: 'Los Tipitos',
+      album: '',
+      src: algo,
+      duracion: 0
+    },
+    {
+      id: crypto.randomUUID(),
+      titulo: 'Campanas en la Noche',
+      artista: 'Los Tipitos',
+      album: '',
+      src: campanasEnLaNoche,
+      duracion: 0
+    },
+    /** Los Tipitos */
+    /** PR */
+    {
+      id: crypto.randomUUID(),
+      titulo: 'Barba Azul versus el Amor Letal',
+      artista: 'Patricio Rey y sus Redonditos de Ricota',
+      album: 'Gulp!',
+      src: barbaAzul,
+      duracion: 0
+    },
+    {
+      id: crypto.randomUUID(),
+      titulo: 'La Bestia Pop',
+      artista: 'Patricio Rey y sus Redonditos de Ricota',
+      album: 'Gulp!',
+      src: bestiaPop,
+      duracion: 0
+    },
+    {
+      id: crypto.randomUUID(),
+      titulo: 'Roto y Mal Parado',
+      artista: 'Patricio Rey y sus Redonditos de Ricota',
+      album: 'Gulp!',
+      src: rotoyMalParado,
+      duracion: 0
+    },
+    {
+      id: crypto.randomUUID(),
+      titulo: 'Pierre, el Victricida',
+      artista: 'Patricio Rey y sus Redonditos de Ricota',
+      album: 'Gulp!',
+      src: pierreElVictricida,
+      duracion: 0
+    },
+    {
+      id: crypto.randomUUID(),
+      titulo: 'Te voy a atornillar',
+      artista: 'Patricio Rey y sus Redonditos de Ricota',
+      album: 'Gulp!',
+      src: teVoyAtornillar,
+      duracion: 0
+    },
+    {
+      id: crypto.randomUUID(),
+      titulo: 'Fuegos de Octubre',
+      artista: 'Patricio Rey y sus Redonditos de Ricota',
+      album: 'Oktubre',
+      src: fuegoOktubre,
+      duracion: 0
+    },
+    {
+      id: crypto.randomUUID(),
+      titulo: 'Preso en mi Ciudad',
+      artista: 'Patricio Rey y sus Redonditos de Ricota',
+      album: 'Oktubre',
+      src: presoEnMiCiudad,
+      duracion: 0
+    },
+    {
+      id: crypto.randomUUID(),
+      titulo: 'Musica para Pastillas',
+      artista: 'Patricio Rey y sus Redonditos de Ricota',
+      album: 'Oktubre',
+      src: musicaPastillas,
+      duracion: 0
+    },
+    {
+      id: crypto.randomUUID(),
+      titulo: 'Semen-Up',
+      artista: 'Patricio Rey y sus Redonditos de Ricota',
+      album: 'Oktubre',
+      src: semenup,
+      duracion: 0
+    },
+    {
+      id: crypto.randomUUID(),
+      titulo: 'Divina TV. Führer',
+      artista: 'Patricio Rey y sus Redonditos de Ricota',
+      album: 'Oktubre',
+      src: divinatv,
+      duracion: 0
+    },
+    {
+      id: crypto.randomUUID(),
+      titulo: 'Jijiji',
+      artista: 'Patricio Rey y sus Redonditos de Ricota',
+      album: 'Oktubre',
+      src: jijiji,
+      duracion: 0
+    },
+    {
+      id: crypto.randomUUID(),
+      titulo: 'Cancion para Naufragios',
+      artista: 'Patricio Rey y sus Redonditos de Ricota',
+      album: 'Oktubre',
+      src: cancionParaNaufragios,
+      duracion: 0
+    },
+    {
+      id: crypto.randomUUID(),
+      titulo: 'Masacre en el puticlub',
+      artista: 'Patricio Rey y sus Redonditos de Ricota',
+      album: 'Un Baion para el ojo idiota',
+      src: puticlub,
+      duracion: 0
+    },
+    {
+      id: crypto.randomUUID(),
+      titulo: 'Noticias de Ayer',
+      artista: 'Patricio Rey y sus Redonditos de Ricota',
+      album: 'Un Baion para el ojo idiota',
+      src: noticiasDeAyer,
+      duracion: 0
+    },
+    {
+      id: crypto.randomUUID(),
+      titulo: 'Todo Preso es Politico',
+      artista: 'Patricio Rey y sus Redonditos de Ricota',
+      album: 'Un Baion para el ojo idiota',
+      src: presoPolitico,
+      duracion: 0
+    },
+    {
+      id: crypto.randomUUID(),
+      titulo: 'Vencedores Vencidos',
+      artista: 'Patricio Rey y sus Redonditos de Ricota',
+      album: 'Un Baion para el ojo idiota',
+      src: vencedoresVencidos,
+      duracion: 0
+    },
+    {
+      id: crypto.randomUUID(),
+      titulo: 'Vamos las Bandas',
+      artista: 'Patricio Rey y sus Redonditos de Ricota',
+      album: 'Un Baion para el ojo idiota',
+      src: vamosLasBandas,
+      duracion: 0
+    },
+    {
+      id: crypto.randomUUID(),
+      titulo: 'Ella debe estar tan linda',
+      artista: 'Patricio Rey y sus Redonditos de Ricota',
+      album: 'Un Baion para el ojo idiota',
+      src: ellaIsSoCute,
+      duracion: 0
+    },
+    {
+      id: crypto.randomUUID(),
+      titulo: 'Todo un Palo',
+      artista: 'Patricio Rey y sus Redonditos de Ricota',
+      album: 'Un Baion para el ojo idiota',
+      src: todoUnPalo,
+      duracion: 0
+    },
+    {
+      id: crypto.randomUUID(),
+      titulo: 'Heroe del Whisky',
+      artista: 'Patricio Rey y sus Redonditos de Ricota',
+      album: '¡Bang! ¡Bang!... Estás liquidado',
+      src: heroeDelWhisky,
+      duracion: 0
+    },
+    {
+      id: crypto.randomUUID(),
+      titulo: 'Un Pacman en el Savoy',
+      artista: 'Patricio Rey y sus Redonditos de Ricota',
+      album: '¡Bang! ¡Bang!... Estás liquidado',
+      src: pacmanSavoy,
+      duracion: 0
+    },
+    {
+      id: crypto.randomUUID(),
+      titulo: 'Nadie es Perfecto',
+      artista: 'Patricio Rey y sus Redonditos de Ricota',
+      album: '¡Bang! ¡Bang!... Estás liquidado',
+      src: nadieEsPerfecto,
+      duracion: 0
+    },
+    {
+      id: crypto.randomUUID(),
+      titulo: 'Maldicion, va a ser un dia hermoso',
+      artista: 'Patricio Rey y sus Redonditos de Ricota',
+      album: '¡Bang! ¡Bang!... Estás liquidado',
+      src: maldicionDiaHermoso,
+      duracion: 0
+    },
+    {
+      id: crypto.randomUUID(),
+      titulo: 'Toxi Taxi',
+      artista: 'Patricio Rey y sus Redonditos de Ricota',
+      album: 'La Mosca y la Sopa',
+      src: toxiTaxi,
+      duracion: 0
+    },
+    {
+      id: crypto.randomUUID(),
+      titulo: 'Un poco de amor frances',
+      artista: 'Patricio Rey y sus Redonditos de Ricota',
+      album: 'La Mosca y la Sopa',
+      src: amorFrances,
+      duracion: 0
+    },
+    {
+      id: crypto.randomUUID(),
+      titulo: 'Mi Perro Dinamita',
+      artista: 'Patricio Rey y sus Redonditos de Ricota',
+      album: 'La Mosca y la Sopa',
+      src: perroDinamita,
+      duracion: 0
+    },
+    {
+      id: crypto.randomUUID(),
+      titulo: 'Blues de Artilleria',
+      artista: 'Patricio Rey y sus Redonditos de Ricota',
+      album: 'La Mosca y la Sopa',
+      src: bluesDeArtilleria,
+      duracion: 0
+    },
+    {
+      id: crypto.randomUUID(),
+      titulo: 'Tarea Fina',
+      artista: 'Patricio Rey y sus Redonditos de Ricota',
+      album: 'La Mosca y la Sopa',
+      src: tareaFina,
+      duracion: 0
+    },
+    {
+      id: crypto.randomUUID(),
+      titulo: 'El pibe de los Astilleros',
+      artista: 'Patricio Rey y sus Redonditos de Ricota',
+      album: 'La Mosca y la Sopa',
+      src: elPibeDeLosAstilleros,
+      duracion: 0
+    },
+    {
+      id: crypto.randomUUID(),
+      titulo: 'Nueva Roma',
+      artista: 'Patricio Rey y sus Redonditos de Ricota',
+      album: 'La Mosca y la Sopa',
+      src: nuevaRoma,
+      duracion: 0
+    },
+    /** PR */
+    /** Pesacdo Rabioso */
+    {
+      id: crypto.randomUUID(),
+      titulo: 'Bajan',
+      artista: 'Pescado Rabioso',
+      album: 'Artaud',
+      src: Bajan,
+      duracion: 0
+    },
+    {
+      id: crypto.randomUUID(),
+      titulo: 'Cementerio Club',
+      artista: 'Pescado Rabioso',
+      album: 'Artaud',
+      src: CementerioClub,
+      duracion: 0
+    },
+    /** Pescado Rabioso */
+    /* Seru */
+    {
+      id: crypto.randomUUID(),
+      titulo: 'A Los Jóvenes De Ayer',
+      artista: 'Serú Girán',
+      album: 'Bicicleta',
+      src: ALosJovenes,
+      duracion: 0
+    },
+    {
+      id: crypto.randomUUID(),
+      titulo: 'Canción De Alicia En El País',
+      artista: 'Serú Girán',
+      album: 'Bicicleta',
+      src: CancionDeAlicia,
+      duracion: 0
+    },
+    {
+      id: crypto.randomUUID(),
+      titulo: 'Cinema Verité',
+      artista: 'Serú Girán',
+      album: 'Bicicleta',
+      src: CinemaVerite,
+      duracion: 0
+    },
+    {
+      id: crypto.randomUUID(),
+      titulo: 'Desarma y Sangra',
+      artista: 'Serú Girán',
+      album: 'Bicicleta',
+      src: DesarmaYSangra,
+      duracion: 0
+    },
+    {
+      id: crypto.randomUUID(),
+      titulo: 'Peperina',
+      artista: 'Serú Girán',
+      album: 'Peperina',
+      src: Peperina,
+      duracion: 0
+    },
+    {
+      id: crypto.randomUUID(),
+      titulo: 'Llorando en el Espejo',
+      artista: 'Serú Girán',
+      album: 'Peperina',
+      src: LlorandoEnElEspejo,
+      duracion: 0
+    },
+    {
+      id: crypto.randomUUID(),
+      titulo: 'Perro Andaluz',
+      artista: 'Serú Girán',
+      album: 'La grasa de las capitales',
+      src: PerroAndaluz,
+      duracion: 0
+    },
+    /** Seru */
+    /** Soda */
+    {
+      id: crypto.randomUUID(),
+      titulo: 'Te hacen Falta Vitaminas',
+      artista: 'Soda Stereo',
+      album: '',
+      src: vitaminas,
+      duracion: 0
+    },
+    {
+      id: crypto.randomUUID(),
+      titulo: 'Un Misil en mi placard',
+      artista: 'Soda Stereo',
+      album: '',
+      src: unMisil,
+      duracion: 0
+    },
+    {
+      id: crypto.randomUUID(),
+      titulo: 'Nada Personal',
+      artista: 'Soda Stereo',
+      album: '',
+      src: nadaPersonal,
+      duracion: 0
+    },
+    /** Soda */
+    /* Sumo */
+    {
+      id: crypto.randomUUID(),
+      titulo: 'Beautiful Losers',
+      artista: 'Sumo',
+      album: '',
+      src: beautiful,
+      duracion: 0
+    },
+    {
+      id: crypto.randomUUID(),
+      titulo: 'Heroina',
+      artista: 'Sumo',
+      album: '',
+      src: heroina,
+      duracion: 0
+    },
+    {
+      id: crypto.randomUUID(),
+      titulo: 'Breaking Away',
+      artista: 'Sumo',
+      album: '',
+      src: breakingAway,
+      duracion: 0
+    },
+    {
+      id: crypto.randomUUID(),
+      titulo: 'La Rubia Tarada',
+      artista: 'Sumo',
+      album: '',
+      src: rubiaTarada,
+      duracion: 0
+    },
+    {
+      id: crypto.randomUUID(),
+      titulo: 'Crua Chan',
+      artista: 'Sumo',
+      album: 'After Chabon',
+      src: crua,
+      duracion: 0
+    },
+    {
+      id: crypto.randomUUID(),
+      titulo: 'Hola Frank',
+      artista: 'Sumo',
+      album: '',
+      src: holaFrank,
+      duracion: 0
+    },
+    {
+      id: crypto.randomUUID(),
+      titulo: 'Estallando Desde el Oceano',
+      artista: 'Sumo',
+      album: '',
+      src: estallando,
+      duracion: 0
+    },
+    {
+      id: crypto.randomUUID(),
+      titulo: 'Regtest',
+      artista: 'Sumo',
+      album: '',
+      src: regtest,
+      duracion: 0
+    },
+    /* Sumo */
+    /* Turf */
+
+    {
+      id: crypto.randomUUID(),
+      titulo: 'Cuatro Personalidades',
+      artista: 'Turf',
+      album: '',
+      src: cuatroPersonalidades,
+      duracion: 0
+    },
+    {
+      id: crypto.randomUUID(),
+      titulo: 'No se llama Amor',
+      artista: 'Turf',
+      album: '',
+      src: noSeLlamaAmor,
+      duracion: 0
+    },
+    /* Turf */
+    /* Virus */
+    {
+      id: crypto.randomUUID(),
+      titulo: 'Danza de Bengalas',
+      artista: 'Virus',
+      album: '',
+      src: danzaDeBengalas,
+      duracion: 0
+    },
+    {
+      id: crypto.randomUUID(),
+      titulo: 'No fumo, soy moderno',
+      artista: 'Virus',
+      album: '',
+      src: noFumo,
+      duracion: 0
+    },
+    {
+      id: crypto.randomUUID(),
+      titulo: 'Superficies de Placer',
+      artista: 'Virus',
+      album: '',
+      src: superficiesDePlacer,
+      duracion: 0
+    },
+
+    /* Virus */
+    /* Viejas lo */
+    {
+      id: crypto.randomUUID(),
+      titulo: 'Homero',
+      artista: 'Viejas Locas',
+      album: '',
+      src: Homero,
       duracion: 0
     },
     /* Artic */
@@ -514,40 +1519,6 @@ const dataPlaylist = {
       duracion: 0
     },
     /* Artic */
-    /* Babasonicos */
-    {
-      id: crypto.randomUUID(),
-      titulo: 'Los Calientes',
-      artista: 'Babasonicos',
-      album: 'Jessico',
-      src: LosCalientes,
-      duracion: 0
-    },
-    {
-      id: crypto.randomUUID(),
-      titulo: 'Fizz',
-      artista: 'Babasonicos',
-      album: 'Jessico',
-      src: Fizz,
-      duracion: 0
-    },
-    {
-      id: crypto.randomUUID(),
-      titulo: 'Irresponsables',
-      artista: 'Babasonicos',
-      album: 'Infame',
-      src: irresponsables,
-      duracion: 0
-    },
-    {
-      id: crypto.randomUUID(),
-      titulo: 'Putita',
-      artista: 'Babasonicos',
-      album: 'Infame',
-      src: putitaxd,
-      duracion: 0
-    },
-    /* Babasonicos */
     /* Blur */
     {
       id: crypto.randomUUID(),
@@ -566,156 +1537,6 @@ const dataPlaylist = {
       duracion: 0
     },
     /* Blur */
-    /* Catupecu */
-    {
-      id: crypto.randomUUID(),
-      titulo: 'Dale!',
-      artista: 'Catupecu Machu',
-      album: 'Dale!',
-      src: dale,
-      duracion: 0
-    },
-    {
-      id: crypto.randomUUID(),
-      titulo: 'Y Lo Que Quiero es Que Pises sin el suelo',
-      artista: 'Catupecu Machu',
-      album: '',
-      src: yLoQueQuiero,
-      duracion: 0
-    },
-    /* Catupecu */
-    /* Charly */
-    {
-      id: crypto.randomUUID(),
-      titulo: 'No toquen',
-      artista: 'Charly Garcia',
-      album: 'Como conseguir chicas',
-      src: noToquen,
-      duracion: 0
-    },
-    {
-      id: crypto.randomUUID(),
-      titulo: 'Yendo de la cama al living',
-      artista: 'Charly Garcia',
-      album: 'Yendo de la cama al living',
-      src: yendoDeLaCamaAlLiving,
-      duracion: 0
-    },
-    {
-      id: crypto.randomUUID(),
-      titulo: 'Nos Siguen Pegando Abajo',
-      artista: 'Charly Garcia',
-      album: 'Clics modernos',
-      src: nosSiguenPegando,
-      duracion: 0
-    },
-    {
-      id: crypto.randomUUID(),
-      titulo: 'No soy un extraño',
-      artista: 'Charly Garcia',
-      album: 'Clics modernos',
-      src: NoSoyUnExtraño,
-      duracion: 0
-    },
-    {
-      id: crypto.randomUUID(),
-      titulo: 'Plateado Sobre Plateado (Huellas en el mar)',
-      artista: 'Charly Garcia',
-      album: 'Clics modernos',
-      src: PlateadoSobrePlateado,
-      duracion: 0
-    },
-    {
-      id: crypto.randomUUID(),
-      titulo: 'Demoliendo Hoteles',
-      artista: 'Charly Garcia',
-      album: 'Piano Bar',
-      src: demoliendoHoteles,
-      duracion: 0
-    },
-    {
-      id: crypto.randomUUID(),
-      titulo: 'Promesas sobre el bidet',
-      artista: 'Charly Garcia',
-      album: 'Piano Bar',
-      src: PromisesAboutBidet,
-      duracion: 0
-    },
-    {
-      id: crypto.randomUUID(),
-      titulo: 'Raros Peinados Nuevos',
-      artista: 'Charly Garcia',
-      album: 'Piano Bar',
-      src: RarosPeinados,
-      duracion: 0
-    },
-    {
-      id: crypto.randomUUID(),
-      titulo: 'No se va a llamar Mi Amor',
-      artista: 'Charly Garcia',
-      album: 'Piano Bar',
-      src: NoSeVaALlamar,
-      duracion: 0
-    },
-    {
-      id: crypto.randomUUID(),
-      titulo: 'Piano Bar',
-      artista: 'Charly Garcia',
-      album: 'Piano Bar',
-      src: PianoBar,
-      duracion: 0
-    },
-    {
-      id: crypto.randomUUID(),
-      titulo: 'Total Inteferencia',
-      artista: 'Charly Garcia',
-      album: 'Piano Bar',
-      src: TotalInterferencia,
-      duracion: 0
-    },
-    /* Charly */
-    /** Chico Buarque */
-    {
-      id: crypto.randomUUID(),
-      titulo: 'Construção',
-      artista: 'Chico Buarque',
-      album: '',
-      src: Construsao,
-      duracion: 0
-    },
-    {
-      id: crypto.randomUUID(),
-      titulo: 'Cotidiano',
-      artista: 'Chico Buarque',
-      album: '',
-      src: Cotidiano,
-      duracion: 0
-    },
-    {
-      id: crypto.randomUUID(),
-      titulo: 'Valsinha',
-      artista: 'Chico Buarque',
-      album: '',
-      src: Valsinha,
-      duracion: 0
-    },
-    {
-      id: crypto.randomUUID(),
-      titulo: 'A Banda',
-      artista: 'Chico Buarque',
-      album: '',
-      src: ABanda,
-      duracion: 0
-    },
-    {
-      id: crypto.randomUUID(),
-      titulo: 'Apesar De Você',
-      artista: 'Chico Buarque',
-      album: '',
-      src: Apesar,
-      duracion: 0
-    },
-    /** Chico Buarque */
     /* childish */
     {
       id: crypto.randomUUID(),
@@ -832,119 +1653,16 @@ const dataPlaylist = {
       duracion: 0
     },
     /** dire straits */
-    /** Divididos */
-    {
-      id: crypto.randomUUID(),
-      titulo: 'Camaron Bombay',
-      artista: 'Divididos',
-      album: '',
-      src: camaronBombay,
-      duracion: 0
-    },
-    {
-      id: crypto.randomUUID(),
-      titulo: 'Che, Que Esperas?',
-      artista: 'Divididos',
-      album: '',
-      src: cheQueEsperas,
-      duracion: 0
-    },
-    {
-      id: crypto.randomUUID(),
-      titulo: 'Haciendo cosas raras',
-      artista: 'Divididos',
-      album: '',
-      src: cosasRaras,
-      duracion: 0
-    },
-    /** Divididos */
-    /* CADILLACS */
-    {
-      id: crypto.randomUUID(),
-      titulo: 'Cadillacs',
-      artista: 'Fabulosos Cadillacs',
-      album: '',
-      src: cadillac,
-      duracion: 0
-    },
-    {
-      id: crypto.randomUUID(),
-      titulo: 'Numero Dos en Tu Lista',
-      artista: 'Fabulosos Cadillacs',
-      album: '',
-      src: numeroDos,
-      duracion: 0
-    },
-    {
-      id: crypto.randomUUID(),
-      titulo: 'Estoy Harto',
-      artista: 'Fabulosos Cadillacs',
-      album: '',
-      src: estoyHarto,
-      duracion: 0
-    },
-
-    {
-      id: crypto.randomUUID(),
-      titulo: 'El Genio del Dub',
-      artista: 'Fabulosos Cadillacs',
-      album: '',
-      src: genidoDelDub,
-      duracion: 0
-    },
-    {
-      id: crypto.randomUUID(),
-      titulo: 'El Satanico Dr Cadillac',
-      artista: 'Fabulosos Cadillacs',
-      album: '',
-      src: satanicoDr,
-      duracion: 0
-    },
-    {
-      id: crypto.randomUUID(),
-      titulo: 'Silencio Hospital',
-      artista: 'Fabulosos Cadillacs',
-      album: '',
-      src: silencioHospital,
-      duracion: 0
-    },
-    /* CADILLACS */
     /* HARMLESS */
-    // {
-    //   id: crypto.randomUUID(),
-    //   titulo: 'Swinn Lynn',
-    //   artista: 'Harmless',
-    //   album: '',
-    //   src: swinn,
-    //   duracion: 0
-    // },
+    {
+      id: crypto.randomUUID(),
+      titulo: 'Swinn Lynn',
+      artista: 'Harmless',
+      album: '',
+      src: swinn,
+      duracion: 0
+    },
     /* HARMLESS */
-    /* Heroes del SIlencio */
-    {
-      id: crypto.randomUUID(),
-      titulo: 'Entre Dos Tierras',
-      artista: 'Heroes del Silencio',
-      album: '',
-      src: entreDosTierras,
-      duracion: 0
-    },
-    {
-      id: crypto.randomUUID(),
-      titulo: 'Maldito Duende',
-      artista: 'Heroes del Silencio',
-      album: '',
-      src: malditoDuende,
-      duracion: 0
-    },
-    {
-      id: crypto.randomUUID(),
-      titulo: 'Hechizo',
-      artista: 'Heroes del Silencio',
-      album: '',
-      src: hechizo,
-      duracion: 0
-    },
-    /* Heroes del SIlencio */
     /* Joey papacito <3 */
     {
       id: crypto.randomUUID(),
@@ -999,42 +1717,6 @@ const dataPlaylist = {
       duracion: 0
     },
     /* laurita branigan */
-    /* Legiao urbana */
-    {
-      id: crypto.randomUUID(),
-      titulo: 'Indios',
-      artista: 'Legião Urbana',
-      album: '',
-      src: indios,
-      duracion: 0
-    },
-    {
-      id: crypto.randomUUID(),
-      titulo: 'Tempo Perdido',
-      artista: 'Legião Urbana',
-      album: '',
-      src: tempoPerdido,
-      duracion: 0
-    },
-    /* Legiao urbana */
-    /* Los Abuelos */
-    {
-      id: crypto.randomUUID(),
-      titulo: 'Mil Horas',
-      artista: 'Los Abuelos de la Nada',
-      album: '',
-      src: milHoras,
-      duracion: 0
-    },
-    {
-      id: crypto.randomUUID(),
-      titulo: 'Costumbres Argentinas',
-      artista: 'Los Abuelos de la Nada',
-      album: '',
-      src: costumbres,
-      duracion: 0
-    },
-    /* Legiao urbana */
     /* mcmiller */
     {
       id: crypto.randomUUID(),
@@ -1209,282 +1891,6 @@ const dataPlaylist = {
       duracion: 0
     },
     /* Oasis */
-    /** PR */
-    {
-      id: crypto.randomUUID(),
-      titulo: 'Barba Azul versus el Amor Letal',
-      artista: 'Patricio Rey y sus Redonditos de Ricota',
-      album: 'Gulp!',
-      src: barbaAzul,
-      duracion: 0
-    },
-    {
-      id: crypto.randomUUID(),
-      titulo: 'La Bestia Pop',
-      artista: 'Patricio Rey y sus Redonditos de Ricota',
-      album: 'Gulp!',
-      src: bestiaPop,
-      duracion: 0
-    },
-    {
-      id: crypto.randomUUID(),
-      titulo: 'Roto y Mal Parado',
-      artista: 'Patricio Rey y sus Redonditos de Ricota',
-      album: 'Gulp!',
-      src: rotoyMalParado,
-      duracion: 0
-    },
-    {
-      id: crypto.randomUUID(),
-      titulo: 'Pierre, el Victricida',
-      artista: 'Patricio Rey y sus Redonditos de Ricota',
-      album: 'Gulp!',
-      src: pierreElVictricida,
-      duracion: 0
-    },
-    {
-      id: crypto.randomUUID(),
-      titulo: 'Te voy a atornillar',
-      artista: 'Patricio Rey y sus Redonditos de Ricota',
-      album: 'Gulp!',
-      src: teVoyAtornillar,
-      duracion: 0
-    },
-    {
-      id: crypto.randomUUID(),
-      titulo: 'Fuegos de Octubre',
-      artista: 'Patricio Rey y sus Redonditos de Ricota',
-      album: 'Oktubre',
-      src: fuegoOktubre,
-      duracion: 0
-    },
-    {
-      id: crypto.randomUUID(),
-      titulo: 'Preso en mi Ciudad',
-      artista: 'Patricio Rey y sus Redonditos de Ricota',
-      album: 'Oktubre',
-      src: presoEnMiCiudad,
-      duracion: 0
-    },
-    {
-      id: crypto.randomUUID(),
-      titulo: 'Musica para Pastillas',
-      artista: 'Patricio Rey y sus Redonditos de Ricota',
-      album: 'Oktubre',
-      src: musicaPastillas,
-      duracion: 0
-    },
-    {
-      id: crypto.randomUUID(),
-      titulo: 'Semen-Up',
-      artista: 'Patricio Rey y sus Redonditos de Ricota',
-      album: 'Oktubre',
-      src: semenup,
-      duracion: 0
-    },
-    {
-      id: crypto.randomUUID(),
-      titulo: 'Divina TV. Führer',
-      artista: 'Patricio Rey y sus Redonditos de Ricota',
-      album: 'Oktubre',
-      src: divinatv,
-      duracion: 0
-    },
-    {
-      id: crypto.randomUUID(),
-      titulo: 'Jijiji',
-      artista: 'Patricio Rey y sus Redonditos de Ricota',
-      album: 'Oktubre',
-      src: jijiji,
-      duracion: 0
-    },
-    {
-      id: crypto.randomUUID(),
-      titulo: 'Cancion para Naufragios',
-      artista: 'Patricio Rey y sus Redonditos de Ricota',
-      album: 'Oktubre',
-      src: cancionParaNaufragios,
-      duracion: 0
-    },
-    {
-      id: crypto.randomUUID(),
-      titulo: 'Masacre en el puticlub',
-      artista: 'Patricio Rey y sus Redonditos de Ricota',
-      album: 'Un Baion para el ojo idiota',
-      src: puticlub,
-      duracion: 0
-    },
-    {
-      id: crypto.randomUUID(),
-      titulo: 'Noticias de Ayer',
-      artista: 'Patricio Rey y sus Redonditos de Ricota',
-      album: 'Un Baion para el ojo idiota',
-      src: noticiasDeAyer,
-      duracion: 0
-    },
-    {
-      id: crypto.randomUUID(),
-      titulo: 'Todo Preso es Politico',
-      artista: 'Patricio Rey y sus Redonditos de Ricota',
-      album: 'Un Baion para el ojo idiota',
-      src: presoPolitico,
-      duracion: 0
-    },
-    {
-      id: crypto.randomUUID(),
-      titulo: 'Vencedores Vencidos',
-      artista: 'Patricio Rey y sus Redonditos de Ricota',
-      album: 'Un Baion para el ojo idiota',
-      src: vencedoresVencidos,
-      duracion: 0
-    },
-    {
-      id: crypto.randomUUID(),
-      titulo: 'Vamos las Bandas',
-      artista: 'Patricio Rey y sus Redonditos de Ricota',
-      album: 'Un Baion para el ojo idiota',
-      src: vamosLasBandas,
-      duracion: 0
-    },
-    {
-      id: crypto.randomUUID(),
-      titulo: 'Ella debe estar tan linda',
-      artista: 'Patricio Rey y sus Redonditos de Ricota',
-      album: 'Un Baion para el ojo idiota',
-      src: ellaIsSoCute,
-      duracion: 0
-    },
-    {
-      id: crypto.randomUUID(),
-      titulo: 'Todo un Palo',
-      artista: 'Patricio Rey y sus Redonditos de Ricota',
-      album: 'Un Baion para el ojo idiota',
-      src: todoUnPalo,
-      duracion: 0
-    },
-    {
-      id: crypto.randomUUID(),
-      titulo: 'Heroe del Whisky',
-      artista: 'Patricio Rey y sus Redonditos de Ricota',
-      album: '¡Bang! ¡Bang!... Estás liquidado',
-      src: heroeDelWhisky,
-      duracion: 0
-    },
-    {
-      id: crypto.randomUUID(),
-      titulo: 'La Parabellum del Buen Psicopata',
-      artista: 'Patricio Rey y sus Redonditos de Ricota',
-      album: '¡Bang! ¡Bang!... Estás liquidado',
-      src: parabellum,
-      duracion: 0
-    },
-    {
-      id: crypto.randomUUID(),
-      titulo: 'Un Pacman en el Savoy',
-      artista: 'Patricio Rey y sus Redonditos de Ricota',
-      album: '¡Bang! ¡Bang!... Estás liquidado',
-      src: pacmanSavoy,
-      duracion: 0
-    },
-    {
-      id: crypto.randomUUID(),
-      titulo: 'Nadie es Perfecto',
-      artista: 'Patricio Rey y sus Redonditos de Ricota',
-      album: '¡Bang! ¡Bang!... Estás liquidado',
-      src: nadieEsPerfecto,
-      duracion: 0
-    },
-    {
-      id: crypto.randomUUID(),
-      titulo: 'Maldicion, va a ser un dia hermoso',
-      artista: 'Patricio Rey y sus Redonditos de Ricota',
-      album: '¡Bang! ¡Bang!... Estás liquidado',
-      src: maldicionDiaHermoso,
-      duracion: 0
-    },
-    {
-      id: crypto.randomUUID(),
-      titulo: 'Toxi Taxi',
-      artista: 'Patricio Rey y sus Redonditos de Ricota',
-      album: 'La Mosca y la Sopa',
-      src: toxiTaxi,
-      duracion: 0
-    },
-    {
-      id: crypto.randomUUID(),
-      titulo: 'Un poco de amor frances',
-      artista: 'Patricio Rey y sus Redonditos de Ricota',
-      album: 'La Mosca y la Sopa',
-      src: amorFrances,
-      duracion: 0
-    },
-    {
-      id: crypto.randomUUID(),
-      titulo: 'Mi Perro Dinamita',
-      artista: 'Patricio Rey y sus Redonditos de Ricota',
-      album: 'La Mosca y la Sopa',
-      src: perroDinamita,
-      duracion: 0
-    },
-    {
-      id: crypto.randomUUID(),
-      titulo: 'Blues de Artilleria',
-      artista: 'Patricio Rey y sus Redonditos de Ricota',
-      album: 'La Mosca y la Sopa',
-      src: bluesDeArtilleria,
-      duracion: 0
-    },
-    {
-      id: crypto.randomUUID(),
-      titulo: 'Tarea Fina',
-      artista: 'Patricio Rey y sus Redonditos de Ricota',
-      album: 'La Mosca y la Sopa',
-      src: tareaFina,
-      duracion: 0
-    },
-    {
-      id: crypto.randomUUID(),
-      titulo: 'El pibe de los Astilleros',
-      artista: 'Patricio Rey y sus Redonditos de Ricota',
-      album: 'La Mosca y la Sopa',
-      src: elPibeDeLosAstilleros,
-      duracion: 0
-    },
-    {
-      id: crypto.randomUUID(),
-      titulo: 'Nueva Roma',
-      artista: 'Patricio Rey y sus Redonditos de Ricota',
-      album: 'La Mosca y la Sopa',
-      src: nuevaRoma,
-      duracion: 0
-    },
-    {
-      id: crypto.randomUUID(),
-      titulo: 'Queso Ruso',
-      artista: 'Patricio Rey y sus Redonditos de Ricota',
-      album: 'La Mosca y la Sopa',
-      src: quesoRuso,
-      duracion: 0
-    },
-    /** PR */
-    /** Pesacdo Rabioso */
-    {
-      id: crypto.randomUUID(),
-      titulo: 'Bajan',
-      artista: 'Pescado Rabioso',
-      album: 'Artaud',
-      src: Bajan,
-      duracion: 0
-    },
-    {
-      id: crypto.randomUUID(),
-      titulo: 'Cementerio Club',
-      artista: 'Pescado Rabioso',
-      album: 'Artaud',
-      src: CementerioClub,
-      duracion: 0
-    },
-    /** Pescado Rabioso */
     /* Pixies */
     {
       id: crypto.randomUUID(),
@@ -1791,64 +2197,6 @@ const dataPlaylist = {
       duracion: 0
     },
     /* Ramones */
-    /* Seru */
-    {
-      id: crypto.randomUUID(),
-      titulo: 'A Los Jóvenes De Ayer',
-      artista: 'Serú Girán',
-      album: 'Bicicleta',
-      src: ALosJovenes,
-      duracion: 0
-    },
-    {
-      id: crypto.randomUUID(),
-      titulo: 'Canción De Alicia En El País',
-      artista: 'Serú Girán',
-      album: 'Bicicleta',
-      src: CancionDeAlicia,
-      duracion: 0
-    },
-    {
-      id: crypto.randomUUID(),
-      titulo: 'Cinema Verité',
-      artista: 'Serú Girán',
-      album: 'Bicicleta',
-      src: CinemaVerite,
-      duracion: 0
-    },
-    {
-      id: crypto.randomUUID(),
-      titulo: 'Desarma y Sangra',
-      artista: 'Serú Girán',
-      album: 'Bicicleta',
-      src: DesarmaYSangra,
-      duracion: 0
-    },
-    {
-      id: crypto.randomUUID(),
-      titulo: 'Peperina',
-      artista: 'Serú Girán',
-      album: 'Peperina',
-      src: Peperina,
-      duracion: 0
-    },
-    {
-      id: crypto.randomUUID(),
-      titulo: 'Llorando en el Espejo',
-      artista: 'Serú Girán',
-      album: 'Peperina',
-      src: LlorandoEnElEspejo,
-      duracion: 0
-    },
-    {
-      id: crypto.randomUUID(),
-      titulo: 'Perro Andaluz',
-      artista: 'Serú Girán',
-      album: 'La grasa de las capitales',
-      src: PerroAndaluz,
-      duracion: 0
-    },
-    /** Seru */
     /* smino */
     {
       id: crypto.randomUUID(),
@@ -1859,72 +2207,6 @@ const dataPlaylist = {
       duracion: 0
     },
     /* smino */
-    /* Sumo */
-    {
-      id: crypto.randomUUID(),
-      titulo: 'Beautiful Losers',
-      artista: 'Sumo',
-      album: '',
-      src: beautiful,
-      duracion: 0
-    },
-    {
-      id: crypto.randomUUID(),
-      titulo: 'Heroina',
-      artista: 'Sumo',
-      album: '',
-      src: heroina,
-      duracion: 0
-    },
-    {
-      id: crypto.randomUUID(),
-      titulo: 'Breaking Away',
-      artista: 'Sumo',
-      album: '',
-      src: breakingAway,
-      duracion: 0
-    },
-    {
-      id: crypto.randomUUID(),
-      titulo: 'La Rubia Tarada',
-      artista: 'Sumo',
-      album: '',
-      src: rubiaTarada,
-      duracion: 0
-    },
-    {
-      id: crypto.randomUUID(),
-      titulo: 'Crua Chan',
-      artista: 'Sumo',
-      album: 'After Chabon',
-      src: crua,
-      duracion: 0
-    },
-    {
-      id: crypto.randomUUID(),
-      titulo: 'Hola Frank',
-      artista: 'Sumo',
-      album: '',
-      src: holaFrank,
-      duracion: 0
-    },
-    {
-      id: crypto.randomUUID(),
-      titulo: 'Estallando Desde el Oceano',
-      artista: 'Sumo',
-      album: '',
-      src: estallando,
-      duracion: 0
-    },
-    {
-      id: crypto.randomUUID(),
-      titulo: 'Regtest',
-      artista: 'Sumo',
-      album: '',
-      src: regtest,
-      duracion: 0
-    },
-    /* Sumo */
     /* TAME IMPALA */
     {
       id: crypto.randomUUID(),
@@ -2245,17 +2527,8 @@ const dataPlaylist = {
       album: '',
       src: whiskeyInTheJar,
       duracion: 0
-    },
-    /* Thin Lizzy */
-    /* Viejas lo */
-    {
-      id: crypto.randomUUID(),
-      titulo: 'Homero',
-      artista: 'Viejas Locas',
-      album: '',
-      src: Homero,
-      duracion: 0
     }
+  /* Thin Lizzy */
   ]
 }
 //* *Es un quilombo, pero anda. Se cuestionaran los metodos, pero no los resultado */
