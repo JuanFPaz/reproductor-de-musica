@@ -348,6 +348,7 @@ import uprising from '/data/muse/Uprising.mp3'
 /* MUSE */
 /*  CADILLACS */
 import cadillac from '/data/fabulosos/Cadillacs.mp3'
+import matador from '/data/fabulosos/El-Matador.mp3'
 import genidoDelDub from '/data/fabulosos/El-Genio-del-Dub.mp3'
 import numeroDos from '/data/fabulosos/Numero-Dos-en-Tu-Lista.mp3'
 import silencioHospital from '/data/fabulosos/Silencio-Hospital.mp3'
@@ -364,6 +365,11 @@ import vivirePorSiempre from '/data/AD/Vivire-por-siempre.mp3'
 import vitaminas from '/data/soda-stereo/Te-hacen-falta-vitaminas.mp3'
 import unMisil from '/data/soda-stereo/Un-Misil-en-mi-placard.mp3'
 import nadaPersonal from '/data/soda-stereo/Nada-Personal.mp3'
+import sobredosisDeTeve from '/data/soda-stereo/Sobredosis-de-TV.mp3'
+import persianaAmericana from '/data/soda-stereo/Persiana-Americana.mp3'
+import ciudadDeLaFuria from '/data/soda-stereo/En-la-ciudad-de-la-furia.mp3'
+import elRito from '/data/soda-stereo/El-Rito.mp3'
+import loQueSangra from '/data/soda-stereo/Lo-que-sangra.mp3'
 /** Soda */
 /** Cuarteto de nos */
 import yendoAlAcasa from '/data/el-cuarteto-de-nos/Yendo-a-la-casa-de-Damian.mp3'
@@ -377,6 +383,8 @@ import avantiMorocha from '/data/los-caballeros-de-la-quema/Avanti-Morocha.mp3'
 /** Los rodriguez */
 import miEnfermadad from '/data/los-rodriguez/Mi-Enfermedad.mp3'
 import aLosOjos from '/data/los-rodriguez/A-los-ojos.mp3'
+import sinDocumentos from '/data/los-rodriguez/Sin-Documentos.mp3'
+import laMiradadelAdios from '/data/los-rodriguez/La-mirada-del-adios.mp3'
 /** Los rodriguez */
 /** Los tipitos */
 import brujeria from '/data/los-tipitos/Brujeria.mp3'
@@ -392,6 +400,33 @@ import noFumo from '/data/virus/Soy-moderno-no-fumo.mp3'
 import superficiesDePlacer from '/data/virus/Superficies-de-placer.mp3'
 import danzaDeBengalas from '/data/virus/Danza-de-Bengalas.mp3'
 /** Virus */
+/** Intoxicados */
+import estaSaliendoElSol from '/data/intoxicados/Esta-saliendo-el-sol.mp3'
+import unaVela from '/data/intoxicados/Una-Vela.mp3'
+/** Intoxicados */
+/** Los Piojos */
+import tanSolo from '/data/los-piojos/Tan-Solo.mp3'
+import losMocosos from '/data/los-piojos/Los-Mocosos.mp3'
+import YiraYira from '/data/los-piojos/Yira-Yira.mp3'
+import esquinaLibertadr from '/data/los-piojos/Esquina-libertad.mp3'
+import taxiBoy from '/data/los-piojos/Taxi-boy.mp3'
+import veranoDelNueveDos from '/data/los-piojos/Verano-del-92.mp3'
+import Olvidate from '/data/los-piojos/Olvidate.mp3'
+import chacTuChac from '/data/los-piojos/Chac-Tu-Chac.mp3'
+import AyAyAy from '/data/los-piojos/Ay-Ay-Ay.mp3'
+import Arco from '/data/los-piojos/Arco.mp3'
+import maradoUwU from '/data/los-piojos/Marado.mp3'
+import Cruel from '/data/los-piojos/Cruel.mp3'
+import luzDeMarfil from '/data/los-piojos/Luz-de-Marfil.mp3'
+import vineHastaAqui from '/data/los-piojos/Vine-hasta-aqui.mp3'
+import Ruleta from '/data/los-piojos/Ruleta.mp3'
+import mariayjose from '/data/los-piojos/Maria-y-Jose.mp3'
+import Llevatelo from '/data/los-piojos/Llevatelo.mp3'
+import ElFarolito from '/data/los-piojos/El-Farolito-Rubia-Tarada.mp3'
+import Morella from '/data/los-piojos/Morella.mp3'
+import Genius from '/data/los-piojos/Genius-Mendigo-del-Dock-Sud.mp3'
+import Fantasma from '/data/los-piojos/Fantasma.mp3'
+/** Los Piojos */
 
 const dataPlaylist = {
   infoPlaylist: {
@@ -750,6 +785,14 @@ const dataPlaylist = {
     },
     {
       id: crypto.randomUUID(),
+      titulo: 'El Matador',
+      artista: 'Fabulosos Cadillacs',
+      album: '',
+      src: matador,
+      duracion: 0
+    },
+    {
+      id: crypto.randomUUID(),
       titulo: 'Numero Dos en Tu Lista',
       artista: 'Fabulosos Cadillacs',
       album: '',
@@ -764,7 +807,6 @@ const dataPlaylist = {
       src: estoyHarto,
       duracion: 0
     },
-
     {
       id: crypto.randomUUID(),
       titulo: 'El Genio del Dub',
@@ -816,6 +858,24 @@ const dataPlaylist = {
       duracion: 0
     },
     /* Heroes del SIlencio */
+    /** Intoxicados */
+    {
+      id: crypto.randomUUID(),
+      titulo: 'Esta Saliendo el Sol',
+      artista: 'Intoxicados',
+      album: '',
+      src: estaSaliendoElSol,
+      duracion: 0
+    },
+    {
+      id: crypto.randomUUID(),
+      titulo: 'Una Vela',
+      artista: 'Intoxicados',
+      album: '',
+      src: unaVela,
+      duracion: 0
+    },
+    /** Intoxicados */
     /** Las pelotas */
     {
       id: crypto.randomUUID(),
@@ -872,6 +932,176 @@ const dataPlaylist = {
       duracion: 0
     },
     /** Los Caballeros de la Quema */
+    /** Los Piojos */
+    {
+      id: crypto.randomUUID(),
+      titulo: 'Tan Solo',
+      artista: 'Los Piojos',
+      album: '',
+      src: tanSolo,
+      duracion: 0
+    },
+    {
+      id: crypto.randomUUID(),
+      titulo: 'Los Mocosos',
+      artista: 'Los Piojos',
+      album: '',
+      src: losMocosos,
+      duracion: 0
+    },
+    {
+      id: crypto.randomUUID(),
+      titulo: 'Yira Yira',
+      artista: 'Los Piojos',
+      album: '',
+      src: YiraYira,
+      duracion: 0
+    },
+    {
+      id: crypto.randomUUID(),
+      titulo: 'Esquina Libertad',
+      artista: 'Los Piojos',
+      album: '',
+      src: esquinaLibertadr,
+      duracion: 0
+    },
+    {
+      id: crypto.randomUUID(),
+      titulo: 'Taxi Boy',
+      artista: 'Los Piojos',
+      album: '',
+      src: taxiBoy,
+      duracion: 0
+    },
+    {
+      id: crypto.randomUUID(),
+      titulo: 'Verano del 92',
+      artista: 'Los Piojos',
+      album: '',
+      src: veranoDelNueveDos,
+      duracion: 0
+    },
+    {
+      id: crypto.randomUUID(),
+      titulo: 'Olvidate (Ya Ves)',
+      artista: 'Los Piojos',
+      album: '',
+      src: Olvidate,
+      duracion: 0
+    },
+    {
+      id: crypto.randomUUID(),
+      titulo: 'Chac Tu Chac',
+      artista: 'Los Piojos',
+      album: '',
+      src: chacTuChac,
+      duracion: 0
+    },
+    {
+      id: crypto.randomUUID(),
+      titulo: 'Ay Ay Ay',
+      artista: 'Los Piojos',
+      album: '',
+      src: AyAyAy,
+      duracion: 0
+    },
+    {
+      id: crypto.randomUUID(),
+      titulo: 'Arco',
+      artista: 'Los Piojos',
+      album: '',
+      src: Arco,
+      duracion: 0
+    },
+    {
+      id: crypto.randomUUID(),
+      titulo: 'Maradó',
+      artista: 'Los Piojos',
+      album: '',
+      src: maradoUwU,
+      duracion: 0
+    },
+    {
+      id: crypto.randomUUID(),
+      titulo: 'Cruel',
+      artista: 'Los Piojos',
+      album: '',
+      src: Cruel,
+      duracion: 0
+    },
+    {
+      id: crypto.randomUUID(),
+      titulo: 'Luz de Marfil',
+      artista: 'Los Piojos',
+      album: '',
+      src: luzDeMarfil,
+      duracion: 0
+    },
+    {
+      id: crypto.randomUUID(),
+      titulo: 'Vine hasta aqui',
+      artista: 'Los Piojos',
+      album: '',
+      src: vineHastaAqui,
+      duracion: 0
+    },
+    {
+      id: crypto.randomUUID(),
+      titulo: 'Ruleta',
+      artista: 'Los Piojos',
+      album: '',
+      src: Ruleta,
+      duracion: 0
+    },
+    {
+      id: crypto.randomUUID(),
+      titulo: 'Maria y Jose',
+      artista: 'Los Piojos',
+      album: '',
+      src: mariayjose,
+      duracion: 0
+    },
+    {
+      id: crypto.randomUUID(),
+      titulo: 'Llevatelo',
+      artista: 'Los Piojos',
+      album: '',
+      src: Llevatelo,
+      duracion: 0
+    },
+    {
+      id: crypto.randomUUID(),
+      titulo: 'El Farolito (Rubia Tarada)',
+      artista: 'Los Piojos',
+      album: '',
+      src: ElFarolito,
+      duracion: 0
+    },
+    {
+      id: crypto.randomUUID(),
+      titulo: 'Morella',
+      artista: 'Los Piojos',
+      album: '',
+      src: Morella,
+      duracion: 0
+    },
+    {
+      id: crypto.randomUUID(),
+      titulo: 'Genius (Mendigo del Dock Sud)',
+      artista: 'Los Piojos',
+      album: '',
+      src: Genius,
+      duracion: 0
+    },
+    {
+      id: crypto.randomUUID(),
+      titulo: 'Fantasma',
+      artista: 'Los Piojos',
+      album: '',
+      src: Fantasma,
+      duracion: 0
+    },
+    /** Los Piojos */
     /** Los Rodriguez */
     {
       id: crypto.randomUUID(),
@@ -887,6 +1117,22 @@ const dataPlaylist = {
       artista: 'Los Rodriguez',
       album: '',
       src: aLosOjos,
+      duracion: 0
+    },
+    {
+      id: crypto.randomUUID(),
+      titulo: 'Sin Documentos',
+      artista: 'Los Rodriguez',
+      album: '',
+      src: sinDocumentos,
+      duracion: 0
+    },
+    {
+      id: crypto.randomUUID(),
+      titulo: 'La Mirada del Adios',
+      artista: 'Los Rodriguez',
+      album: '',
+      src: laMiradadelAdios,
       duracion: 0
     },
     /** Los Rodriguez */
@@ -1245,6 +1491,14 @@ const dataPlaylist = {
     },
     {
       id: crypto.randomUUID(),
+      titulo: 'Sobredosis de T.V.',
+      artista: 'Soda Stereo',
+      album: '',
+      src: sobredosisDeTeve,
+      duracion: 0
+    },
+    {
+      id: crypto.randomUUID(),
       titulo: 'Un Misil en mi placard',
       artista: 'Soda Stereo',
       album: '',
@@ -1257,6 +1511,38 @@ const dataPlaylist = {
       artista: 'Soda Stereo',
       album: '',
       src: nadaPersonal,
+      duracion: 0
+    },
+    {
+      id: crypto.randomUUID(),
+      titulo: 'El Rito',
+      artista: 'Soda Stereo',
+      album: '',
+      src: elRito,
+      duracion: 0
+    },
+    {
+      id: crypto.randomUUID(),
+      titulo: 'En La Ciudad de la Furia',
+      artista: 'Soda Stereo',
+      album: '',
+      src: ciudadDeLaFuria,
+      duracion: 0
+    },
+    {
+      id: crypto.randomUUID(),
+      titulo: 'Lo Que Sangra (La Cupula)',
+      artista: 'Soda Stereo',
+      album: '',
+      src: loQueSangra,
+      duracion: 0
+    },
+    {
+      id: crypto.randomUUID(),
+      titulo: 'Persiana Americana',
+      artista: 'Soda Stereo',
+      album: '',
+      src: persianaAmericana,
       duracion: 0
     },
     /** Soda */
@@ -1327,7 +1613,6 @@ const dataPlaylist = {
     },
     /* Sumo */
     /* Turf */
-
     {
       id: crypto.randomUUID(),
       titulo: 'Cuatro Personalidades',
