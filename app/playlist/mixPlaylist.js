@@ -325,6 +325,8 @@ import hechizo from '/data/heroes-del-silencio/Heroes-del-Silencio-Hechizo.mp3'
 import dale from '/data/catupecu-machu/Catupecu-Machu-Dale.mp3'
 import yLoQueQuiero from '/data/catupecu-machu/Catupecu-Machu-Y-lo-que-quiero-es-que-pises-sin-el-suelo.mp3'
 /* los abuelos */
+import noSeDesesperen from '/data/los-abuelos/No-se-desesperen.mp3'
+import asiEsElCalor from '/data/los-abuelos/Asi-es-el-calor.mp3'
 import milHoras from '/data/los-abuelos/Los-Abuelos-De-La-Nada-Mil-Horas.mp3'
 import costumbres from '/data/los-abuelos/Los-Abuelos-De-La-Nada-Costumbres-Argentinas.mp3'
 /* Los abuelos */
@@ -905,6 +907,22 @@ const dataPlaylist = {
     },
     /* Legiao urbana */
     /* Los Abuelos */
+    {
+      id: crypto.randomUUID(),
+      titulo: 'No Se Desesperen',
+      artista: 'Los Abuelos de la Nada',
+      album: '',
+      src: noSeDesesperen,
+      duracion: 0
+    },
+    {
+      id: crypto.randomUUID(),
+      titulo: 'Asi Es El Calor',
+      artista: 'Los Abuelos de la Nada',
+      album: '',
+      src: asiEsElCalor,
+      duracion: 0
+    },
     {
       id: crypto.randomUUID(),
       titulo: 'Mil Horas',
