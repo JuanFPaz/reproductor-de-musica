@@ -1,0 +1,203 @@
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+#app {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background-color: #000000;
+  color: #ffffff;
+}
+
+.media-player-info,
+.media-player-playbar {
+  display: flex;
+  flex-direction: row;
+}
+.media-player-info,
+.media-player-relleno {
+  width: 20%;
+}
+.media-player-playbar {
+  width: 100%;
+  justify-content: center;
+}
+
+.media-player-control {
+  width: 60%;
+}
+
+.media-player-control {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.media-player-data-song {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.media-player-pic {
+  display: flex;
+  width: 30%;
+  align-items: center;
+}
+
+.media-player-pic .image-container {
+  padding: 16px;
+}
+
+.media-player-pic .image-container img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  aspect-ratio: 1/1; /* Mantiene relación cuadrada */
+}
+
+input[type="range"] {
+  -webkit-appearance: none;
+  appearance: none;
+  background: transparent;
+  cursor: pointer;
+  width: 60%;
+  margin: 0 10px;
+}
+
+/***** Track Styles *****/
+/***** Chrome, Safari, Opera, and Edge Chromium *****/
+input[type="range"]::-webkit-slider-runnable-track {
+  background-color: #053a5f;
+  background-image: linear-gradient(
+    to right,
+    #84a0fc calc((var(--progress-value) / 100) * 100%),
+    #053a5f calc((var(--progress-value) / 100) * 100%)
+  );
+  height: 4px;
+}
+
+/******** Firefox ********/
+input[type="range"]::-moz-range-track {
+  background-color: #053a5f;
+  background-image: linear-gradient(
+    to right,
+    #84a0fc calc((var(--progress-value) / 100) * 100%),
+    #053a5f calc((var(--progress-value) / 100) * 100%)
+  );
+  height: 4px;
+}
+
+/*Para centrar el thumb en -webkit, hay que hacer un calculo matematico:
+margin-top = (track height in pixels / 2) - (thumb height in pixels /2)
+El thumb height lo definimos a continuacion, si elegimos una medida de 18px, pues dividimos 18/2
+mt = (4px / 2) - (18px/2)
+mt = 2px - 9px
+mt = -7px
+*/
+
+/*thumb webkit*/
+input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none; /* Override default look */
+  appearance: none;
+  margin-top: -6px; /* Centers thumb on the track */
+  background-color: #84a0fc00;
+  border-radius: 50%;
+  height: 16px;
+  width: 16px;
+  transition: box-shadow ease-in-out 0.1s, background-color ease-in-out 0.1s;
+}
+
+input[type="range"]::-moz-range-thumb {
+  border: none; /*Removes extra border that FF applies*/
+  border-radius: 50%; /*Removes default border-radius that FF applies*/
+  background-color: #84a0fc00;
+  height: 16px;
+  width: 16px;
+  transition: box-shadow ease-in-out 0.1s, background-color ease-in-out 0.1s;
+}
+
+/***** Focus Styles *****/
+/* Removes default focus */
+input[type="range"]:focus,
+input[type="range"]:hover {
+  outline: none;
+}
+
+/***** Chrome, Safari, Opera, and Edge Chromium *****/
+input[type="range"]:focus::-webkit-slider-thumb,
+input[type="range"]:active::-webkit-slider-thumb,
+input[type="range"]:hover::-webkit-slider-thumb {
+  box-shadow: 0 0 14px #9cb3ff;
+  background-color: #84a0fc;
+}
+
+/******** Firefox ********/
+input[type="range"]:focus::-moz-range-thumb,
+input[type="range"]:hover::-moz-range-thumb {
+  box-shadow: 0 0 14px #9cb3ff;
+  background-color: #84a0fc;
+}
+
+.biblioteca button {
+  background-color: rgba(0, 0, 0);
+  font-weight: 200;
+  border: 1px solid rgb(0, 145, 255);
+  color: rgb(0, 145, 255);
+  border-radius: 12px;
+  transition: background-color 0.5s ease-in-out, filter 0.5s ease-in-out,
+    color 0.5s ease-in-out;
+}
+
+.biblioteca button:hover {
+  filter: drop-shadow(0 0 5px rgb(0, 145, 255));
+}
+.biblioteca button.seleccionado {
+  background-color: rgb(0, 145, 255);
+  padding: 5px;
+  border: 2px solid rgb(0, 145, 255);
+  color: rgb(0, 0, 0);
+}
+
+.media-player-button button {
+  width: 30px;
+  height: 30px;
+  background-color: #84a0fc;
+  border-radius: 50%;
+  border: 1px solid #84a0fc;
+  transition: box-shadow ease-in-out 0.5s;
+}
+
+.media-player-button button:disabled {
+  background-color: #37446e;
+  border: 1px solid #37446e;
+}
+
+.media-player-button button:hover:disabled {
+  box-shadow: 0 0 0;
+}
+
+.media-player-button button img {
+  width: 50%;
+}
+
+.media-player-button button:hover {
+  box-shadow: 0 0 10px #9cb3ff;
+}
+
+.media-player-button button#play {
+  width: 50px;
+  height: 50px;
+}
+
+.media-player-button button#prev {
+  transform: rotate(180deg);
+}
+
+.media-player-button button.active {
+  box-shadow: 0 0 14px #9cb3ff;
+}

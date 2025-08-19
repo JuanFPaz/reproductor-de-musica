@@ -1,0 +1,22 @@
+h1 {
+  margin: 0;
+}
+header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: 1;
+  padding: 12px;
+  /* Ajusta la altura según necesites */
+}
+main {
+  flex: 15;
+  min-height: 0; /* Crucial para el correcto funcionamiento del flex */
+  overflow: hidden; /* Evita fugas de contenido */
+  display: flex;
+  flex-wrap: wrap;
+}
+footer {
+  display: flex; /* Hacemos que main también sea flex container */
+  flex: 2; /* Ocupará 2 partes del espacio disponible */
+}
