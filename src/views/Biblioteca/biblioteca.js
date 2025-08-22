@@ -13,7 +13,7 @@ export default function biblioteca () {
 
   function init ({ data, className }) {
     dataBiblioteca = data
-    bibliotecaContainer.setAttribute('class', `biblioteca ${className} container-fluid`)
+    bibliotecaContainer.setAttribute('class', `biblioteca ${className} px-2`)
     bibliotecaContainer.setAttribute('id', 'biblioteca')
     bibliotecaView.setAttribute('class', 'biblioteca-view')
 
@@ -56,7 +56,7 @@ export default function biblioteca () {
             (db) => `
             <a href=${db.href} class='enlaces-artistas' id=${db.id}>
               <div class="image-container">
-                <img src=${db.profile} alt="Imagen 1" />
+                <img src=${db.profile} alt="Foto de perfil de ${db.nombre} " />
                 <div class="biblioteca-data">
                   <span>${db.nombre}</span>
                   <span>${db.tipo} · ${db.canciones} Canciones</span>
@@ -69,7 +69,6 @@ export default function biblioteca () {
     `
 
     enlacesArtistas = document.querySelectorAll('a.enlaces-artistas')
-    console.log(enlacesArtistas)
   }
 
   function eventSelectArtista (callback) {

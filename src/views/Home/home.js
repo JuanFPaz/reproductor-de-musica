@@ -1,8 +1,8 @@
+import router from '../../services/router.js'
 import biblioteca from '../Biblioteca/biblioteca.js'
 import artista from '../Artista/artista.js'
-import request from '../../services/request.js'
+import mediaPlayer from '../MediaPlayer/mediaPlayer.js'
 import './home.css'
-import router from '../../services/router.js'
 
 export default function home () {
   const appContainer = document.querySelector('#app')
@@ -10,15 +10,23 @@ export default function home () {
   const mainContainer = document.createElement('main')
   const footerContainer = document.createElement('footer')
 
-  const dataBiblioteca = []
+  // Data Base
+  let dataBase
+  let dataBiblioteca = []
+  let dataArtista = {}
+  let dataPlaylist = []
+  let dataMediaPlayer = {}
+  // Componentes
   let Biblioteca
   let Artista
+  let MediaPlayer
 
-  function init () {
-    setData(request) // Croe que esto, de llamar un seter en el constructor en TS no se podia. aca si se ve
+  function init ({ req }) {
+    dataBase = req
+
     headerContainer.setAttribute('class', 'header')
     headerContainer.setAttribute('id', 'header')
-    mainContainer.setAttribute('class', 'main')
+    mainContainer.setAttribute('class', 'main container-fluid')
     mainContainer.setAttribute('id', 'main')
     footerContainer.setAttribute('class', 'footer')
     footerContainer.setAttribute('id', 'footer')
@@ -28,27 +36,40 @@ export default function home () {
 
     Biblioteca = biblioteca()
     Artista = artista()
+    MediaPlayer = mediaPlayer()
+    MediaPlayer.init()
+    MediaPlayer.setDataSesion()
+    MediaPlayer.render()
   }
 
-  function setData (req) {
-    const data = req()
-    data.init()
-    data.getDataBiblioteca().forEach((d) => dataBiblioteca.push(d))
+  function setBiblioteca () {
+    dataBiblioteca = dataBase.getDataBiblioteca()
   }
 
-  function getDataSelect (id) {
-    console.log('getDataSelect')
-    console.log(dataBiblioteca)
-    console.log(id)
-
-    const [artista] = dataBiblioteca.filter(db => db.id === id[0])
-    console.log(artista)
-
-    return artista
+  function setArtista (id) {
+    try {
+      const [artista] = dataBiblioteca.filter(db => db.id === id[0])
+      if (!artista) {
+        throw new Error('Ocurrio un error filtrando la ID del artista')
+      }
+      dataArtista = artista
+    } catch (error) {
+      window.history.pushState(null, null, '/404')
+    }
   }
+
+  function setPlaylist (id) {
+    try {
+      const playlist = dataBase.getDataPlaylist(id[0])
+      if (!playlist) throw new Error('Ocurrio un error filtrando la ID del artista')
+      dataPlaylist = playlist
+    } catch (error) {
+      window.history.pushState(null, null, '/404')
+    }
+  }
+
   function render () {
     router('/', () => {
-      console.log(dataBiblioteca)
       Biblioteca.init({ data: dataBiblioteca, className: 'col-12' })
       Biblioteca.render()
       Biblioteca.eventSelectArtista(({ id, href }) => {
@@ -58,22 +79,31 @@ export default function home () {
     })
 
     router('/artista/:id', (params) => {
-      console.log('en /artista/:id')
-      console.log('id: ' + params)
-      const dataSelect = getDataSelect(params)
-      Biblioteca.init({ data: dataBiblioteca, className: 'col-3' })
+      setArtista(params)
+      setPlaylist(params)
+      Biblioteca.init({ data: dataBiblioteca, className: 'col-2' })
       Biblioteca.render()
       Biblioteca.eventSelectArtista(({ id, href }) => {
         window.history.pushState(null, null, href)
         render()
       })
 
-      Artista.init({ data: dataSelect, className: 'col-9' })
+      Artista.init({ data: { dataArtista, dataPlaylist }, className: 'col-10' })
       Artista.render()
+      Artista.eventeSelectSong((data) => {
+        dataMediaPlayer = data
+        MediaPlayer.setPlaylist(dataMediaPlayer)
+        MediaPlayer.render()
+      })
+    })
+
+    router('/404', () => {
+      mainContainer.innerHTML = 'Ocurrio un error x_x'
     })
   }
   return {
     init,
-    render
+    render,
+    setBiblioteca
   }
 }

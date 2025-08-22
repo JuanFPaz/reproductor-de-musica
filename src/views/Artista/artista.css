@@ -1,0 +1,51 @@
+.artista {
+  display: flex;
+  /* flex: 1; */
+  flex-direction: column;
+  height: 100%;
+}
+
+.artista-view {
+  background-color: rgb(38, 38, 48);
+  display: flex;
+  flex-direction: column;
+  min-height: 0;
+  height: 100%;
+  border-radius: 20px;
+  padding-bottom: 16px;
+  overflow-y: auto;
+}
+
+.artista-header {
+  flex-shrink: 0;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-content: center;
+  justify-content: space-between;
+}
+
+.artista-header .image-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.artista-header .image-container img {
+  width: 15%;
+  border-radius: 250px;
+  height: auto;
+  object-fit: cover;
+  aspect-ratio: 1 / 1;
+}
+
+.artista-view::-webkit-scrollbar {
+  width: 8px;
+}
+.artista-view::-webkit-scrollbar-thumb {
+  background-color: rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+}
+.artista-view::-webkit-scrollbar-track {
+  background-color: rgba(0, 0, 0, 0.1);
+}

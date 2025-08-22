@@ -40,11 +40,11 @@ export function actualizarMediaPlayerDataSong ({ titulo, artista }) {
 }
 
 export function actualizarMediaPlayerTimeProgress ({ duracion }) {
-  document.querySelector('#time-progress').innerHTML = `${Math.floor(duracion / 60).toString()} : ${Math.floor(duracion % 60).toString().padStart(2, '0')}`
+  document.querySelector('#time-progress').innerHTML = `${Math.floor(duracion / 60).toString().padStart()} : ${Math.floor(duracion % 60).toString().padStart(2, '0')}`
 }
 
 export function actualizarMediaPlayerTimeSong ({ duracion }) {
-  document.querySelector('#time-song').innerHTML = `${Math.floor(duracion / 60).toString()} : ${Math.floor(duracion % 60).toString().padStart(2, '0')}`
+  document.querySelector('#time-song').innerHTML = `${Math.floor(duracion / 60).toString().padStart()} : ${Math.floor(duracion % 60).toString().padStart(2, '0')}`
 }
 
 export function actualizarMediaPlayButton ({ _play }) {
