@@ -11,7 +11,7 @@ import PlateadoSobrePlateado from './audios/Charly-Garcia-Plateado-sobre-platead
 import NoSoyUnExtraño from './audios/Charly-Garcia-No-soy-un-extraño.mp3'
 import NoSeVaALlamar from './audios/Charly-Garcia-No-Se-Va-A-Llamar-Mi-Amor.mp3'
 /* Portadas */
-import picYendoDeLaCama from './images/yendo.png'
+import picYendoDeLaCama from './images/yendo.jpg'
 import picPianoBar from './images/piano-bar.jpg'
 import picClicsModernos from './images/clics-modernos.jpg'
 import picComoConseguirChicas from './images/como-conseguir-chicas.jpg'

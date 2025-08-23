@@ -100,6 +100,7 @@ export default function mediaPlayer () {
             </div>
           </div
     `
+
       window.addEventListener('beforeunload', () => {
         const guardarSesion = {
           indice,
@@ -110,19 +111,7 @@ export default function mediaPlayer () {
 
         localStorage.setItem('dataSesion', JSON.stringify(guardarSesion))
       })
-      document.querySelector('#play').addEventListener('click', () => {
-        if (audio.paused) {
-          audio.play()
-        } else {
-          audio.pause()
-        }
-      })
-      document.querySelector('#prev').addEventListener('click', () => {
-        if (audio.currentTime > 1.5) {
-          audio.currentTime = 0
-          return
-        }
-        setDecremento()
+      audio.addEventListener('loadedmetadata', () => {
         mediaPlayerInfo.innerHTML = `
           <div class="media-player-pic">
             <div class="image-container">
@@ -134,20 +123,56 @@ export default function mediaPlayer () {
             <span id="artis-name">${currentAudio.artista} </span>
           </div>      
       `
+        document.querySelector('#time-song').innerHTML = `${Math.floor(audio.duration / 60).toString().padStart(2, '0')} : ${Math.floor(audio.duration % 60).toString().padStart(2, '0')}`
+
+        if ('mediaSession' in navigator) {
+          navigator.mediaSession.metadata = new MediaMetadata({
+            title: currentAudio.titulo,
+            artist: currentAudio.artista,
+            album: currentAudio.album,
+            artwork: [
+              {
+                src: currentAudio.pic,
+                sizes: '96x96',
+                type: 'image/*'
+              },
+              {
+                src: currentAudio.pic,
+                sizes: '128x128',
+                type: 'image/*'
+              },
+              {
+                src: currentAudio.pic,
+                sizes: '192x192',
+                type: 'image/*'
+              },
+              {
+                src: currentAudio.pic,
+                sizes: '256x256',
+                type: 'image/*'
+              },
+              {
+                src: currentAudio.pic,
+                sizes: '384x384',
+                type: 'image/*'
+              },
+              {
+                src: currentAudio.pic,
+                sizes: '512x512',
+                type: 'image/*'
+              }
+            ]
+          })
+        }
+      })
+      document.querySelector('#play').addEventListener('click', () => {
+        setPlay()
+      })
+      document.querySelector('#prev').addEventListener('click', () => {
+        setDecremento()
       })
       document.querySelector('#next').addEventListener('click', () => {
         setIncremento()
-        mediaPlayerInfo.innerHTML = `
-          <div class="media-player-pic">
-            <div class="image-container">
-              <img src="${currentAudio.pic} " alt="Imagen 1" />
-            </div>
-          </div>
-          <div class="media-player-data-song">
-            <span id="song-name">${currentAudio.titulo}</span>
-            <span id="artis-name">${currentAudio.artista} </span>
-          </div>      
-      `
       })
       document.querySelector('#playbar-progress').addEventListener('input', (e) => {
         const progressTime = audio.duration * (e.target.value / 100)
@@ -180,9 +205,35 @@ export default function mediaPlayer () {
         document.querySelector('#playbar-progress').style.setProperty('--progress-value', updateProgressBar)
         document.querySelector('#time-progress').innerHTML = `${Math.floor(audio.currentTime / 60).toString().padStart(2, '0')} : ${Math.floor(audio.currentTime % 60).toString().padStart(2, '0')}`
       })
+      if ('mediaSession' in navigator) {
+        navigator.mediaSession.setActionHandler('play', function () {
+          setPlay()
+        })
+
+        navigator.mediaSession.setActionHandler('pause', function () {
+          setPlay()
+        })
+
+        navigator.mediaSession.setActionHandler('previoustrack', function () {
+          setDecremento()
+        })
+
+        navigator.mediaSession.setActionHandler('nexttrack', function () {
+          setIncremento()
+        })
+      }
     }
   }
 
+  function setPlay () {
+    if (audio.paused) {
+      audio.play()
+      navigator.mediaSession.playbackState = 'playing'
+    } else {
+      audio.pause()
+      navigator.mediaSession.playbackState = 'paused'
+    }
+  }
   function setDataSesion () {
     const dataSesion = JSON.parse(localStorage.getItem('dataSesion'))
 
@@ -213,6 +264,10 @@ export default function mediaPlayer () {
   }
 
   function setDecremento () {
+    if (audio.currentTime > 1.5) {
+      audio.currentTime = 0
+      return
+    }
     audio.pause()
     indice = indice === 0 ? maxIndice : --indice
     currentAudio = currentPlaylist[indice]

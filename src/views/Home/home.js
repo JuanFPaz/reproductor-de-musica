@@ -36,6 +36,16 @@ export default function home () {
 
     Biblioteca = biblioteca()
     Artista = artista()
+    headerContainer.innerHTML = `
+        <form>
+          <input
+            type="text"
+            class="form-control"
+            id="exampleFormControlInput1"
+            placeholder="Buscar en mi biblioteca"
+          />
+        </form>
+    `
     MediaPlayer = mediaPlayer()
     MediaPlayer.init()
     MediaPlayer.setDataSesion()

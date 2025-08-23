@@ -78,7 +78,7 @@ export default function biblioteca () {
         const id = e.currentTarget.id
         const href = e.currentTarget.href
 
-        callback({ id, href })
+        callback({ href })
       })
     })
   }
