@@ -12,6 +12,7 @@ export default function mediaPlayer () {
   let currentPlaylist = []
   let currentAudio = null
 
+  let endedFlag = false
   const footerContainer = document.querySelector('footer')
 
   const mediaPlayerInfo = document.createElement('div')
@@ -112,6 +113,7 @@ export default function mediaPlayer () {
         localStorage.setItem('dataSesion', JSON.stringify(guardarSesion))
       })
       audio.addEventListener('loadedmetadata', () => {
+        endedFlag = false
         mediaPlayerInfo.innerHTML = `
           <div class="media-player-pic">
             <div class="image-container">
@@ -165,14 +167,14 @@ export default function mediaPlayer () {
           })
         }
       })
-      document.querySelector('#play').addEventListener('click', () => {
-        setPlay()
+      document.querySelector('#play').addEventListener('click', async () => {
+        await setPlay()
       })
-      document.querySelector('#prev').addEventListener('click', () => {
-        setDecremento()
+      document.querySelector('#prev').addEventListener('click', async () => {
+        await setDecremento()
       })
-      document.querySelector('#next').addEventListener('click', () => {
-        setIncremento()
+      document.querySelector('#next').addEventListener('click', async () => {
+        await setIncremento()
       })
       document.querySelector('#playbar-progress').addEventListener('input', (e) => {
         const progressTime = audio.duration * (e.target.value / 100)
@@ -181,23 +183,17 @@ export default function mediaPlayer () {
       })
       audio.addEventListener('play', () => {
         document.querySelector('#play img').src = pauseButton
+        document.title = `${currentAudio.titulo} · ${currentAudio.artista}`
       })
       audio.addEventListener('pause', () => {
         document.querySelector('#play img').src = playButton
+        document.title = 'G/Fon #'
       })
-      audio.addEventListener('ended', () => {
-        setIncremento()
-        mediaPlayerInfo.innerHTML = `
-          <div class="media-player-pic">
-            <div class="image-container">
-              <img src="${currentAudio.pic} " alt="Imagen 1" />
-            </div>
-          </div>
-          <div class="media-player-data-song">
-            <span id="song-name">${currentAudio.titulo}</span>
-            <span id="artis-name">${currentAudio.artista} </span>
-          </div>      
-      `
+      audio.addEventListener('ended', async () => {
+        if (!endedFlag) {
+          endedFlag = true
+          await setIncremento()
+        }
       })
       audio.addEventListener('timeupdate', () => {
         const updateProgressBar = (audio.currentTime / audio.duration) * 100
@@ -206,28 +202,106 @@ export default function mediaPlayer () {
         document.querySelector('#time-progress').innerHTML = `${Math.floor(audio.currentTime / 60).toString().padStart(2, '0')} : ${Math.floor(audio.currentTime % 60).toString().padStart(2, '0')}`
       })
       if ('mediaSession' in navigator) {
-        navigator.mediaSession.setActionHandler('play', function () {
-          setPlay()
+        navigator.mediaSession.setActionHandler('play', async function () {
+          await setPlay()
+          document.title = `${currentAudio.titulo} · ${currentAudio.artista}`
         })
 
-        navigator.mediaSession.setActionHandler('pause', function () {
-          setPlay()
+        navigator.mediaSession.setActionHandler('pause', async function () {
+          await setPlay()
+          document.title = 'G/Fon #'
         })
 
-        navigator.mediaSession.setActionHandler('previoustrack', function () {
-          setDecremento()
+        navigator.mediaSession.setActionHandler('previoustrack', async function () {
+          await setDecremento()
+          document.title = `${currentAudio.titulo} · ${currentAudio.artista}`
+          navigator.mediaSession.metadata = new MediaMetadata({
+            title: currentAudio.titulo,
+            artist: currentAudio.artista,
+            album: currentAudio.album,
+            artwork: [
+              {
+                src: currentAudio.pic,
+                sizes: '96x96',
+                type: 'image/*'
+              },
+              {
+                src: currentAudio.pic,
+                sizes: '128x128',
+                type: 'image/*'
+              },
+              {
+                src: currentAudio.pic,
+                sizes: '192x192',
+                type: 'image/*'
+              },
+              {
+                src: currentAudio.pic,
+                sizes: '256x256',
+                type: 'image/*'
+              },
+              {
+                src: currentAudio.pic,
+                sizes: '384x384',
+                type: 'image/*'
+              },
+              {
+                src: currentAudio.pic,
+                sizes: '512x512',
+                type: 'image/*'
+              }
+            ]
+          })
         })
 
-        navigator.mediaSession.setActionHandler('nexttrack', function () {
-          setIncremento()
+        navigator.mediaSession.setActionHandler('nexttrack', async function () {
+          await setIncremento()
+          document.title = `${currentAudio.titulo} · ${currentAudio.artista}`
+          navigator.mediaSession.metadata = new MediaMetadata({
+            title: currentAudio.titulo,
+            artist: currentAudio.artista,
+            album: currentAudio.album,
+            artwork: [
+              {
+                src: currentAudio.pic,
+                sizes: '96x96',
+                type: 'image/*'
+              },
+              {
+                src: currentAudio.pic,
+                sizes: '128x128',
+                type: 'image/*'
+              },
+              {
+                src: currentAudio.pic,
+                sizes: '192x192',
+                type: 'image/*'
+              },
+              {
+                src: currentAudio.pic,
+                sizes: '256x256',
+                type: 'image/*'
+              },
+              {
+                src: currentAudio.pic,
+                sizes: '384x384',
+                type: 'image/*'
+              },
+              {
+                src: currentAudio.pic,
+                sizes: '512x512',
+                type: 'image/*'
+              }
+            ]
+          })
         })
       }
     }
   }
 
-  function setPlay () {
+  async function setPlay () {
     if (audio.paused) {
-      audio.play()
+      await audio.play()
       navigator.mediaSession.playbackState = 'playing'
     } else {
       audio.pause()
@@ -244,35 +318,36 @@ export default function mediaPlayer () {
     currentPlaylist = dataSesion.currentPlaylist
     audio.src = currentAudio.src
     audio.currentTime = dataSesion.currentTime
-    maxIndice = currentPlaylist.length - 1
+    maxIndice = currentPlaylist.length
   }
-  function setPlaylist ({ data }) {
+  async function setPlaylist ({ data }) {
     currentPlaylist = data.dataPlaylist
     currentAudio = data.dataSong
-    maxIndice = currentPlaylist.length - 1
+    maxIndice = currentPlaylist.length
     indice = currentPlaylist.indexOf(currentAudio)
     audio.src = currentAudio.src
-    audio.play()
+    document.title = `${currentAudio.titulo} · ${currentAudio.artista}`
+    await audio.play()
   }
 
-  function setIncremento () {
-    audio.pause()
-    indice = indice === maxIndice ? 0 : ++indice
+  async function setIncremento () {
+    console.log('ocurre este evento cuando termina una cancion?')
+
+    indice = indice >= maxIndice - 1 ? 0 : ++indice % maxIndice
     currentAudio = currentPlaylist[indice]
     audio.src = currentAudio.src
-    audio.play()
+    await audio.play()
   }
 
-  function setDecremento () {
+  async function setDecremento () {
     if (audio.currentTime > 1.5) {
       audio.currentTime = 0
       return
     }
-    audio.pause()
-    indice = indice === 0 ? maxIndice : --indice
+    indice = indice <= 0 ? maxIndice - 1 : --indice % maxIndice
     currentAudio = currentPlaylist[indice]
     audio.src = currentAudio.src
-    audio.play()
+    await audio.play()
   }
   return {
     init,

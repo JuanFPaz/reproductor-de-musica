@@ -18,8 +18,8 @@ export default function audioControl ({ playlist }) {
 
   /* Creamos Setters */
   const setIncremento = () => {
-    indice = indice >= maxIndice - 1 ? 0 : ++indice % maxIndice
     audio.pause()
+    indice = indice >= maxIndice - 1 ? 0 : ++indice % maxIndice
     audio.src = currentPlaylist[indice].src
     audio.play()
     actualizarMediaPlayerDataSong({ ...currentPlaylist[indice] })
@@ -27,8 +27,8 @@ export default function audioControl ({ playlist }) {
 
   // Set para el evento Prev
   const setDecremento = () => {
-    indice = indice <= 0 ? maxIndice - 1 : --indice % maxIndice
     audio.pause()
+    indice = indice <= 0 ? maxIndice - 1 : --indice % maxIndice
     audio.src = currentPlaylist[indice].src
     audio.play()
     actualizarMediaPlayerDataSong({ ...currentPlaylist[indice] })
