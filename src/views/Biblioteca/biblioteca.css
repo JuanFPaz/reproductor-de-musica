@@ -1,0 +1,133 @@
+.biblioteca {
+  display: flex;
+  /* flex: 1; */
+  flex-direction: column;
+  height: 100%;
+}
+.biblioteca-header,
+.biblioteca-nav {
+  flex-shrink: 0; /* Evita que se encojan */
+  width: 100%;
+  /* Tus estilos existentes */
+  display: flex;
+  flex-direction: row;
+  align-content: center;
+  justify-content: space-between;
+}
+
+.biblioteca-view {
+  background-color: rgb(0 0 0 / 65%);
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  min-height: 0; /* Importante para contener el overflow */
+  height: 100%;
+  border-radius: 20px;
+  padding-bottom: 16px;
+}
+
+.biblioteca-main {
+  flex: 1;
+  min-height: 0; /* Permite que el overflow funcione correctamente */
+  overflow-y: auto;
+}
+
+.biblioteca-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  gap: 16px;
+  padding: 16px;
+}
+.biblioteca-list a {
+  text-decoration: none;
+  color: #ffffff;
+}
+
+.biblioteca-list .image-container:hover {
+  border: 0;
+  border-radius: 6px;
+  box-shadow: 0px 0px 20px 2px black;
+  cursor: pointer;
+}
+
+.biblioteca-list .image-container {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.biblioteca-list .image-container img {
+  padding: 16px;
+  width: 100%;
+  border-radius: 200px;
+  height: auto;
+  object-fit: cover;
+  aspect-ratio: 1/1; /* Mantiene relación cuadrada */
+}
+
+.biblioteca-data {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+/* Opcional: estilos para el scroll */
+.biblioteca-main::-webkit-scrollbar {
+  width: 8px;
+}
+
+.biblioteca-main::-webkit-scrollbar-thumb {
+  background-color: rgb(255, 255, 255);
+  border-radius: 4px;
+}
+
+.biblioteca-main::-webkit-scrollbar-track {
+  border-radius: 16px;
+  background-color: rgb(0, 0, 0);
+}
+.biblioteca button {
+  background-color: #ffffff00;
+  font-size: 1rem;
+  border: 1px solid rgb(255, 255, 255);
+  color: rgb(255, 255, 255);
+  border-radius: 16px;
+  transition: background-color 0.5s ease-in-out, filter 0.5s ease-in-out,
+    color 0.5s ease-in-out;
+}
+
+.biblioteca button:hover {
+  filter: drop-shadow(0 0 5px rgb(0, 145, 255));
+}
+/* pseudo responsivo:*/
+
+#biblioteca-1 .biblioteca-header {
+  display: flex;
+  flex-direction: column;
+}
+
+#biblioteca-1 .biblioteca-nav {
+  display: flex;
+  flex-direction: column;
+}
+
+#biblioteca-1 .biblioteca-nav {
+  display: flex;
+  flex-direction: column;
+}
+#biblioteca-1 .biblioteca-list {
+  padding: 10px;
+}
+#biblioteca-1 .biblioteca-list .image-container {
+  display: flex;
+  padding: 10px;
+  flex-direction: row;
+}
+#biblioteca-1 .biblioteca-list .image-container img {
+  width: 40%;
+  padding: 6px;
+}
+#biblioteca-1 .biblioteca-list .biblioteca-data {
+  display: flex;
+  flex-direction: column;
+    align-items: flex-start;
+}

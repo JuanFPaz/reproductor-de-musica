@@ -13,6 +13,7 @@ dist-ssr
 *.local
 # audios
 public/data
+src/data
 public/pages
 private
 # Editor directories and files
