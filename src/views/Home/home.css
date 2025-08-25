@@ -6,7 +6,6 @@ header {
   align-items: center;
   justify-content: center;
   flex: 1;
-  padding: 12px;
   /* Ajusta la altura según necesites */
 }
 main {

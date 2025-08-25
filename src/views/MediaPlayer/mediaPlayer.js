@@ -1,4 +1,6 @@
 /* eslint-disable no-undef */
+import './mediaPlayer.css'
+
 import nextButton from '../../assets/media-player/next.png'
 import playButton from '../../assets/media-player/play.png'
 import pauseButton from '../../assets/media-player/pause.png'
@@ -11,23 +13,20 @@ export default function mediaPlayer () {
   let maxIndice = 0
   let currentPlaylist = []
   let currentAudio = null
-
+  let urlProfile = null
   let endedFlag = false
   const footerContainer = document.querySelector('footer')
 
   const mediaPlayerInfo = document.createElement('div')
   const mediaPlayerControl = document.createElement('div')
-  const mediaPlayerControlDos = document.createElement('div')
 
   function init () {
     audio = new Audio()
-    mediaPlayerInfo.setAttribute('class', 'media-player-info')
-    mediaPlayerControl.setAttribute('class', 'media-player-control')
-    mediaPlayerControlDos.setAttribute('class', 'media-player-relleno')
+    mediaPlayerInfo.setAttribute('class', 'media-player-info col-6 col-lg-2')
+    mediaPlayerControl.setAttribute('class', 'media-player-control col-6 col-lg-8')
 
     footerContainer.appendChild(mediaPlayerInfo)
     footerContainer.appendChild(mediaPlayerControl)
-    footerContainer.appendChild(mediaPlayerControlDos)
   }
 
   function render () {
@@ -104,6 +103,7 @@ export default function mediaPlayer () {
 
       window.addEventListener('beforeunload', () => {
         const guardarSesion = {
+          urlProfile,
           indice,
           currentPlaylist,
           currentAudio,
@@ -117,7 +117,7 @@ export default function mediaPlayer () {
         mediaPlayerInfo.innerHTML = `
           <div class="media-player-pic">
             <div class="image-container">
-              <img src="${currentAudio.pic} " alt="Imagen 1" />
+              <img src="${!currentAudio.pic ? urlProfile : currentAudio.pic} " alt="Imagen 1" />
             </div>
           </div>
           <div class="media-player-data-song">
@@ -134,32 +134,32 @@ export default function mediaPlayer () {
             album: currentAudio.album,
             artwork: [
               {
-                src: currentAudio.pic,
+                src: !currentAudio.pic ? urlProfile : currentAudio.pic,
                 sizes: '96x96',
                 type: 'image/*'
               },
               {
-                src: currentAudio.pic,
+                src: !currentAudio.pic ? urlProfile : currentAudio.pic,
                 sizes: '128x128',
                 type: 'image/*'
               },
               {
-                src: currentAudio.pic,
+                src: !currentAudio.pic ? urlProfile : currentAudio.pic,
                 sizes: '192x192',
                 type: 'image/*'
               },
               {
-                src: currentAudio.pic,
+                src: !currentAudio.pic ? urlProfile : currentAudio.pic,
                 sizes: '256x256',
                 type: 'image/*'
               },
               {
-                src: currentAudio.pic,
+                src: !currentAudio.pic ? urlProfile : currentAudio.pic,
                 sizes: '384x384',
                 type: 'image/*'
               },
               {
-                src: currentAudio.pic,
+                src: !currentAudio.pic ? urlProfile : currentAudio.pic,
                 sizes: '512x512',
                 type: 'image/*'
               }
@@ -313,6 +313,7 @@ export default function mediaPlayer () {
 
     if (!dataSesion) return
 
+    urlProfile = dataSesion.urlProfile
     indice = dataSesion.indice
     currentAudio = dataSesion.currentAudio
     currentPlaylist = dataSesion.currentPlaylist
@@ -321,6 +322,8 @@ export default function mediaPlayer () {
     maxIndice = currentPlaylist.length
   }
   async function setPlaylist ({ data }) {
+    console.log(data)
+    urlProfile = data.dataArtista.profile
     currentPlaylist = data.dataPlaylist
     currentAudio = data.dataSong
     maxIndice = currentPlaylist.length
@@ -331,8 +334,6 @@ export default function mediaPlayer () {
   }
 
   async function setIncremento () {
-    console.log('ocurre este evento cuando termina una cancion?')
-
     indice = indice >= maxIndice - 1 ? 0 : ++indice % maxIndice
     currentAudio = currentPlaylist[indice]
     audio.src = currentAudio.src

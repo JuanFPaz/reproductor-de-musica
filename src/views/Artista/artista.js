@@ -7,6 +7,8 @@ export default function artista () {
   const artistaContainer = document.createElement('div')
   const artistaView = document.createElement('div')
 
+  let botonBack
+
   let dataArtista
   let dataPlaylist
 
@@ -15,12 +17,15 @@ export default function artista () {
   function init ({ data, className }) {
     dataArtista = data.dataArtista
     dataPlaylist = data.dataPlaylist
-    artistaContainer.setAttribute('class', `artista ${className} px-2`)
+    artistaContainer.setAttribute('class', `artista ${className}`)
     artistaContainer.setAttribute('id', 'artista')
     artistaView.setAttribute('class', 'artista-view')
 
     artistaView.innerHTML = `
     <div class="artista-header pt-3 pb-1 px-3">
+        <div class="boton-volver d-lg-none" id='botonBack'>
+          <button> <- Volver atras (?</button>
+        </div>
         <div class="image-container">
           <img src=${dataArtista.profile} alt="Imagen 1" />
           <div class="artista-data">
@@ -36,6 +41,7 @@ export default function artista () {
 
     mainContainer.appendChild(artistaContainer)
     artistaContainer.appendChild(artistaView)
+    botonBack = document.querySelector('#botonBack')
   }
 
   function render () {
@@ -71,14 +77,22 @@ export default function artista () {
     tableRowsSong = document.querySelectorAll('tr')
   }
 
-  function eventeSelectSong (callback) {
+  function eventSelectSong (callback) {
     tableRowsSong.forEach((rowSong) => {
       rowSong.addEventListener('click', (e) => {
         const id = e.currentTarget.id
+
         const [selectSong] = dataPlaylist.filter(dp => dp.id === id)
-        callback({ data: { dataSong: selectSong, dataPlaylist } })
+        callback({ data: { dataSong: selectSong, dataPlaylist, dataArtista } })
       })
     })
   }
-  return { init, render, eventeSelectSong }
+
+  function eventBotonBack (callback) {
+    botonBack.addEventListener('click', () => {
+      artistaContainer.setAttribute('class', 'artista d-none col-sm-12 col-lg-10 px-1')
+      callback()
+    })
+  }
+  return { init, render, eventSelectSong, eventBotonBack }
 }

@@ -7,13 +7,14 @@ export default function biblioteca () {
   const bibliotecaContainer = document.createElement('div')
   const bibliotecaView = document.createElement('div')
 
+  let idBibliotecaView = 'biblioteca-0'
   let enlacesArtistas
 
   let dataBiblioteca
 
   function init ({ data, className }) {
     dataBiblioteca = data
-    bibliotecaContainer.setAttribute('class', `biblioteca ${className} px-2`)
+    bibliotecaContainer.setAttribute('class', `biblioteca ${className}`)
     bibliotecaContainer.setAttribute('id', 'biblioteca')
     bibliotecaView.setAttribute('class', 'biblioteca-view')
 
@@ -50,8 +51,9 @@ export default function biblioteca () {
   }
 
   function render () {
+    bibliotecaView.setAttribute('id', idBibliotecaView)
     document.querySelector('#biblioteca-main').innerHTML = `
-      <div class="biblioteca-grid">
+      <div class="biblioteca-list">
           ${dataBiblioteca.map(
             (db) => `
             <a href=${db.href} class='enlaces-artistas' id=${db.id}>
@@ -75,12 +77,15 @@ export default function biblioteca () {
     enlacesArtistas.forEach((artista) => {
       artista.addEventListener('click', (e) => {
         e.preventDefault()
-        const id = e.currentTarget.id
+        // const id = e.currentTarget.id
         const href = e.currentTarget.href
-
         callback({ href })
       })
     })
   }
-  return { init, render, eventSelectArtista }
+
+  function setViewBiblioteca (value) {
+    idBibliotecaView = value
+  }
+  return { init, render, eventSelectArtista, setViewBiblioteca }
 }
