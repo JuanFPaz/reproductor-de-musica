@@ -28,13 +28,50 @@ import losFabulososCadillacs from '../data/los-fabulosos/losFabulososCadillacs.j
 import losPiojos from '../data/los-piojos/losPiojos.js'
 import losRodriguez from '../data/los-rodriguez/losRodriguez.js'
 import losTipitos from '../data/los-tipitos/losTipitos.js'
+import macMiller from '../data/mac-miller/macMiller.js'
+import metallica from '../data/metallica/metallica.js'
+import misfits from '../data/misfits/misfits.js'
+import muse from '../data/muse/muse.js'
+import nirvana from '../data/nirvana/nirvana.js'
+import noDoubt from '../data/no-doubt/noDoubt.js'
+import oasis from '../data/oasis/oasis.js'
+import patricioRey from '../data/patricio-rey/patricioRey.js'
+import pescadoRabioso from '../data/pescado-rabioso/pescadoRabioso.js'
+import pixies from '../data/pixies/pixies.js'
+import queen from '../data/queen/queen.js'
+import rageAgainst from '../data/rage-against/rageAgainst.js'
+import rammstein from '../data/rammstein/rammstein.js'
+import ramones from '../data/ramones/ramones.js'
+import seruGiran from '../data/seru-giran/seruGiran.js'
+import smino from '../data/smino/smino.js'
+import sodaStereo from '../data/soda-stereo/sodaStereo.js'
+import sumo from '../data/sumo/sumo.js'
+import tameImpala from '../data/tame-impala/tameImpala.js'
+import theBeatles from '../data/the-beatles/theBeatles.js'
+import theCranberries from '../data/the-cranberries/theCranberries.js'
+import theDoors from '../data/the-doors/theDoors.js'
+import theOffspring from '../data/the-offspring/theOffspring.js'
+import thePolice from '../data/the-police/thePolice.js'
+import theSmiths from '../data/the-smiths/theSmiths.js'
+import theStrokes from '../data/the-strokes/theStrokes.js'
+import thinLizzy from '../data/thin-lizzy/thinLizzy.js'
+import turf from '../data/turf/turf.js'
+import viejasLocas from '../data/viejas-locas/viejasLocas.js'
+import virus from '../data/virus/virus.js'
 
 export default function request () {
   const data = []
 
   function init () {
-    // window.localStorage.removeItem('data')
-    const localData = JSON.parse(window.localStorage.getItem('data'))
+    /** TODO:
+     * No solo comprobar si la instancia localData existe,
+     * tambien, hacer una comprobacion para cuando actualice la carpeta data
+     * sea agregando nuevos artistas, o más audios, o algo por el estilo
+     * poder sobreeescribir lo que tenemos en localData, sin eliminar los ID'S
+     * detodas formas gh pages no le importa mucho las urls q le pasamos, pero bueno
+     * ya lo voy a solucionar a eso.
+     */
+    const localData = JSON.parse(window.localStorage.getItem('dataDos'))
 
     if (!localData) {
       data.push({ dataArtista: almendra().getArtista(), dataAudios: almendra().getAudios() })
@@ -67,8 +104,38 @@ export default function request () {
       data.push({ dataArtista: losPiojos().getArtista(), dataAudios: losPiojos().getAudios() })
       data.push({ dataArtista: losRodriguez().getArtista(), dataAudios: losRodriguez().getAudios() })
       data.push({ dataArtista: losTipitos().getArtista(), dataAudios: losTipitos().getAudios() })
+      data.push({ dataArtista: macMiller().getArtista(), dataAudios: macMiller().getAudios() })
+      data.push({ dataArtista: metallica().getArtista(), dataAudios: metallica().getAudios() })
+      data.push({ dataArtista: misfits().getArtista(), dataAudios: misfits().getAudios() })
+      data.push({ dataArtista: muse().getArtista(), dataAudios: muse().getAudios() })
+      data.push({ dataArtista: nirvana().getArtista(), dataAudios: nirvana().getAudios() })
+      data.push({ dataArtista: noDoubt().getArtista(), dataAudios: noDoubt().getAudios() })
+      data.push({ dataArtista: oasis().getArtista(), dataAudios: oasis().getAudios() })
+      data.push({ dataArtista: patricioRey().getArtista(), dataAudios: patricioRey().getAudios() })
+      data.push({ dataArtista: pescadoRabioso().getArtista(), dataAudios: pescadoRabioso().getAudios() })
+      data.push({ dataArtista: pixies().getArtista(), dataAudios: pixies().getAudios() })
+      data.push({ dataArtista: queen().getArtista(), dataAudios: queen().getAudios() })
+      data.push({ dataArtista: rageAgainst().getArtista(), dataAudios: rageAgainst().getAudios() })
+      data.push({ dataArtista: rammstein().getArtista(), dataAudios: rammstein().getAudios() })
+      data.push({ dataArtista: ramones().getArtista(), dataAudios: ramones().getAudios() })
+      data.push({ dataArtista: seruGiran().getArtista(), dataAudios: seruGiran().getAudios() })
+      data.push({ dataArtista: smino().getArtista(), dataAudios: smino().getAudios() })
+      data.push({ dataArtista: sodaStereo().getArtista(), dataAudios: sodaStereo().getAudios() })
+      data.push({ dataArtista: sumo().getArtista(), dataAudios: sumo().getAudios() })
+      data.push({ dataArtista: tameImpala().getArtista(), dataAudios: tameImpala().getAudios() })
+      data.push({ dataArtista: theBeatles().getArtista(), dataAudios: theBeatles().getAudios() })
+      data.push({ dataArtista: theCranberries().getArtista(), dataAudios: theCranberries().getAudios() })
+      data.push({ dataArtista: theDoors().getArtista(), dataAudios: theDoors().getAudios() })
+      data.push({ dataArtista: theOffspring().getArtista(), dataAudios: theOffspring().getAudios() })
+      data.push({ dataArtista: thePolice().getArtista(), dataAudios: thePolice().getAudios() })
+      data.push({ dataArtista: theSmiths().getArtista(), dataAudios: theSmiths().getAudios() })
+      data.push({ dataArtista: theStrokes().getArtista(), dataAudios: theStrokes().getAudios() })
+      data.push({ dataArtista: thinLizzy().getArtista(), dataAudios: thinLizzy().getAudios() })
+      data.push({ dataArtista: turf().getArtista(), dataAudios: turf().getAudios() })
+      data.push({ dataArtista: viejasLocas().getArtista(), dataAudios: viejasLocas().getAudios() })
+      data.push({ dataArtista: virus().getArtista(), dataAudios: virus().getAudios() })
 
-      window.localStorage.setItem('data', JSON.stringify(data))
+      window.localStorage.setItem('dataDos', JSON.stringify(data))
       return
     }
 

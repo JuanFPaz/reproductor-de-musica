@@ -23,6 +23,6 @@
   },
   "dependencies": {
     "bootstrap": "5.3.7",
-    "colorthief": "2.4.0"
+    "colorthief": "^2.6.0"
   }
 }

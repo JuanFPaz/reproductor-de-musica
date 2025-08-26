@@ -4,6 +4,6 @@ import { defineConfig } from 'vite'
 export default defineConfig({
   base: '/',
   server: {
-    historyApiFallback: true // Para que todas las rutas fallen back a index.html
+    historyApiFallback: true
   }
 })
